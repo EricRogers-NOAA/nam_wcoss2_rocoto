@@ -1,0 +1,108 @@
+#!/bin/sh
+
+##########################################
+echo "This script is run by the SDM to create the text file"
+echo "with the central lat/lon of the NAM fire weather nest."
+echo "This text file, called "nam_firewx_loc" is copied to" 
+echo "/gpfs/dell1/nco/ops/com/nam/prod/input and is read"
+echo "by the NAM jobs that process the fire weather nest."
+##########################################
+
+envir=prod
+
+. /gpfs/dell1/nco/ops/nw${envir}/versions/nam.ver
+EXECfirewx=/gpfs/dell1/nco/ops/nw${envir}/nam.${nam_ver}/util/exec/wcoss.exec
+COMOUT=/gpfs/dell1/nco/ops/com/nam/${envir}/input
+
+TMP=/gpfs/dell1/ptmp
+mkdir -p ${TMP}/`whoami`/firewx_setup
+cd ${TMP}/`whoami`/firewx_setup
+rm nam_firewx_loc
+
+###
+#main menu loop
+###
+
+###clear
+endloop=""
+until [ -n "$endloop" ]
+do
+ prcss_points="no"
+ enter_dat="no"
+ prcss="no"
+
+ echo
+ echo
+ echo "Welcome to the firewx setup script..."
+ echo
+ echo "1. Enter firewx points"
+ echo "2. Enter same firewx points as yesterday for all four cycles"
+ echo "3. Check to see what points are currently entered in production"
+ echo "4. Quit"
+ echo 
+ echo "Please select from the above (1-4):"
+ read choice 
+ 
+ case "$choice"
+ in
+  1) prcss_points="yes" 
+     enter_dat="yes";;
+
+  2) echo "Use same fire weather points as yesterday, which are:"
+     echo
+     echo "CYCLE        LAT     LONG"
+     echo "-------------------------"
+     for cyc in 00 06 12 18
+     do
+      lt=`grep ${cyc}z $COMOUT/nam_firewx_loc | awk '{print $2}'`
+      lg=`grep ${cyc}z $COMOUT/nam_firewx_loc | awk '{print $3}'`
+      echo "$cyc        $lt     $lg"
+     done
+     echo "exit script"
+     exit 0 ;;
+    
+  3) clear
+     echo "CURRENT SUBMITTED FIREWX POINTS/INFO IN PRODUCTION"
+     echo 
+     echo "CYCLE	LAT	LONG"
+     echo "-------------------------"
+     for cyc in 00 06 12 18 
+     do
+      lt=`grep ${cyc}z $COMOUT/nam_firewx_loc | awk '{print $2}'`
+      lg=`grep ${cyc}z $COMOUT/nam_firewx_loc | awk '{print $3}'`
+      echo "$cyc	$lt	$lg"
+     done ;;
+     
+  4) endloop="yes";;
+
+  *) echo "You entered $choice...Invalid Choice...try again"  ;;
+ esac
+ 
+ if [ "$prcss_points" = "yes" ]
+  then
+ if [ "$enter_dat" = "yes" ]
+  then
+  
+  echo "Start execution of SETFIREWX code"
+
+  $EXECfirewx/setfirewx
+
+  echo "NEW FIREWX POINTS IN PRODUCTION"
+  echo
+  echo "CYCLE        LAT     LONG"
+  echo "-------------------------"
+  for cyc in 00 06 12 18
+  do
+   lt=`grep ${cyc}z nam_firewx_loc | awk '{print $2}'`
+   lg=`grep ${cyc}z nam_firewx_loc | awk '{print $3}'`
+   echo "$cyc        $lt     $lg"
+  done
+
+  cp $COMOUT/nam_firewx_loc $COMOUT/nam_firewx_loc_prev
+  cp nam_firewx_loc $COMOUT/nam_firewx_loc
+
+  fi #end prscc if statement
+
+ fi  #end prcss_points if statement
+
+done #end main until loop

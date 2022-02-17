@@ -1,0 +1,42 @@
+#! /bin/ksh --login
+#
+#BSUB -o /_PTMP_/_USER_/nps_nemsinterp.log.%J
+#BSUB -e /_PTMP_/_USER_/nps_nemsinterp.log.%J
+#BSUB -q "dev_shared"
+#BSUB -W 0:39
+#BSUB -R "span[ptile=_NPROCNEMSINTERP_]"
+#BSUB -R affinity[core(1)]
+#BSUB -P HRW-T2O
+#BSUB -R rusage[mem=12000]
+#BSUB -J NEMSINTERP
+#BSUB -n _NPROCNEMSINTERP_
+#
+# . /usrx/local/Modules/3.2.9/init/ksh
+# module load ics
+# module load ibmpe
+# module load NetCDF/4.2/serial
+
+module purge
+module load EnvVars/1.0.2
+module load lsf/10.1
+module load ips/18.0.1.163
+module load impi/18.0.1
+module load NetCDF/3.6.3
+
+#
+
+PACKDIR=_PACKDIR_
+WORKDIR=_WORKDIR_
+
+
+cd $WORKDIR
+cp $PACKDIR/NPS/nemsinterp.exe .
+
+rm test_input* 
+rm input_domain*
+rm domain_det*
+rm boco.*
+rm configure_nest_details*
+rm GWD*
+
+mpirun ./nemsinterp.exe > nemsinterp.log 2>&1

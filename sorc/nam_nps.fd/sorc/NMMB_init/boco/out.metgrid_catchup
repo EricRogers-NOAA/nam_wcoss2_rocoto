@@ -1,0 +1,1542 @@
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
++ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup
++ DATAROOT=/stmpp2/Eric.Rogers/testnps_origcode_catchup
++ export DATAROOT
++ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
++ export DATA
++ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
++ NDATE=/nwprod/util/exec/ndate
++ export NDATE
++ PDY=20161220
++ export PDY
++ cyc=12
++ export cyc
++ CYCLE=2016122012
++ export CYCLE
++ /nwprod/util/exec/ndate -06 2016122012
++ TM06=2016122006
++ export TM06
++ echo 2016122006
++ cut -c 1-8
++ PDYtm06=20161220
++ /nwprod/util/exec/ndate -05 2016122012
++ TM05=2016122007
++ export TM05
++ echo 2016122007
++ cut -c 1-8
++ PDYtm05=20161220
++ /nwprod/util/exec/ndate -04 2016122012
++ TM04=2016122008
++ export TM04
++ echo 2016122008
++ cut -c 1-8
++ PDYtm04=20161220
++ /nwprod/util/exec/ndate -03 2016122012
++ TM03=2016122009
++ export TM03
++ echo 2016122009
++ cut -c 1-8
++ PDYtm03=20161220
++ /nwprod/util/exec/ndate -02 2016122012
++ TM02=2016122010
++ export TM02
++ echo 2016122010
++ cut -c 1-8
++ PDYtm02=20161220
++ /nwprod/util/exec/ndate -01 2016122012
++ TM01=2016122011
++ export TM01
++ echo 2016122011
++ cut -c 1-8
++ PDYtm01=20161220
++ PARMnam=/meso/save/Eric.Rogers/nam.v4.1.5/parm
++ export PARMnam
++ PARMnps=/meso/save/Eric.Rogers/tempscripts
++ export PARMnps
++ FIXnam=/meso/save/Eric.Rogers/nam.v4.1.5/fix
++ export FIXnam
++ EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec
++ export EXECnam
++ USHnps=/meso/save/Eric.Rogers/tempscripts
++ export USHnps
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm05
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm04
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm03
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm02
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm01
++ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
++ rm -rf poescript
++ send=0
++ export send
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122006 00 01 tm06 0'
++ 1> poescript
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122007 00 01 tm05 0'
++ 1>> poescript
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122008 00 01 tm04 0'
++ 1>> poescript
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122009 00 01 tm03 0'
++ 1>> poescript
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122010 00 01 tm02 0'
++ 1>> poescript
++ echo '/meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh 2016122011 00 01 tm01 0'
++ 1>> poescript
++ chmod 775 /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/poescript
++ MP_PGMMODEL=mpmd
++ export MP_PGMMODEL
++ MP_CMDFILE=poescript
++ export MP_CMDFILE
++ MP_LABELIO=YES
++ export MP_LABELIO
++ MP_STDOUTMODE=ordered
++ export MP_STDOUTMODE
++ mpirun.lsf
+Execute poe command line: poe 
+ATTENTION: 0031-408  6 tasks allocated by Resource Manager, continuing...
+   1:+ INT=1
+   1:+ CYC=2016122007
+   1:+ STARTHR=00
+   1:+ ENDHR=01
+   1:+ ICOUNT=tm05
+   1:+ SENDCOM=0
+   1:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   1:+ export DATA
+   1:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   3:+ INT=1
+   3:+ CYC=2016122009
+   3:+ STARTHR=00
+   3:+ ENDHR=01
+   3:+ ICOUNT=tm03
+   3:+ SENDCOM=0
+   3:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   3:+ export DATA
+   3:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   2:+ INT=1
+   2:+ CYC=2016122008
+   2:+ STARTHR=00
+   2:+ ENDHR=01
+   2:+ ICOUNT=tm04
+   2:+ SENDCOM=0
+   2:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   2:+ export DATA
+   2:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   0:+ INT=1
+   0:+ CYC=2016122006
+   0:+ STARTHR=00
+   0:+ ENDHR=01
+   0:+ ICOUNT=tm06
+   0:+ SENDCOM=0
+   0:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   0:+ export DATA
+   0:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   4:+ INT=1
+   4:+ CYC=2016122010
+   4:+ STARTHR=00
+   4:+ ENDHR=01
+   4:+ ICOUNT=tm02
+   4:+ SENDCOM=0
+   4:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   4:+ export DATA
+   4:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   5:+ INT=1
+   5:+ CYC=2016122011
+   5:+ STARTHR=00
+   5:+ ENDHR=01
+   5:+ ICOUNT=tm01
+   5:+ SENDCOM=0
+   5:+ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   5:+ export DATA
+   5:+ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+   1:+ NDATE=/nwprod/util/exec/ndate
+   3:+ NDATE=/nwprod/util/exec/ndate
+   2:+ NDATE=/nwprod/util/exec/ndate
+   4:+ NDATE=/nwprod/util/exec/ndate
+   5:+ NDATE=/nwprod/util/exec/ndate
+   0:+ NDATE=/nwprod/util/exec/ndate
+   1:+ echo 2016122007
+   3:+ echo 2016122009
+   2:+ echo 2016122008
+   3:+ cut -c1-4
+   2:+ cut -c1-4
+   1:+ cut -c1-4
+   4:+ echo 2016122010
+   5:+ echo 2016122011
+   0:+ echo 2016122006
+   4:+ cut -c1-4
+   5:+ cut -c1-4
+   0:+ cut -c1-4
+   3:+ ystart=2016
+   2:+ ystart=2016
+   1:+ ystart=2016
+   5:+ ystart=2016
+   4:+ ystart=2016
+   0:+ ystart=2016
+   3:+ echo 2016122009
+   2:+ echo 2016122008
+   3:+ cut -c5-6
+   1:+ echo 2016122007
+   2:+ cut -c5-6
+   1:+ cut -c5-6
+   5:+ echo 2016122011
+   4:+ echo 2016122010
+   5:+ cut -c5-6
+   0:+ echo 2016122006
+   4:+ cut -c5-6
+   0:+ cut -c5-6
+   3:+ mstart=12
+   2:+ mstart=12
+   1:+ mstart=12
+   5:+ mstart=12
+   3:+ echo 2016122009
+   4:+ mstart=12
+   3:+ cut -c7-8
+   2:+ echo 2016122008
+   2:+ cut -c7-8
+   0:+ mstart=12
+   1:+ echo 2016122007
+   1:+ cut -c7-8
+   5:+ echo 2016122011
+   4:+ echo 2016122010
+   0:+ echo 2016122006
+   5:+ cut -c7-8
+   4:+ cut -c7-8
+   0:+ cut -c7-8
+   3:+ dstart=20
+   2:+ dstart=20
+   3:+ echo 2016122009
+   1:+ dstart=20
+   3:+ cut -c9-10
+   2:+ echo 2016122008
+   2:+ cut -c9-10
+   5:+ dstart=20
+   4:+ dstart=20
+   1:+ echo 2016122007
+   0:+ dstart=20
+   1:+ cut -c9-10
+   5:+ echo 2016122011
+   5:+ cut -c9-10
+   4:+ echo 2016122010
+   4:+ cut -c9-10
+   0:+ echo 2016122006
+   0:+ cut -c9-10
+   3:+ hstart=09
+   3:+ orig_start=2016122009
+   3:+ /nwprod/util/exec/ndate +00 2016122009
+   2:+ hstart=08
+   2:+ orig_start=2016122008
+   2:+ /nwprod/util/exec/ndate +00 2016122008
+   1:+ hstart=07
+   1:+ orig_start=2016122007
+   5:+ hstart=11
+   5:+ orig_start=2016122011
+   4:+ hstart=10
+   4:+ orig_start=2016122010
+   1:+ /nwprod/util/exec/ndate +00 2016122007
+   5:+ /nwprod/util/exec/ndate +00 2016122011
+   0:+ hstart=06
+   0:+ orig_start=2016122006
+   4:+ /nwprod/util/exec/ndate +00 2016122010
+   0:+ /nwprod/util/exec/ndate +00 2016122006
+   3:+ start=2016122009
+   3:+ echo 2016122009
+   3:+ cut -c1-4
+   2:+ start=2016122008
+   1:+ start=2016122007
+   2:+ echo 2016122008
+   2:+ cut -c1-4
+   5:+ start=2016122011
+   4:+ start=2016122010
+   0:+ start=2016122006
+   3:+ ystart=2016
+   1:+ echo 2016122007
+   5:+ echo 2016122011
+   4:+ echo 2016122010
+   5:+ cut -c1-4
+   4:+ cut -c1-4
+   0:+ echo 2016122006
+   1:+ cut -c1-4
+   3:+ echo 2016122009
+   0:+ cut -c1-4
+   3:+ cut -c5-6
+   2:+ ystart=2016
+   2:+ echo 2016122008
+   2:+ cut -c5-6
+   5:+ ystart=2016
+   4:+ ystart=2016
+   0:+ ystart=2016
+   1:+ ystart=2016
+   5:+ echo 2016122011
+   3:+ mstart=12
+   5:+ cut -c5-6
+   4:+ echo 2016122010
+   4:+ cut -c5-6
+   1:+ echo 2016122007
+   1:+ cut -c5-6
+   3:+ echo 2016122009
+   0:+ echo 2016122006
+   3:+ cut -c7-8
+   2:+ mstart=12
+   0:+ cut -c5-6
+   2:+ echo 2016122008
+   2:+ cut -c7-8
+   5:+ mstart=12
+   4:+ mstart=12
+   5:+ echo 2016122011
+   5:+ cut -c7-8
+   3:+ dstart=20
+   4:+ echo 2016122010
+   1:+ mstart=12
+   4:+ cut -c7-8
+   0:+ mstart=12
+   3:+ echo 2016122009
+   1:+ echo 2016122007
+   3:+ cut -c9-10
+   1:+ cut -c7-8
+   2:+ dstart=20
+   0:+ echo 2016122006
+   0:+ cut -c7-8
+   5:+ dstart=20
+   2:+ echo 2016122008
+   2:+ cut -c9-10
+   4:+ dstart=20
+   5:+ echo 2016122011
+   5:+ cut -c9-10
+   4:+ echo 2016122010
+   4:+ cut -c9-10
+   1:+ dstart=20
+   3:+ hstart=09
+   3:+ /nwprod/util/exec/ndate +01 2016122009
+   0:+ dstart=20
+   1:+ echo 2016122007
+   2:+ hstart=08
+   0:+ echo 2016122006
+   2:+ /nwprod/util/exec/ndate +01 2016122008
+   1:+ cut -c9-10
+   0:+ cut -c9-10
+   5:+ hstart=11
+   4:+ hstart=10
+   5:+ /nwprod/util/exec/ndate +01 2016122011
+   4:+ /nwprod/util/exec/ndate +01 2016122010
+   3:+ end=2016122010
+   1:+ hstart=07
+   0:+ hstart=06
+   1:+ /nwprod/util/exec/ndate +01 2016122007
+   0:+ /nwprod/util/exec/ndate +01 2016122006
+   3:+ echo 2016122010
+   3:+ cut -c1-4
+   2:+ end=2016122009
+   4:+ end=2016122011
+   2:+ echo 2016122009
+   5:+ end=2016122012
+   2:+ cut -c1-4
+   4:+ echo 2016122011
+   5:+ echo 2016122012
+   4:+ cut -c1-4
+   5:+ cut -c1-4
+   3:+ yend=2016
+   3:+ echo 2016122010
+   3:+ cut -c5-6
+   1:+ end=2016122008
+   2:+ yend=2016
+   0:+ end=2016122007
+   4:+ yend=2016
+   5:+ yend=2016
+   1:+ echo 2016122008
+   2:+ echo 2016122009
+   1:+ cut -c1-4
+   0:+ echo 2016122007
+   2:+ cut -c5-6
+   0:+ cut -c1-4
+   3:+ mend=12
+   4:+ echo 2016122011
+   5:+ echo 2016122012
+   5:+ cut -c5-6
+   4:+ cut -c5-6
+   3:+ echo 2016122010
+   3:+ cut -c7-8
+   2:+ mend=12
+   1:+ yend=2016
+   0:+ yend=2016
+   5:+ mend=12
+   2:+ echo 2016122009
+   2:+ cut -c7-8
+   3:+ dend=20
+   4:+ mend=12
+   1:+ echo 2016122008
+   0:+ echo 2016122007
+   1:+ cut -c5-6
+   0:+ cut -c5-6
+   5:+ echo 2016122012
+   5:+ cut -c7-8
+   3:+ echo 2016122010
+   4:+ echo 2016122011
+   4:+ cut -c7-8
+   3:+ cut -c9-10
+   2:+ dend=20
+   1:+ mend=12
+   0:+ mend=12
+   2:+ echo 2016122009
+   2:+ cut -c9-10
+   5:+ dend=20
+   1:+ echo 2016122008
+   1:+ cut -c7-8
+   4:+ dend=20
+   0:+ echo 2016122007
+   5:+ echo 2016122012
+   0:+ cut -c7-8
+   3:+ hend=10
+   3:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm03
+   3:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm03/geo_nmb.d01.dio
+   5:+ cut -c9-10
+   4:+ echo 2016122011
+   4:+ cut -c9-10
+   2:+ hend=09
+   2:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm04
+   2:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm04/geo_nmb.d01.dio
+   1:+ dend=20
+   0:+ dend=20
+   1:+ echo 2016122008
+   1:+ cut -c9-10
+   5:+ hend=12
+   5:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm01
+   5:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm01/geo_nmb.d01.dio
+   4:+ hend=11
+   4:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm02
+   4:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm02/geo_nmb.d01.dio
+   0:+ echo 2016122007
+   0:+ cut -c9-10
+   1:+ hend=08
+   1:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm05
+   1:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm05/geo_nmb.d01.dio
+   0:+ hend=07
+   0:+ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06
+   0:+ cp /meso/save/Eric.Rogers/nam.v4.1.5/fix/nam_geo_nmb.d01.dio /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/geo_nmb.d01.dio
+   0:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm06/namelist.nps .
+   5:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm01/namelist.nps .
+   5:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   5:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   0:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   0:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   1:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm05/namelist.nps .
+   1:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   1:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   0:+ mv namelist.nps.tm06 namelist.nps
+   1:+ mv namelist.nps.tm05 namelist.nps
+   5:+ mv namelist.nps.tm01 namelist.nps
+   0:mv: cannot stat `namelist.nps.tm06'   1:mv: cannot stat `namelist.nps.tm05'   5:mv: cannot stat `namelist.nps.tm01': No such file or directory: No such file or directory
+: No such file or directory
+
+   5:+ FHR=00
+   5:+ [ 00 -le 01 ]
+   0:+ FHR=00
+   0:+ [ 00 -le 01 ]
+   1:+ FHR=00
+   1:+ [ 00 -le 01 ]
+   0:+ /nwprod/util/exec/ndate +00 2016122006
+   5:+ /nwprod/util/exec/ndate +00 2016122011
+   1:+ /nwprod/util/exec/ndate +00 2016122007
+   0:+ time=2016122006
+   1:+ time=2016122007
+   5:+ time=2016122011
+   0:+ echo 2016122006
+   1:+ echo 2016122007
+   5:+ echo 2016122011
+   0:+ cut -c1-4
+   1:+ cut -c1-4
+   5:+ cut -c1-4
+   0:+ yy=2016
+   1:+ yy=2016
+   5:+ yy=2016
+   0:+ echo 2016122006
+   0:+ cut -c5-6
+   1:+ echo 2016122007
+   5:+ echo 2016122011
+   1:+ cut -c5-6
+   5:+ cut -c5-6
+   0:+ mm=12
+   5:+ mm=12
+   0:+ echo 2016122006
+   1:+ mm=12
+   0:+ cut -c7-8
+   5:+ echo 2016122011
+   5:+ cut -c7-8
+   1:+ echo 2016122007
+   1:+ cut -c7-8
+   0:+ dd=20
+   5:+ dd=20
+   1:+ dd=20
+   0:+ echo 2016122006
+   0:+ cut -c9-10
+   5:+ echo 2016122011
+   5:+ cut -c9-10
+   1:+ echo 2016122007
+   1:+ cut -c9-10
+   0:+ hh=06
+   0:+ . /usrx/local/Modules/default/init/ksh
+   0:+ [ 3.2.10 '=' '' ]
+   0:+ MODULE_VERSION_STACK=3.2.10
+   0:+ export MODULE_VERSION_STACK
+   0:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   0:+ export MODULESHOME
+   0:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   0:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   0:+ module load NetCDF/4.2/serial
+   1:+ hh=07
+   1:+ . /usrx/local/Modules/default/init/ksh
+   1:+ [ 3.2.10 '=' '' ]
+   1:+ MODULE_VERSION_STACK=3.2.10
+   1:+ export MODULE_VERSION_STACK
+   1:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   1:+ export MODULESHOME
+   1:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   1:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   1:+ module load NetCDF/4.2/serial
+   5:+ hh=11
+   5:+ . /usrx/local/Modules/default/init/ksh
+   5:+ [ 3.2.10 '=' '' ]
+   5:+ MODULE_VERSION_STACK=3.2.10
+   5:+ export MODULE_VERSION_STACK
+   5:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   5:+ export MODULESHOME
+   5:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   5:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   5:+ module load NetCDF/4.2/serial
+   1:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   0:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   5:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   4:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm02/namelist.nps .
+   4:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   4:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   4:+ mv namelist.nps.tm02 namelist.nps
+   4:mv: cannot stat `namelist.nps.tm02': No such file or directory
+   4:+ FHR=00
+   4:+ [ 00 -le 01 ]
+   4:+ /nwprod/util/exec/ndate +00 2016122010
+   4:+ time=2016122010
+   4:+ echo 2016122010
+   4:+ cut -c1-4
+   4:+ yy=2016
+   4:+ echo 2016122010
+   4:+ cut -c5-6
+   4:+ mm=12
+   4:+ echo 2016122010
+   4:+ cut -c7-8
+   4:+ dd=20
+   4:+ echo 2016122010
+   4:+ cut -c9-10
+   4:+ hh=10
+   4:+ . /usrx/local/Modules/default/init/ksh
+   4:+ [ 3.2.10 '=' '' ]
+   4:+ MODULE_VERSION_STACK=3.2.10
+   4:+ export MODULE_VERSION_STACK
+   4:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   4:+ export MODULESHOME
+   4:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   4:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   4:+ module load NetCDF/4.2/serial
+   4:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   4:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   4:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   4:+ export HDF5
+   4:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   4:+ export HDF5_CFLAGS
+   4:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   4:+ export HDF5_CXXFLAGS
+   4:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   4:+ export HDF5_FFLAGS
+   4:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   4:+ export HDF5_INCLUDE
+   4:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   4:+ export HDF5_LDFLAGS
+   4:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   4:+ export HDF5_LDFLAGS_C
+   4:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   4:+ export HDF5_LDFLAGS_CXX
+   4:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   4:+ export HDF5_LDFLAGS_F
+   4:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   4:+ export LD_LIBRARY_PATH
+   4:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   4:+ export LOADEDMODULES
+   4:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   4:+ export MANPATH
+   4:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   4:+ export NETCDF
+   4:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   4:+ export NETCDF_CFLAGS
+   4:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   4:+ export NETCDF_CXXFLAGS
+   4:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   4:+ export NETCDF_FFLAGS
+   4:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   4:+ export NETCDF_INCLUDE
+   4:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   4:+ export NETCDF_LDFLAGS
+   4:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   4:+ export NETCDF_LDFLAGS_C
+   4:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   4:+ export NETCDF_LDFLAGS_CXX
+   4:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   4:+ export NETCDF_LDFLAGS_F
+   4:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   4:+ export PATH
+   4:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   4:+ export _LMFILES_
+   4:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm02/FILE:2016-12-20_10 .
+   0:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   0:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   0:+ export HDF5
+   0:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   0:+ export HDF5_CFLAGS
+   0:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   0:+ export HDF5_CXXFLAGS
+   0:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   0:+ export HDF5_FFLAGS
+   0:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   0:+ export HDF5_INCLUDE
+   0:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   0:+ export HDF5_LDFLAGS
+   0:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   0:+ export HDF5_LDFLAGS_C
+   0:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   0:+ export HDF5_LDFLAGS_CXX
+   0:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   0:+ export HDF5_LDFLAGS_F
+   0:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   0:+ export LD_LIBRARY_PATH
+   0:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   0:+ export LOADEDMODULES
+   0:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   0:+ export MANPATH
+   0:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   0:+ export NETCDF
+   0:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   0:+ export NETCDF_CFLAGS
+   0:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   0:+ export NETCDF_CXXFLAGS
+   0:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   0:+ export NETCDF_FFLAGS
+   0:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   0:+ export NETCDF_INCLUDE
+   0:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   0:+ export NETCDF_LDFLAGS
+   0:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   0:+ export NETCDF_LDFLAGS_C
+   0:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   0:+ export NETCDF_LDFLAGS_CXX
+   0:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   0:+ export NETCDF_LDFLAGS_F
+   0:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   0:+ export PATH
+   0:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   0:+ export _LMFILES_
+   0:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm06/FILE:2016-12-20_06 .
+   1:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   1:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   1:+ export HDF5
+   1:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   1:+ export HDF5_CFLAGS
+   1:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   1:+ export HDF5_CXXFLAGS
+   1:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   1:+ export HDF5_FFLAGS
+   1:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   1:+ export HDF5_INCLUDE
+   1:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   1:+ export HDF5_LDFLAGS
+   1:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   1:+ export HDF5_LDFLAGS_C
+   1:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   1:+ export HDF5_LDFLAGS_CXX
+   1:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   1:+ export HDF5_LDFLAGS_F
+   1:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   1:+ export LD_LIBRARY_PATH
+   1:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   1:+ export LOADEDMODULES
+   1:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   1:+ export MANPATH
+   1:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   1:+ export NETCDF
+   1:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   1:+ export NETCDF_CFLAGS
+   1:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   1:+ export NETCDF_CXXFLAGS
+   1:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   1:+ export NETCDF_FFLAGS
+   1:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   1:+ export NETCDF_INCLUDE
+   1:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   1:+ export NETCDF_LDFLAGS
+   1:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   1:+ export NETCDF_LDFLAGS_C
+   1:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   1:+ export NETCDF_LDFLAGS_CXX
+   1:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   1:+ export NETCDF_LDFLAGS_F
+   1:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   1:+ export PATH
+   1:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   1:+ export _LMFILES_
+   1:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm05/FILE:2016-12-20_07 .
+   5:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   5:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   5:+ export HDF5
+   5:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   5:+ export HDF5_CFLAGS
+   5:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   5:+ export HDF5_CXXFLAGS
+   5:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   5:+ export HDF5_FFLAGS
+   5:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   5:+ export HDF5_INCLUDE
+   5:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   5:+ export HDF5_LDFLAGS
+   5:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   5:+ export HDF5_LDFLAGS_C
+   5:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   5:+ export HDF5_LDFLAGS_CXX
+   5:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   5:+ export HDF5_LDFLAGS_F
+   5:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   5:+ export LD_LIBRARY_PATH
+   5:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   5:+ export LOADEDMODULES
+   5:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   5:+ export MANPATH
+   5:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   5:+ export NETCDF
+   5:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   5:+ export NETCDF_CFLAGS
+   5:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   5:+ export NETCDF_CXXFLAGS
+   5:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   5:+ export NETCDF_FFLAGS
+   5:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   5:+ export NETCDF_INCLUDE
+   5:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   5:+ export NETCDF_LDFLAGS
+   5:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   5:+ export NETCDF_LDFLAGS_C
+   5:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   5:+ export NETCDF_LDFLAGS_CXX
+   5:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   5:+ export NETCDF_LDFLAGS_F
+   5:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   5:+ export PATH
+   5:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   5:+ export _LMFILES_
+   5:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm01/FILE:2016-12-20_11 .
+   2:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm04/namelist.nps .
+   2:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   2:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   2:+ mv namelist.nps.tm04 namelist.nps
+   2:mv: cannot stat `namelist.nps.tm04': No such file or directory
+   2:+ FHR=00
+   2:+ [ 00 -le 01 ]
+   2:+ /nwprod/util/exec/ndate +00 2016122008
+   2:+ time=2016122008
+   2:+ echo 2016122008
+   2:+ cut -c1-4
+   2:+ yy=2016
+   2:+ echo 2016122008
+   2:+ cut -c5-6
+   2:+ mm=12
+   2:+ echo 2016122008
+   2:+ cut -c7-8
+   2:+ dd=20
+   2:+ echo 2016122008
+   2:+ cut -c9-10
+   2:+ hh=08
+   2:+ . /usrx/local/Modules/default/init/ksh
+   2:+ [ 3.2.10 '=' '' ]
+   2:+ MODULE_VERSION_STACK=3.2.10
+   2:+ export MODULE_VERSION_STACK
+   2:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   2:+ export MODULESHOME
+   2:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   2:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   2:+ module load NetCDF/4.2/serial
+   2:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   2:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   2:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   2:+ export HDF5
+   2:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   2:+ export HDF5_CFLAGS
+   2:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   2:+ export HDF5_CXXFLAGS
+   2:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   2:+ export HDF5_FFLAGS
+   2:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   2:+ export HDF5_INCLUDE
+   2:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   2:+ export HDF5_LDFLAGS
+   2:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   2:+ export HDF5_LDFLAGS_C
+   2:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   2:+ export HDF5_LDFLAGS_CXX
+   2:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   2:+ export HDF5_LDFLAGS_F
+   2:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   2:+ export LD_LIBRARY_PATH
+   2:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   2:+ export LOADEDMODULES
+   2:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   2:+ export MANPATH
+   2:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   2:+ export NETCDF
+   2:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   2:+ export NETCDF_CFLAGS
+   2:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   2:+ export NETCDF_CXXFLAGS
+   2:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   2:+ export NETCDF_FFLAGS
+   2:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   2:+ export NETCDF_INCLUDE
+   2:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   2:+ export NETCDF_LDFLAGS
+   2:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   2:+ export NETCDF_LDFLAGS_C
+   2:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   2:+ export NETCDF_LDFLAGS_CXX
+   2:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   2:+ export NETCDF_LDFLAGS_F
+   2:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   2:+ export PATH
+   2:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   2:+ export _LMFILES_
+   2:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm04/FILE:2016-12-20_08 .
+   3:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm03/namelist.nps .
+   3:+ EXECmet=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src
+   3:+ cp /meso/save/Eric.Rogers/tempscripts/nam.METGRID.TBL.bocos METGRID.TBL
+   3:+ mv namelist.nps.tm03 namelist.nps
+   3:mv: cannot stat `namelist.nps.tm03': No such file or directory
+   3:+ FHR=00
+   3:+ [ 00 -le 01 ]
+   3:+ /nwprod/util/exec/ndate +00 2016122009
+   3:+ time=2016122009
+   3:+ echo 2016122009
+   3:+ cut -c1-4
+   3:+ yy=2016
+   3:+ echo 2016122009
+   3:+ cut -c5-6
+   3:+ mm=12
+   3:+ echo 2016122009
+   3:+ cut -c7-8
+   3:+ dd=20
+   3:+ echo 2016122009
+   3:+ cut -c9-10
+   3:+ hh=09
+   3:+ . /usrx/local/Modules/default/init/ksh
+   3:+ [ 3.2.10 '=' '' ]
+   3:+ MODULE_VERSION_STACK=3.2.10
+   3:+ export MODULE_VERSION_STACK
+   3:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   3:+ export MODULESHOME
+   3:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
+   3:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   3:+ module load NetCDF/4.2/serial
+   3:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   3:+ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
+   3:+ HDF5=/usrx/local/HDF5/1.8.9/serial
+   3:+ export HDF5
+   3:+ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   3:+ export HDF5_CFLAGS
+   3:+ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   3:+ export HDF5_CXXFLAGS
+   3:+ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
+   3:+ export HDF5_FFLAGS
+   3:+ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
+   3:+ export HDF5_INCLUDE
+   3:+ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   3:+ export HDF5_LDFLAGS
+   3:+ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   3:+ export HDF5_LDFLAGS_C
+   3:+ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   3:+ export HDF5_LDFLAGS_CXX
+   3:+ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   3:+ export HDF5_LDFLAGS_F
+   3:+ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/opt/ibmhpc/pe13012/mpich2/intel/fast/lib64:/opt/ibmhpc/pe13012/base/intel/lib64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
+   3:+ export LD_LIBRARY_PATH
+   3:+ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
+   3:+ export LOADEDMODULES
+   3:+ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
+   3:+ export MANPATH
+   3:+ NETCDF=/usrx/local/NetCDF/4.2/serial
+   3:+ export NETCDF
+   3:+ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   3:+ export NETCDF_CFLAGS
+   3:+ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   3:+ export NETCDF_CXXFLAGS
+   3:+ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
+   3:+ export NETCDF_FFLAGS
+   3:+ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
+   3:+ export NETCDF_INCLUDE
+   3:+ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   3:+ export NETCDF_LDFLAGS
+   3:+ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
+   3:+ export NETCDF_LDFLAGS_C
+   3:+ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
+   3:+ export NETCDF_LDFLAGS_CXX
+   3:+ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
+   3:+ export NETCDF_LDFLAGS_F
+   3:+ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
+   3:+ export PATH
+   3:+ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
+   3:+ export _LMFILES_
+   3:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm03/FILE:2016-12-20_09 .
+   2:+ expr 00 + 1
+   2:+ FHR=1
+   2:+ [ 1 -le 01 ]
+   2:+ /nwprod/util/exec/ndate +1 2016122008
+   2:+ time=2016122009
+   2:+ echo 2016122009
+   2:+ cut -c1-4
+   2:+ yy=2016
+   2:+ echo 2016122009
+   2:+ cut -c5-6
+   2:+ mm=12
+   2:+ echo 2016122009
+   2:+ cut -c7-8
+   2:+ dd=20
+   2:+ echo 2016122009
+   2:+ cut -c9-10
+   2:+ hh=09
+   2:+ . /usrx/local/Modules/default/init/ksh
+   2:+ [ 3.2.10 '=' '' ]
+   2:+ MODULE_VERSION_STACK=3.2.10
+   2:+ export MODULE_VERSION_STACK
+   2:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   2:+ export MODULESHOME
+   2:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   2:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   2:+ module load NetCDF/4.2/serial
+   2:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   1:+ expr 00 + 1
+   1:+ FHR=1
+   1:+ [ 1 -le 01 ]
+   1:+ /nwprod/util/exec/ndate +1 2016122007
+   2:+ eval
+   2:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm04/FILE:2016-12-20_09 .
+   1:+ time=2016122008
+   1:+ echo 2016122008
+   1:+ cut -c1-4
+   1:+ yy=2016
+   1:+ echo 2016122008
+   1:+ cut -c5-6
+   1:+ mm=12
+   1:+ echo 2016122008
+   1:+ cut -c7-8
+   1:+ dd=20
+   1:+ echo 2016122008
+   1:+ cut -c9-10
+   1:+ hh=08
+   1:+ . /usrx/local/Modules/default/init/ksh
+   1:+ [ 3.2.10 '=' '' ]
+   1:+ MODULE_VERSION_STACK=3.2.10
+   1:+ export MODULE_VERSION_STACK
+   1:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   1:+ export MODULESHOME
+   1:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   1:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   1:+ module load NetCDF/4.2/serial
+   1:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   1:+ eval
+   1:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm05/FILE:2016-12-20_08 .
+   3:+ expr 00 + 1
+   3:+ FHR=1
+   3:+ [ 1 -le 01 ]
+   3:+ /nwprod/util/exec/ndate +1 2016122009
+   3:+ time=2016122010
+   3:+ echo 2016122010
+   3:+ cut -c1-4
+   3:+ yy=2016
+   3:+ echo 2016122010
+   3:+ cut -c5-6
+   3:+ mm=12
+   3:+ echo 2016122010
+   3:+ cut -c7-8
+   3:+ dd=20
+   3:+ echo 2016122010
+   3:+ cut -c9-10
+   4:+ expr 00 + 1
+   3:+ hh=10
+   3:+ . /usrx/local/Modules/default/init/ksh
+   3:+ [ 3.2.10 '=' '' ]
+   3:+ MODULE_VERSION_STACK=3.2.10
+   3:+ export MODULE_VERSION_STACK
+   3:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   3:+ export MODULESHOME
+   3:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   3:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   3:+ module load NetCDF/4.2/serial
+   3:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   4:+ FHR=1
+   4:+ [ 1 -le 01 ]
+   4:+ /nwprod/util/exec/ndate +1 2016122010
+   4:+ time=2016122011
+   4:+ echo 2016122011
+   4:+ cut -c1-4
+   4:+ yy=2016
+   4:+ echo 2016122011
+   4:+ cut -c5-6
+   4:+ mm=12
+   4:+ echo 2016122011
+   4:+ cut -c7-8
+   4:+ dd=20
+   4:+ echo 2016122011
+   4:+ cut -c9-10
+   4:+ hh=11
+   4:+ . /usrx/local/Modules/default/init/ksh
+   4:+ [ 3.2.10 '=' '' ]
+   4:+ MODULE_VERSION_STACK=3.2.10
+   4:+ export MODULE_VERSION_STACK
+   4:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   4:+ export MODULESHOME
+   4:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   4:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   4:+ module load NetCDF/4.2/serial
+   4:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   3:+ eval
+   3:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm03/FILE:2016-12-20_10 .
+   4:+ eval
+   4:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm02/FILE:2016-12-20_11 .
+   0:+ expr 00 + 1
+   0:+ FHR=1
+   0:+ [ 1 -le 01 ]
+   0:+ /nwprod/util/exec/ndate +1 2016122006
+   0:+ time=2016122007
+   0:+ echo 2016122007
+   0:+ cut -c1-4
+   0:+ yy=2016
+   0:+ echo 2016122007
+   0:+ cut -c5-6
+   0:+ mm=12
+   0:+ echo 2016122007
+   0:+ cut -c7-8
+   0:+ dd=20
+   0:+ echo 2016122007
+   0:+ cut -c9-10
+   0:+ hh=07
+   0:+ . /usrx/local/Modules/default/init/ksh
+   0:+ [ 3.2.10 '=' '' ]
+   0:+ MODULE_VERSION_STACK=3.2.10
+   0:+ export MODULE_VERSION_STACK
+   0:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   0:+ export MODULESHOME
+   0:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   0:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   0:+ module load NetCDF/4.2/serial
+   0:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   0:+ eval
+   0:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm06/FILE:2016-12-20_07 .
+   5:+ expr 00 + 1
+   5:+ FHR=1
+   5:+ [ 1 -le 01 ]
+   5:+ /nwprod/util/exec/ndate +1 2016122011
+   5:+ time=2016122012
+   5:+ echo 2016122012
+   5:+ cut -c1-4
+   5:+ yy=2016
+   5:+ echo 2016122012
+   5:+ cut -c5-6
+   5:+ mm=12
+   5:+ echo 2016122012
+   5:+ cut -c7-8
+   5:+ dd=20
+   5:+ echo 2016122012
+   5:+ cut -c9-10
+   5:+ hh=12
+   5:+ . /usrx/local/Modules/default/init/ksh
+   5:+ [ 3.2.10 '=' '' ]
+   5:+ MODULE_VERSION_STACK=3.2.10
+   5:+ export MODULE_VERSION_STACK
+   5:+ MODULESHOME=/usrx/local/Modules/3.2.10
+   5:+ export MODULESHOME
+   5:+ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial '=' '' ]
+   5:+ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
+   5:+ module load NetCDF/4.2/serial
+   5:+ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
+   5:+ eval
+   5:+ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib_tm01/FILE:2016-12-20_12 .
+   1:+ expr 1 + 1
+   1:+ FHR=2
+   1:+ [ 2 -le 01 ]
+   1:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   1: my_endianness = 2
+   1: is_little_endian() = T
+   1: File: ./geo_nmb.d01.dio opened 
+   2:+ expr 1 + 1
+   2:+ FHR=2
+   2:+ [ 2 -le 01 ]
+   2:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   2: my_endianness = 2
+   2: is_little_endian() = T
+   2: File: ./geo_nmb.d01.dio opened 
+   4:+ expr 1 + 1
+   4:+ FHR=2
+   4:+ [ 2 -le 01 ]
+   4:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   4: my_endianness = 2
+   4: is_little_endian() = T
+   4: File: ./geo_nmb.d01.dio opened 
+   3:+ expr 1 + 1
+   3:+ FHR=2
+   3:+ [ 2 -le 01 ]
+   3:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   3: my_endianness = 2
+   3: is_little_endian() = T
+   3: File: ./geo_nmb.d01.dio opened 
+   5:+ expr 1 + 1
+   5:+ FHR=2
+   5:+ [ 2 -le 01 ]
+   5:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   5: my_endianness = 2
+   5: is_little_endian() = T
+   5: File: ./geo_nmb.d01.dio opened 
+   0:+ expr 1 + 1
+   0:+ FHR=2
+   0:+ [ 2 -le 01 ]
+   0:+ /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/metgrid/src/metgrid.exe
+   0: my_endianness = 2
+   0: is_little_endian() = T
+   0: File: ./geo_nmb.d01.dio opened 
+   1: my_endianness = 2
+   1: is_little_endian() = T
+   1: dfile%endianness = 1
+   1: File: ./met_nmb.d01.2016-12-20_07:00:00.dio opened 
+   3: my_endianness = 2
+   3: is_little_endian() = T
+   3: dfile%endianness = 1
+   3: File: ./met_nmb.d01.2016-12-20_09:00:00.dio opened 
+   2: my_endianness = 2
+   2: is_little_endian() = T
+   2: dfile%endianness = 1
+   2: File: ./met_nmb.d01.2016-12-20_08:00:00.dio opened 
+   5: my_endianness = 2
+   5: is_little_endian() = T
+   5: dfile%endianness = 1
+   5: File: ./met_nmb.d01.2016-12-20_11:00:00.dio opened 
+   4: my_endianness = 2
+   4: is_little_endian() = T
+   4: dfile%endianness = 1
+   4: File: ./met_nmb.d01.2016-12-20_10:00:00.dio opened 
+   0: my_endianness = 2
+   0: is_little_endian() = T
+   0: dfile%endianness = 1
+   0: File: ./met_nmb.d01.2016-12-20_06:00:00.dio opened 
+   1: my_endianness = 2
+   1: is_little_endian() = T
+   1: dfile%endianness = 1
+   1: File: ./met_nmb.d01.2016-12-20_08:00:00.dio opened 
+   5: my_endianness = 2
+   5: is_little_endian() = T
+   5: dfile%endianness = 1
+   5: File: ./met_nmb.d01.2016-12-20_12:00:00.dio opened 
+   3: my_endianness = 2
+   3: is_little_endian() = T
+   3: dfile%endianness = 1
+   3: File: ./met_nmb.d01.2016-12-20_10:00:00.dio opened 
+   2: my_endianness = 2
+   2: is_little_endian() = T
+   2: dfile%endianness = 1
+   2: File: ./met_nmb.d01.2016-12-20_09:00:00.dio opened 
+   4: my_endianness = 2
+   4: is_little_endian() = T
+   4: dfile%endianness = 1
+   4: File: ./met_nmb.d01.2016-12-20_11:00:00.dio opened 
+   0: my_endianness = 2
+   0: is_little_endian() = T
+   0: dfile%endianness = 1
+   0: File: ./met_nmb.d01.2016-12-20_07:00:00.dio opened 
+   1:+ err=0
+   1:+ export err
+   1:+ echo DONE
+   1:+ 1> wpsdone.tm05
+   1:+ ls met_nmb.d01.2016-12-20_07:00:00.dio met_nmb.d01.2016-12-20_08:00:00.dio
+   1:+ files=$'met_nmb.d01.2016-12-20_07:00:00.dio\nmet_nmb.d01.2016-12-20_08:00:00.dio'
+   1:+ [ 0 '=' 1 ]
+   1:+ [ tm05 '==' 1 ]
+   1:+ mv wpsdone.tm05 ../
+   1:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm05
+   1:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   1:+ exit
+   5:+ err=0
+   5:+ export err
+   5:+ echo DONE
+   5:+ 1> wpsdone.tm01
+   5:+ ls met_nmb.d01.2016-12-20_11:00:00.dio met_nmb.d01.2016-12-20_12:00:00.dio
+   5:+ files=$'met_nmb.d01.2016-12-20_11:00:00.dio\nmet_nmb.d01.2016-12-20_12:00:00.dio'
+   5:+ [ 0 '=' 1 ]
+   5:+ [ tm01 '==' 1 ]
+   5:+ mv wpsdone.tm01 ../
+   5:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm01
+   5:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   5:+ exit
+   3:+ err=0
+   3:+ export err
+   3:+ echo DONE
+   3:+ 1> wpsdone.tm03
+   3:+ ls met_nmb.d01.2016-12-20_09:00:00.dio met_nmb.d01.2016-12-20_10:00:00.dio
+   3:+ files=$'met_nmb.d01.2016-12-20_09:00:00.dio\nmet_nmb.d01.2016-12-20_10:00:00.dio'
+   3:+ [ 0 '=' 1 ]
+   3:+ [ tm03 '==' 1 ]
+   3:+ mv wpsdone.tm03 ../
+   3:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm03
+   3:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   3:+ exit
+   2:+ err=0
+   2:+ export err
+   2:+ echo DONE
+   2:+ 1> wpsdone.tm04
+   2:+ ls met_nmb.d01.2016-12-20_08:00:00.dio met_nmb.d01.2016-12-20_09:00:00.dio
+   2:+ files=$'met_nmb.d01.2016-12-20_08:00:00.dio\nmet_nmb.d01.2016-12-20_09:00:00.dio'
+   2:+ [ 0 '=' 1 ]
+   2:+ [ tm04 '==' 1 ]
+   2:+ mv wpsdone.tm04 ../
+   2:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm04
+   2:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   2:+ exit
+   4:+ err=0
+   4:+ export err
+   4:+ echo DONE
+   4:+ 1> wpsdone.tm02
+   4:+ ls met_nmb.d01.2016-12-20_10:00:00.dio met_nmb.d01.2016-12-20_11:00:00.dio
+   4:+ files=$'met_nmb.d01.2016-12-20_10:00:00.dio\nmet_nmb.d01.2016-12-20_11:00:00.dio'
+   4:+ [ 0 '=' 1 ]
+   4:+ [ tm02 '==' 1 ]
+   4:+ mv wpsdone.tm02 ../
+   4:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm02
+   4:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   4:+ exit
+   0:+ err=0
+   0:+ export err
+   0:+ echo DONE
+   0:+ 1> wpsdone.tm06
+   0:+ ls met_nmb.d01.2016-12-20_06:00:00.dio met_nmb.d01.2016-12-20_07:00:00.dio
+   0:+ files=$'met_nmb.d01.2016-12-20_06:00:00.dio\nmet_nmb.d01.2016-12-20_07:00:00.dio'
+   0:+ [ 0 '=' 1 ]
+   0:+ [ tm06 '==' 1 ]
+   0:+ mv wpsdone.tm06 ../
+   0:+ cp metgrid.log /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid/metgrid.log.0000_tm06
+   0:+ echo EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   0:+ exit
+   0:Processing domain 1 of 1
+   0: call map_set (a)
+   0: Processing 2016-12-20_06
+   0:    ./FILE
+   0: Processing 2016-12-20_07
+   0:    ./FILE
+   0:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   0:!  Successful completion of metgrid.  !
+   0:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   0:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   1:Processing domain 1 of 1
+   1: call map_set (a)
+   1: Processing 2016-12-20_07
+   1:    ./FILE
+   1: Processing 2016-12-20_08
+   1:    ./FILE
+   1:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   1:!  Successful completion of metgrid.  !
+   1:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   1:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   2:Processing domain 1 of 1
+   2: call map_set (a)
+   2: Processing 2016-12-20_08
+   2:    ./FILE
+   2: Processing 2016-12-20_09
+   2:    ./FILE
+   2:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   2:!  Successful completion of metgrid.  !
+   2:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   2:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   3:Processing domain 1 of 1
+   3: call map_set (a)
+   3: Processing 2016-12-20_09
+   3:    ./FILE
+   3: Processing 2016-12-20_10
+   3:    ./FILE
+   3:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   3:!  Successful completion of metgrid.  !
+   3:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   3:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   4:Processing domain 1 of 1
+   4: call map_set (a)
+   4: Processing 2016-12-20_10
+   4:    ./FILE
+   4: Processing 2016-12-20_11
+   4:    ./FILE
+   4:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   4:!  Successful completion of metgrid.  !
+   4:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   4:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+   5:Processing domain 1 of 1
+   5: call map_set (a)
+   5: Processing 2016-12-20_11
+   5:    ./FILE
+   5: Processing 2016-12-20_12
+   5:    ./FILE
+   5:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   5:!  Successful completion of metgrid.  !
+   5:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   5:EXITING /meso/save/Eric.Rogers/tempscripts/nam_boco_metgrid_gen_catchup.sh
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@g27c6f>
+Subject: Job 800624: <metgrid> in cluster <gyre> Done
+
+Job <metgrid> was submitted from host <g10a2f> by user <Eric.Rogers> in cluster <gyre>.
+Job was executed on host(s) <6*g27c6f>, in queue <dev2>, as user <Eric.Rogers> in cluster <gyre>.
+</u/Eric.Rogers> was used as the home directory.
+</meso/save/Eric.Rogers/tempscripts> was used as the working directory.
+Started at Wed Dec 21 14:50:15 2016
+Results reported on Wed Dec 21 14:51:32 2016
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/ksh
+
+#BSUB -oo out.metgrid_catchup
+#BSUB -eo out.metgrid_catchup
+#BSUB -n 6
+#BSUB -J metgrid
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#####BSUB -q "dev2_shared"
+#BSUB -q "dev2"
+#BSUB -R span[ptile=6]
+#BSUB -R "affinity[core]"
+####BSUB -R rusage[mem=4000]
+#BSUB -x
+#BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+set -x
+
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+cd /stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATAROOT=/stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+cd $DATA
+
+export NDATE=/nwprod/util/exec/ndate
+
+export PDY=20161220
+export cyc=12
+
+export CYCLE=$PDY$cyc
+
+export TM06=`${NDATE} -06 $CYCLE`
+PDYtm06=`echo $TM06 | cut -c 1-8`
+export TM05=`${NDATE} -05 $CYCLE`
+PDYtm05=`echo $TM05 | cut -c 1-8`
+export TM04=`${NDATE} -04 $CYCLE`
+PDYtm04=`echo $TM04 | cut -c 1-8`
+export TM03=`${NDATE} -03 $CYCLE`
+PDYtm03=`echo $TM03 | cut -c 1-8`
+export TM02=`${NDATE} -02 $CYCLE`
+PDYtm02=`echo $TM02 | cut -c 1-8`
+export TM01=`${NDATE} -01 $CYCLE`
+PDYtm01=`echo $TM01 | cut -c 1-8`
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :               574.00 sec.
+    Max Memory :             6918 MB
+    Average Memory :         2543.50 MB
+    Total Requested Memory : -
+    Delta Memory :           -
+    (Delta: the difference between Total Requested Memory and Max Memory.)
+    Max Processes :          17
+    Max Threads :            45
+
+The output (if any) is above this job summary.
+
+[Wed Dec 21 14:51:32 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: /var/lsf/ecflow_post_in.800624 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Wed Dec 21 14:51:32 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Adding mmpmon postexec record to /var/lsf/mmpmon.800624 for node g27c6f:
+[Wed Dec 21 14:51:32 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Performing IPCS cleanup on node g27c6f:
+[Wed Dec 21 14:51:32 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Reporting summary of GPFS mmpmon activity:
+
+LSF_SUMMARY: GPFS
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd1
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():                36
+    close():               34
+    read():               497
+    write():             1207
+    readdir():              0
+
+  Data:
+
+    READ:                  1.9 GB
+    WRITTEN:              93.7 KB
+
+  Inode_Updates:           11
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd2
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            2
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd3
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:           24
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp1
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():               254
+    close():              248
+    read():                90
+    write():                5
+    readdir():              0
+
+  Data:
+
+    READ:                  2.8 MB
+    WRITTEN:               6.0 KB
+
+  Inode_Updates:           20
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp2
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():               705
+    close():              420
+    read():              8756
+    write():           108536
+    readdir():              9
+
+  Data:
+
+    READ:                 26.1 GB
+    WRITTEN:              21.3 GB
+
+  Inode_Updates:          406
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-ioddev
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-iodprod
+---------------------------------
+
+  Time_Interval:           77 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+===============================================
+AGGREGATE TOTALS (ALL Hosts, ALL File Systems):
+===============================================
+
+  Requests:
+
+    open():               995
+    close():              702
+    read():              9343
+    write():           109748
+    readdir():              9
+
+  Data:
+
+    READ:                 27.9 GB
+    WRITTEN:              21.3 GB
+
+  Inode_Updates:          463
+

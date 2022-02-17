@@ -1,0 +1,34 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=nam_${cyc}_main_${envir}
+
+  # Got these from the FV3GFS env.
+  export MPI_LABELIO=YES
+  export MP_STDOUTMODE="ORDERED"
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+#
+# Get needed variables from exnam_prelim.sh.sms
+#
+. $GESDIR/nam.t${cyc}z.envir.sh
+
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_metgrid_boco.sh
+jerr=$?
+########################################################
+
+cat $pgmout
+cat errfile
+cat metgrid.log
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+exit $jerr

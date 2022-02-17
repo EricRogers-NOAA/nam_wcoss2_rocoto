@@ -1,0 +1,849 @@
+./phys/module_SF_JSFC.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: FLX_LH,HFX,PSHLTR &
+./phys/module_SF_JSFC.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: CHS,CHS2,CQS2     &
+./phys/module_SF_JSFC.F90:      REAL,INTENT(OUT) :: CHS,CHS2,CPM,CQS2,CT,FLHC,FLQC,FLX_LH,HFX    &
+./phys/module_BL_GFSPBLHUR.F90:      REAL,  DIMENSION(ims:ime, jms:jme), INTENT(OUT) ::              &
+./phys/module_BL_GFSPBLHUR.F90:      REAL,  DIMENSION(ims:ime, jms:jme, kms:kme), INTENT(OUT) :: DKU3D,DKT3D  
+./phys/module_BL_GFSPBLHUR.F90:      INTEGER, DIMENSION(ims:ime, jms:jme), INTENT(OUT) ::              &
+./phys/module_BL_GFSPBLHUR.F90:   REAL , DIMENSION( ims:ime , kms:kme , jms:jme ) , INTENT(OUT) ::         &
+./phys/module_LS_NOAHLSM.F90:               INTENT(OUT)    ::                        CHKLOWQ
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: PSIM_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: PSIH_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: GZ1OZ0_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: U10_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: V10_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: TH2_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: Q2_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, OPTIONAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: AKMS_URB2D
+./phys/module_LS_NOAHLSM.F90:     REAL, DIMENSION( ims:ime, jms:jme ), INTENT(OUT) :: UST_URB2D
+./phys/module_LS_NOAHLSM.F90:      INTEGER,INTENT(OUT)::  NROOT                                                             
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT):: ET          
+./phys/module_LS_NOAHLSM.F90:      REAL,INTENT(OUT)   :: ETA_KINEMATIC,BETA,DEW,DRIP,EC,EDIR,ESNOW,ETA,  & 
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT) ::  ALBEDO
+./phys/module_LS_NOAHLSM.F90:      REAL,    INTENT(OUT):: PC,RC,RCQ,RCS,RCSOIL,RCT
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT):: SNCOND
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT):: EDIR
+./phys/module_LS_NOAHLSM.F90:      REAL,    INTENT(OUT)  :: EC,EDIR,ETA1,ETT
+./phys/module_LS_NOAHLSM.F90:      REAL,DIMENSION(1:NSOIL), INTENT(OUT) :: ET
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)    :: FREE
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT)  :: RHSTS
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT)  :: AI, BI,CI
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT):: AI, BI,CI
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT):: RHSTS
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT):: STCOUT
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)    :: DEW,DRIP,EC,EDIR,ETA,ETT,FLX1,FLX3,       &
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL),INTENT(OUT)    :: ET
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)       :: EPSCA,ETP,FLX2,RCH,RR,T24
+./phys/module_LS_NOAHLSM.F90:      INTEGER, INTENT(OUT)   :: NROOT
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)      :: HS,LAI,RSMIN,RGL,SHDFAC,SNUP,Z0BRD,         &
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)      :: BEXP,DKSAT,DWSAT,F1,QUARTZ,SMCDRY,          &
+./phys/module_LS_NOAHLSM.F90:      REAL,    INTENT(OUT)   :: SLOPE,CZIL,SBETA,FXEXP,                     &
+./phys/module_LS_NOAHLSM.F90:      REAL,DIMENSION(1:NSOIL),INTENT(OUT):: RTDIS                           
+./phys/module_LS_NOAHLSM.F90:      PTU = 0.    ! (not used yet) to satisify intent(out)
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)     :: SSOIL
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)                      :: DRIP, RUNOFF1, RUNOFF2, RUNOFF3
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)    :: SNCOVR
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)     :: DEW,DRIP,EC,EDIR, ETNS, ESNOW,ETT,       &
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL),INTENT(OUT)    :: ET
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)       :: Z0                                              
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)         :: RUNOFF1, RUNOFF2
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT)  :: RHSTT
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT)  :: AI, BI, CI
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)         :: RUNOFF3
+./phys/module_LS_NOAHLSM.F90:      REAL, DIMENSION(1:NSOIL), INTENT(OUT)    :: SH2OOUT
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)         :: TBND1
+./phys/module_LS_NOAHLSM.F90:      REAL, INTENT(OUT)         :: DF
+./phys/module_mp_radar.F90:      DOUBLE PRECISION, INTENT(out):: C_back
+./phys/module_mp_radar.F90:      INTEGER, INTENT(out):: cumulerror
+./phys/module_mp_radar.F90:      INTEGER, INTENT(out):: error
+./phys/module_mp_radar.F90:      INTEGER, INTENT(out) :: error
+./phys/module_CU_SASHUR.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT):: &
+./phys/module_CU_SASHUR.F90:      REAL,DIMENSION(IMS:IME,JMS:JME,1:lm),INTENT(OUT):: &
+./phys/module_SF_GFDL.F90:      REAL, DIMENSION(ims:ime, jms:jme), INTENT(OUT) ::                 &
+./phys/module_SF_GFDL.F90:    REAL, INTENT(OUT):: znotm
+./phys/module_SF_GFDL.F90:    REAL, INTENT(OUT):: znotm 
+./phys/module_SF_GFDL.F90:    REAL, INTENT(OUT):: znott
+./phys/module_SF_GFDL.F90:    REAL, INTENT(OUT):: znott 
+./phys/module_SF_GFDL.F90:    REAL, INTENT(OUT):: znott
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: TS     ! surface potential temperature    [K]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: QS     ! surface humidity                 [K]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: SH     ! sensible heat flux               [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: LH     ! latent heat flux                 [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: LH_KINEMATIC ! latent heat, kinetic     [kg/m/m/s]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: SW     ! upward short wave radiation flux [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: ALB    ! time-varying albedo            [fraction]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: LW     ! upward long wave radiation flux  [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: G      ! heat flux into the ground        [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: RN     ! net radition                     [W/m/m]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: PSIM   ! similality stability shear function for momentum
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: PSIH   ! similality stability shear function for heat
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: GZ1OZ0   
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: U10    ! u at 10m                         [m/s]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: V10    ! u at 10m                         [m/s]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: TH2    ! potential temperature at 2 m     [K]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: Q2     ! humidity at 2 m                  [-]
+./phys/module_SF_URBAN.F90:!m   REAL, INTENT(OUT) :: CHS,CHS2 ! CH*U at za and 2 m             [m/s]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT) :: UST    ! friction velocity                [m/s]
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT)   :: ALPHA, CD
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT)   :: ALPHA, CD
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT)   :: ALPHA, CD
+./phys/module_SF_URBAN.F90:   REAL, INTENT(OUT)    :: ZR,Z0C,Z0HC,ZDC,SVF,R,RW,HGT,CDS,AS,AH,       &
+./phys/module_SF_URBAN.F90:   INTEGER, INTENT(OUT) :: BOUNDR,BOUNDB,BOUNDG,CH_SCHEME,TS_SCHEME
+./phys/module_SF_URBAN.F90:     REAL, INTENT(OUT) :: TS
+./phys/module_SF_URBAN.F90:     REAL, INTENT(OUT) :: TS
+./phys/module_mp_thompson.F90:      REAL, DIMENSION(kts:kte), INTENT(OUT):: vtcik,vtcsk,vtcgk,&
+./phys/module_mp_thompson.F90:      REAL, DIMENSION(ims:ime,jms:jme,kms:kme), INTENT(OUT):: cldfra
+./phys/module_CU_BMJ.F90:      real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out):: &
+./phys/module_CU_BMJ.F90:      real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./phys/module_CU_BMJ.F90:      integer(kind=kint),intent(out):: &
+./phys/module_CU_BMJ.F90:      real(kind=kfpt),intent(out):: &
+./phys/module_CU_BMJ.F90:!      real(kind=kfpt),intent(out) :: acutim,avcnvc
+./phys/module_CU_BMJ.F90:      real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out):: &
+./phys/module_CU_BMJ.F90:      real(kind=kfpt),dimension(jtbx),intent(out):: &
+./phys/module_MP_GFS.F90:      REAL, INTENT(OUT),    DIMENSION(ims:ime,jms:jme):: SR
+./phys/module_BL_MYJPBL.F90:      INTEGER(KIND=KINT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      INTEGER(KIND=KINT),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(1:LM-1),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(1:LM-1),INTENT(OUT):: &
+./phys/module_BL_MYJPBL.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT):: &
+./phys/module_RA_GFDL.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: CZEN
+./phys/module_RA_GFDL.F90:      INTEGER,INTENT(OUT) :: JULDAY,JULYR
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT) :: JULIAN,XTIME
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(ims:ime, jms:jme):: CZMEAN             &
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT), DIMENSION(ims:ime, jms:jme):: GLW,GSW,CZMEAN   &
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT),DIMENSION(ims:ime,jms:jme,kts:kte) :: CLDFRA
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT)       :: HOUR,DAYI
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(IMS:IME,JMS:JME) :: CZEN
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT), DIMENSION(37,kte):: DDUO3N,DDO3N2,DDO3N3,DDO3N4
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT),DIMENSION(its:ite,kts:kte+1,kts:kte+1) :: CLDFAC
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(its:ite,kts:kte)   :: HEATRA
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(its:ite)           :: GRNFLX,TOPFLX
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(its:ite,kts:kte)  :: HEATRA
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(its:ite)          :: GRNFLX,TOPFLX
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(its:ite,kts:kte+1) :: G1,G4,G3,EMISS
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(its:ite,kts:kte)   :: G2,G5
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(its:ite,kts:kte)  :: CTSO3
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(its:ite,kts:kte)  :: EXCTS
+./phys/module_RA_GFDL.F90:      REAL,INTENT(OUT),DIMENSION(its:ite)          :: GXCTS
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT),DIMENSION(its:ite,kts:kte+1) :: EMISSB
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT), DIMENSION(its:ite,kts:kte*2+1) :: EMV
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT),DIMENSION(its:ite,kts:kte+1) ::     &
+./phys/module_RA_GFDL.F90:      REAL, INTENT(OUT),DIMENSION(its:ite) :: GDFVB,GDFVD,GDFNB,GDFND
+./phys/module_RA_GFDL.F90:      REAL,    INTENT(OUT), DIMENSION(its:ite):: FLWUPS
+./phys/module_RA_GFDL.F90:       REAL, INTENT(OUT), DIMENSION(its:ite):: FSWUP,FSWUPS,FSWDN, &
+./phys/module_RA_GFDL.F90:!     REAL   , INTENT(OUT) :: R1
+./phys/module_RA_GFDL.F90:    INTEGER, INTENT(OUT) :: Jmonth,Jday
+./phys/module_MP_FER_HIRES.F90:      REAL, INTENT(OUT),    DIMENSION(ims:ime, jms:jme,kms:kme) ::      & !jul28
+./phys/module_MP_FER_HIRES.F90:      REAL, INTENT(OUT),    DIMENSION(ims:ime,jms:jme):: SR
+./phys/module_MP_FER_HIRES.F90:      real,DIMENSION(ims:ime, jms:jme, kms:kme),INTENT(OUT) ::          &
+./phys/module_CU_SAS.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT):: &
+./phys/module_CU_SAS.F90:      REAL,DIMENSION(IMS:IME,JMS:JME,1:lm),INTENT(OUT):: &
+./phys/module_MP_ETANEW.F90:      REAL, INTENT(OUT),    DIMENSION(ims:ime,jms:jme):: SR
+./phys/module_MP_ETANEW.F90:      real,DIMENSION(ims:ime, jms:jme, kms:kme),INTENT(OUT) ::          &
+./phys/module_LS_LISS.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) ::              TBOT
+./phys/module_LS_LISS.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) ::           CHKLOWQ, &
+./phys/module_LS_LISS.F90:real,dimension(ims:ime,jms:jme),intent(out):: &
+./phys/module_LS_LISS.F90:real(kind=kfpt),intent(out):: &
+./phys/module_LS_LISS.F90:real(kind=kfpt),intent(out):: &
+./phys/module_LS_LISS.F90:real(kind=kfpt),intent(out):: &
+./phys/module_BL_GFSPBL.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: MIXHT,PBLH,QSFC
+./phys/module_BL_GFSPBL.F90:      INTEGER,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: PBLK
+./phys/module_BL_GFSPBL.F90:     &    ,INTENT(OUT) ::                                              &
+./nmm/module_GET_CONFIG.F90:      INTEGER,             INTENT(OUT)   :: INPES,JNPES                 &
+./nmm/module_GET_CONFIG.F90:      LOGICAL,             INTENT(OUT)   :: GFS,LMPRATE
+./nmm/module_GET_CONFIG.F90:      CHARACTER(LEN=*),    INTENT(OUT)   :: MICROPHYSICS, SHORTWAVE     &
+./nmm/module_GET_CONFIG.F90:      INTEGER,             INTENT(OUT)   :: RC_CONF                       !<-- Final return code
+./nmm/module_GET_CONFIG.F90:      INTEGER             ,INTENT(OUT)   :: RC_CONF                       !<-- Final return code
+./nmm/module_H_TO_V.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: ARRAY_V
+./nmm/module_H_TO_V.F90:      REAL(KIND=KFPT),DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT) ::    &
+./nmm/module_FLTBNDS.F90:integer(kind=kint),dimension(jds:jde),intent(out) :: &
+./nmm/module_FLTBNDS.F90:integer(kind=kint),dimension(1:15),intent(out) :: &
+./nmm/module_FLTBNDS.F90:real(kind=kfpt),dimension(ids:ide,jds:jde),intent(out) :: &
+./nmm/module_FLTBNDS.F90:real(kind=kfpt),dimension(1:2*(ide-3)),intent(out) :: &
+./nmm/module_FLTBNDS.F90:integer(kind=kint),dimension(jms:jme),intent(out) :: &
+./nmm/module_FLTBNDS.F90:integer(kind=kint),intent(out):: &
+./nmm/module_FLTBNDS.F90:integer(kind=kint),dimension(1:3),intent(out):: &
+./nmm/module_FLTBNDS.F90:real(kind=kfpt),intent(out):: &
+./nmm/module_FLTBNDS.F90:logical(kind=klog),intent(out) :: runbc
+./nmm/module_DIGITAL_FILTER_NMM.F90:      integer(kind=kint), intent(out) :: kstep,nstep
+./nmm/module_DIGITAL_FILTER_NMM.F90:      integer(kind=kint), intent(out) :: tot_rank_2d                    &
+./nmm/module_DIGITAL_FILTER_NMM.F90:      real(kind=kfpt), intent(out) :: totalsum
+./nmm/module_DIGITAL_FILTER_NMM.F90:      INTEGER(kind=KINT),INTENT(OUT) :: KSTEP,NSTEP
+./nmm/module_DIGITAL_FILTER_NMM.F90:      INTEGER(kind=KINT),INTENT(OUT) :: TOT_RANK_2D_PHYS                &
+./nmm/module_DIGITAL_FILTER_NMM.F90:      REAL, DIMENSION(0:2*M), INTENT(OUT)    ::  window
+./nmm/module_NMM_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG
+./nmm/module_NMM_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT
+./nmm/module_NMM_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./nmm/module_NMM_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE
+./nmm/module_MICROPHYSICS.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: SR
+./nmm/module_RADIATION.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: CFRACH,CFRACL      &
+./nmm/module_RADIATION.F90:      REAL,DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT) :: CLDFRA
+./nmm/module_VARS.F90:        INTEGER, INTENT(OUT) :: NUM_VARS
+./nmm/module_VARS.F90:        INTEGER, INTENT(OUT) :: RC
+./nmm/module_VARS.F90:      INTEGER, INTENT(OUT)                :: INDX
+./nmm/module_PRECIP_ADJUST.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: DDATA, LSPA
+./nmm/module_PRECIP_ADJUST.F90:      REAL,DIMENSION(IMS:IME,JMS:JME,1:PCPHR),INTENT(OUT) :: PPTDAT
+./nmm/module_PRECIP_ADJUST.F90:      REAL,DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: DDATA, LSPA
+./nmm/module_TIMESERIES.F90:      integer, intent(out) :: ierr
+./nmm/module_TIMESERIES.F90:      integer, intent(out) :: ierr
+./nmm/module_TIMESERIES.F90:      real, intent(out) :: tlmd, tphd
+./nmm/module_TIMESERIES.F90:      integer, intent(out) :: inrs,jnrs
+./nmm/module_TIMESERIES.F90:      logical, intent(out) :: inside
+./nmm/module_TIMESERIES.F90:      integer, intent(out) :: iyear, month, iday,idaywk,idayyr
+./nmm/module_SOLVER_INTERNAL_STATE.F90:      INTEGER, INTENT(OUT) :: RC
+./nmm/module_TURBULENCE.F90:      INTEGER(kind=KINT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: LPBL
+./nmm/module_TURBULENCE.F90:      REAL(kind=KFPT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: GRNFLX,QWBS,RADOT  &
+./nmm/module_TURBULENCE.F90:      REAL(kind=KFPT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: AKHS_OUT,AKMS_OUT  &
+./nmm/module_TURBULENCE.F90:      REAL(kind=KFPT),DIMENSION(IMS:IME,JMS:JME,1:LM),INTENT(OUT) :: DUDT,DVDT &
+./nmm/module_DM_PARALLEL.F90:      integer(kind=kint),intent(out) ::                                 &
+./nmm/module_DM_PARALLEL.F90:      real(kind=kfpt),dimension(ims:ime,jms:jme,lls:lle),intent(out) :: &
+./nmm/module_DM_PARALLEL.F90:      integer(kind=kint),dimension(ims:ime,jms:jme),intent(out) :: &
+./nmm/module_DM_PARALLEL.F90:      real(kind=kfpt),dimension(lls:lle,ims:ime,jms:jme),intent(out) :: &
+./nmm/module_DM_PARALLEL.F90:real(kind=kfpt),dimension(ids:ide,jstart_fft:jend_fft,1:lm_fft),intent(out) :: &
+./nmm/module_DM_PARALLEL.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,lm),intent(out) :: &
+./nmm/module_WRITE_ROUTINES.F90:      INTEGER(kind=KINT),DIMENSION(1:LENGTH_INT_DATA),INTENT(OUT) ::    &
+./nmm/module_WRITE_ROUTINES.F90:      REAL(kind=KFPT),DIMENSION(1:LENGTH_REAL_DATA),INTENT(OUT) ::      &
+./nmm/module_WRITE_ROUTINES.F90:      LOGICAL(kind=KLOG),DIMENSION(1:LENGTH_LOG_DATA),INTENT(OUT) ::    &
+./nmm/module_WRITE_ROUTINES.F90:      INTEGER,INTENT(OUT) :: DIM1,DIM2,NFRAME
+./nmm/module_WRITE_ROUTINES.F90:      LOGICAL,INTENT(OUT) :: GLOBAL
+./nmm/module_WRITE_ROUTINES.F90:      INTEGER,INTENT(OUT) :: DIM1,DIM2,NFRAME         
+./nmm/module_WRITE_ROUTINES.F90:      LOGICAL,INTENT(OUT) :: GLOBAL
+./nmm/module_GET_CONFIG_WRITE.F90:      INTEGER                   ,INTENT(OUT)    :: RC_CONF                !<-- Final return code
+./nmm/module_REDUCTION.F90:    double precision,intent(out) :: dout
+./nmm/module_REDUCTION.F90:    double precision,intent(out) :: dout
+./nmm/module_REDUCTION.F90:    real, intent(out) :: rout
+./nmm/module_REDUCTION.F90:    real, intent(out) :: rfnd
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: iloc,jloc,kloc,rankloc
+./nmm/module_REDUCTION.F90:    real, intent(out) :: rfnd
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: iloc,jloc,rankloc
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: ifnd
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: iloc,jloc,kloc,rankloc
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: ifnd
+./nmm/module_REDUCTION.F90:    integer, intent(out) :: iloc,jloc,rankloc
+./nmm/module_REDUCTION.F90:    double precision, intent(out) :: dfnd
+./nmm/module_CONTROL.F90:integer(kind=kint),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),dimension(jds:jde),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out) :: &
+./nmm/module_CONTROL.F90:logical(kind=klog),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),dimension(jds:jde),intent(out) :: &
+./nmm/module_CONTROL.F90:real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out) :: &
+./nmm/module_CONTROL.F90:      real,dimension(jtb),intent(out) :: ynew
+./nmm/module_INIT_READ_BIN.F90:integer(kind=kint),intent(out) :: &
+./nmm/module_INIT_READ_BIN.F90:      INTEGER,INTENT(OUT) :: RC
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out) :: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out) :: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm-1),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out) :: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,lm),intent(out) :: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./nmm/module_DYNAMICS_ROUTINES.F90:real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                        !<-- Return code for register
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_INIT                                       !<-- Return code for Initialize step
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_RUN                                        !<-- Return code for the Run step
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINALIZE                                   !<-- Return code for the Finalize step
+./nmm/module_DOMAIN_GRID_COMP.F90:      TYPE(ESMF_Grid),INTENT(OUT) :: GRID_DOMAIN                           !<-- The ESMF Grid for the NMM integration grid
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FILT                                       !<-- Return code for this step
+./nmm/module_DOMAIN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_RUN2                                       !<-- Return code for the Run step 
+./nmm/module_DOMAIN_GRID_COMP.F90:                                                ,INTENT(OUT) :: HDACX   &  !<-- Lateral diffusion coefficients
+./nmm/module_DOMAIN_GRID_COMP.F90:                                       ,INTENT(OUT),OPTIONAL :: F
+./nmm/module_DOMAIN_GRID_COMP.F90:      REAL(kind=KFPT),INTENT(OUT) :: RLATX                              &  !<-- Rotated latitude (radians)
+./nmm/module_DOMAIN_GRID_COMP.F90:      LOGICAL(kind=KLOG),INTENT(OUT) :: FOUND                              !<-- Was a valid point found by the search?
+./nmm/module_GWD.F90:      REAL, INTENT(OUT) :: CLEFF
+./nmm/module_GWD.F90:      REAL, INTENT(OUT), DIMENSION (ims:ime,jms:jme) :: CROT,SROT
+./nmm/module_GWD.F90:      REAL, INTENT(OUT), DIMENSION (ims:ime, jms:jme, 1:lm) ::       &
+./nmm/module_WRITE_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_WRT                                        ! Final return code
+./nmm/module_WRITE_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_INIT
+./nmm/module_WRITE_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: RC_RUN 
+./nmm/module_WRITE_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RCFINAL
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),INTENT(OUT) :: NUM_GENS                           !<-- The # of generations of domains
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(:,:),POINTER,INTENT(OUT) :: ID_CHILDREN &  !<-- Domain IDs of all domains' children
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(:),POINTER,INTENT(OUT) :: ID_DOMAINS      &  !<-- Array of the domain IDs
+./nmm/module_NESTING.F90:      TYPE(COMMS_FAMILY),DIMENSION(:),POINTER,INTENT(OUT) :: COMMS_DOMAIN  !<-- Intracommunicators between parent and child domains
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),DIMENSION(1:IM_CHILD,1:JM_CHILD,1:NLEV),INTENT(OUT) :: &  !<-- Data from parent tasks interpolated to child grid
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(1:IM_CHILD,1:JM_CHILD),INTENT(OUT) :: &  !<-- Data from parent tasks interpolated to child grid
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),DIMENSION(1:IM_CHILD,1:JM_CHILD,1:NLEV),INTENT(OUT) :: &
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(1:IM_CHILD,1:JM_CHILD),INTENT(OUT) :: &
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: RLATD                              &  !<-- Latitude (deg, positive north) of point, unrotated system
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: RLAT                               &  !<-- Latitude (rad, positive north) of point on projection
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: RLAT,RLON                             !<-- Lat/lon (rad) of point on the projection
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: DISTANCE                              !<-- Distance (radians) between points 1 and 2
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: TPH0D_DOMAIN                       &  !<-- Latitude (deg) of domain's center
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: DPHD_MINE                          &  !<-- Delta phi of this nested domain (degrees)
+./nmm/module_NESTING.F90:      LOGICAL(kind=KLOG),DIMENSION(IDS:IDE,JDS:JDE),INTENT(OUT) ::      &
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),INTENT(OUT) :: LM                                 !<-- # of model layers
+./nmm/module_NESTING.F90:      TYPE(INTERIOR_DATA_FROM_PARENT),DIMENSION(1:4),INTENT(OUT) ::     &
+./nmm/module_NESTING.F90:      TYPE(BNDS_2D),DIMENSION(1:KOUNT_RATIOS_MN),INTENT(OUT) ::         &
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),INTENT(OUT) :: REAL_I                             &  !<-- Real I on uppermost parent grid for GLAT,GLON
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(1:4),INTENT(OUT) :: NPTS_UPDATE_PARENT  !<-- # of points to update on each parent task subdomain
+./nmm/module_NESTING.F90:      INTEGER(kind=KINT),DIMENSION(1:4),INTENT(OUT) :: &
+./nmm/module_NESTING.F90:      TYPE(INTEGER_DATA),DIMENSION(1:4),INTENT(OUT) :: I_2WAY_UPDATE    &  !<-- I indices of parent points to update 
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),DIMENSION(1:NPTS_UPDATE_PARENT,1:2),INTENT(OUT) :: &
+./nmm/module_NESTING.F90:      REAL(kind=KFPT),DIMENSION(1:NPTS_UPDATE_PARENT*NVERT),INTENT(OUT) :: & 
+./nmm/module_NESTING.F90:      REAL,DIMENSION(1:NNEW),INTENT(OUT) :: YNEW
+./nmm/module_NESTING.F90:      REAL(kind=KDBL),INTENT(OUT) :: A                                     !<-- Constant in the hyperbola Y=A/(X+A)
+./nmm/module_QUASIPOST.F90:    real, intent(out) :: Pmsl(ims:ime,jms:jme)
+./nmm/module_CONVECTION.F90:      real(kind=kfpt),dimension(ims:ime,jms:jme,1:lm),intent(out):: &
+./nmm/module_TRACKER.F90:    integer, intent(out) :: iguess,jguess
+./nmm/module_TRACKER.F90:    real, intent(out) :: longuess,latguess
+./nmm/module_TRACKER.F90:    integer, intent(out) :: iloc,jloc,ierr
+./nmm/module_TRACKER.F90:    real, intent(out), optional :: latnear, lonnear
+./nmm/module_TRACKER.F90:    real, intent(out) :: min_mslp,max_wind,rmw
+./nmm/module_TRACKER.F90:    real, intent(out) :: motion_grideast,motion_gridnorth
+./nmm/module_TRACKER.F90:    real, intent(out) :: smooth(ims:ime,jms:jme)
+./nmm/module_TRACKER.F90:    real, intent(out) :: xdist
+./nmm/module_TRACKER.F90:    integer, intent(out) :: ierr
+./nmm/module_NMM_INTEGRATE.F90:      LOGICAL(kind=KLOG),INTENT(OUT),OPTIONAL :: GENERATION_FINISHED       !<-- Is a generation through with its integration?
+./nmm/module_NMM_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG
+./nmm/module_NMM_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_INIT                                       !<-- Error return code
+./nmm/module_NMM_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_RUN                                        !<-- Error return code
+./nmm/module_NMM_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINALIZE                                   !<-- Error return code
+./nmm/module_NMM_GRID_COMP.F90:      TYPE(ESMF_State),INTENT(OUT)   :: IMP_STATE_DOMAIN                   !<-- The nests' DOMAIN import state
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(1:IM,1:JM),INTENT(OUT)      :: H_VALUE                !<-- Output values on mass (H) points
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(:,:),POINTER   ,INTENT(OUT),optional :: V_SAVE        !<-- Original values on boundary V points
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(1:IM,1:JM,1:LM),INTENT(OUT) :: H_VALUE                !<-- Output values on mass (H) points
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(:,:),POINTER   ,INTENT(OUT),optional :: V_SAVE        !<-- Original values on boundary V points
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(1:IM,1:JM),INTENT(OUT)      :: V_VALUE                !<-- Output values on mass (V) points
+./nmm/module_BGRID_INTERP.F90:      REAL,DIMENSION(1:IM,1:JM,1:LM),INTENT(OUT) :: V_VALUE                !<-- Output values on mass (V) points
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: RC_NEST_REG                                   !<-- Return code for register
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINAL
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      REAL(kind=KFPT),DIMENSION(IMS:IME,JMS:JME),INTENT(OUT) :: PD_V       !<-- Parent PD (Pa) (column mass in sigma domain) on V points
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:                                          ,INTENT(OUT),OPTIONAL :: PDB     !<-- PD for segment of the child boundary
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: I_SW_PARENT_NEW                 &  !<-- Parent I of nest domain's SW corner; new position
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      LOGICAL(kind=KLOG),INTENT(OUT) :: I_WANT_TO_MOVE                     !<-- Does nest want to move to a new position?
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      LOGICAL(kind=KLOG),INTENT(OUT) :: I_HOLD_THIS_POINT                  !<-- This task subdomain holds the point?
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      REAL(kind=KFPT),DIMENSION(1:NNEW),INTENT(OUT) :: YNEW
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      integer(kind=kint),intent(out) :: i_sw_parent_new                 &
+./nmm/module_PARENT_CHILD_CPL_COMP.F90:      logical(kind=klog),intent(out) :: i_want_to_move
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: RC_REG                            !<-- Return code for Solver register
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_INIT
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_RUN
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_FINALIZE
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),DIMENSION(1:3),INTENT(OUT) :: N_BC_3D_H           !<-- Hold order of domain #1's BC vbls from boco files
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: NVARS_BC_2D_H                   &  !<-- # of 2-D,3-D,4-D H-pt variables
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: NVARS_BC_2D_V                   &  !<-- # of 2-D,3-D V-pt variables
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: NLEV_H,NLEV_V                      !<-- # of model levels in all H-pt,V-pt variables used
+./nmm/module_SOLVER_GRID_COMP.F90:      TYPE(BC_H_ALL),INTENT(OUT) :: BND_VARS_H                             !<-- Object holding H-pt variable info on domain boundaries
+./nmm/module_SOLVER_GRID_COMP.F90:      TYPE(BC_V_ALL),INTENT(OUT) :: BND_VARS_V                             !<-- Object holding V-pt variable info on domain boundaries
+./nmm/module_SOLVER_GRID_COMP.F90:      REAL(kind=KFPT),DIMENSION(1:NUM_WORDS_BC_SOUTH),INTENT(OUT) ::    &
+./nmm/module_SOLVER_GRID_COMP.F90:      REAL(kind=KFPT),DIMENSION(1:NUM_WORDS_BC_NORTH),INTENT(OUT) ::    &
+./nmm/module_SOLVER_GRID_COMP.F90:      REAL(kind=KFPT),DIMENSION(1:NUM_WORDS_BC_WEST ),INTENT(OUT) ::    &
+./nmm/module_SOLVER_GRID_COMP.F90:      REAL(kind=KFPT),DIMENSION(1:NUM_WORDS_BC_EAST ),INTENT(OUT) ::    &
+./nmm/module_SOLVER_GRID_COMP.F90:      INTEGER(kind=KINT),INTENT(OUT) :: RC
+./nmm/module_INIT_READ_NEMSIO.F90:integer(kind=kint),intent(out) :: &
+./nmm/module_INIT_READ_NEMSIO.F90:        integer,intent(out)     :: recn
+./post/post_gfs.F90:      real,intent(out) :: ASLAT(JMAX)
+./gen/module_GEN_GRID_COMP_stub.F90:      INTEGER,INTENT(OUT) :: RC_REG                                        !<-- Return code for register
+./gen/module_GEN_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Return code for Initialize step
+./gen/module_GEN_GRID_COMP_stub.F90:      INTEGER,            INTENT(OUT)   :: RC_RUN                          !<-- Return code for the Run step
+./gen/module_GEN_GRID_COMP_stub.F90:      INTEGER,            INTENT(OUT)   :: RC_FINAL                        !<-- Return code for the Finalize step
+./gen/module_GEN_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                        !<-- Return code for register
+./gen/module_GEN_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Return code for Initialize step
+./gen/module_GEN_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_RUN                          !<-- Return code for the Run step
+./gen/module_GEN_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_FINAL                        !<-- Return code for the Finalize step
+./module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG                          !<-- Error return code
+./module_ATM_GRID_COMP.F90:    integer, intent(out)  :: rc
+./module_ATM_GRID_COMP.F90:    integer, intent(out) :: rc
+./module_ATM_GRID_COMP.F90:    integer, intent(out) :: rc
+./module_ATM_GRID_COMP.F90:      integer, intent(out), optional  :: rc
+./module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Error return code
+./module_ATM_GRID_COMP.F90:    integer, intent(out) :: rc
+./module_ATM_GRID_COMP.F90:      integer, intent(out), optional  :: rc
+./module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN                          !<-- Error return code
+./module_ATM_GRID_COMP.F90:      integer, intent(out)  :: rc
+./module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE                     !<-- Error return code
+./fim/FIMsrc/post/pop/postdata.F90:    integer, intent(out) :: retcode
+./fim/FIMsrc/post/pop/post.F90:    integer, intent(out) :: retcode         ! return code to caller
+./fim/FIMsrc/post/pop/post.F90:    integer, intent(out) :: retcode         ! return code to caller
+./fim/FIMsrc/post/pop/post.F90:    integer, intent(out) :: mx, my
+./fim/FIMsrc/post/pop/post.F90:  integer, intent(out) :: retcode
+./fim/FIMsrc/post/pop/post.F90:  integer, intent(out)       :: retcode ! return code to caller
+./fim/FIMsrc/post/pop/post.F90:  integer, intent(out) :: retcode         ! return code to send caller
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       ,intent(out)     :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*) ,intent(out)    :: Name
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: TimeIndex
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       ,intent(out) :: NDim
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: i1,i2,j1,j2,k1,k2
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                    ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character(80),dimension(NVarDims),intent(out)   :: ROVector
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                          ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*) ,intent(out) :: MemOrd
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*) ,intent(out) :: MemOrd
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer  ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                    ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*3       ,intent(out)   :: MemO
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       , INTENT(OUT)  :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       , INTENT(OUT)  :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer, intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)     :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)     :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)     :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)     :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       , intent(out) :: DataHandle
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer       , intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer              ,intent(out) :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character *(*), INTENT(OUT)   :: Result
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA real,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCOunt
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA integer,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA real*8,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA logical,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA character*(*),intent(out) :: Data
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     real   ,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     real   ,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     real*8 ,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     real*8 ,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     integer,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     integer,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     logical,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA     logical,intent(out) :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_OUTCOUNT integer,intent(out) :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA   character*(*) ,intent(out) :: Data
+./fim/FIMsrc/post/wrfio/wrf_io.F90:#define TYPE_DATA character*(*) ,intent(out)    :: Data
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  real                  ,intent(out)    :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  real*8                ,intent(out)    :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  logical               ,intent(out)    :: Data(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: OutCount
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: Data
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                       ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                       ,intent(out)   :: Field(*)
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer                       ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: FileStatus
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: FileName
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: FileStatus
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: DateStr
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: DateStr
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: VarName
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: NDim
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character*(*)         ,intent(out)    :: MemoryOrder
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer ,dimension(*) ,intent(out)    :: DomainStart, DomainEnd
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: WrfType
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer               ,intent(out)    :: Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character *(*), intent(out) :: ReturnString
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer, intent(out) ::Status
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  character *(*), intent(out) :: ReturnString
+./fim/FIMsrc/post/wrfio/wrf_io.F90:  integer, intent(out) ::Status
+./fim/FIMsrc/post/wrfio/field_routines.F90:  integer                     ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/field_routines.F90:  integer                     ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/field_routines.F90:  integer                     ,intent(out)   :: Status
+./fim/FIMsrc/post/wrfio/field_routines.F90:  integer                                         ,intent(out)   :: Status
+./fim/FIMsrc/utils/read_queue_namelist.F90:    integer,intent(OUT) :: nprocs
+./fim/FIMsrc/utils/read_queue_namelist.F90:    character(8),intent(OUT) :: QueueTime
+./fim/FIMsrc/utils/read_queue_namelist.F90:    integer,intent(OUT) :: glvlout
+./fim/FIMsrc/utils/read_queue_namelist.F90:    integer,intent(OUT) :: nipout
+./fim/FIMsrc/utils/read_queue_namelist.F90:    integer,intent(OUT) :: SubdivNumout(20)
+./fim/FIMsrc/utils/read_queue_namelist.F90:    integer,intent(OUT) :: nvlout
+./fim/FIMsrc/utils/read_queue_namelist.F90:    REAL,intent(OUT) :: dtout
+./fim/FIMsrc/utils/read_queue_namelist.F90:    logical,intent(OUT) :: chem_on
+./fim/FIMsrc/utils/read_queue_namelist.F90:    logical,intent(OUT) :: wrfcu_on
+./fim/FIMsrc/utils/read_queue_namelist.F90:    logical,intent(OUT) :: wrfmp_on
+./fim/FIMsrc/utils/read_queue_namelist.F90:    logical,intent(OUT) :: wrf_on
+./fim/FIMsrc/utils/reduce.F90:integer,intent(OUT) :: inv_perm(nip)
+./fim/FIMsrc/utils/wtinfo.F90:    integer, intent(out) :: cpn_out             ! number of cores per node
+./fim/FIMsrc/utils/wtinfo.F90:    integer, intent(out) :: mwtpn_out           ! max write tasks per node
+./fim/FIMsrc/utils/wtinfo.F90:    integer, intent(out) :: num_write_tasks_out ! number of write tasks
+./fim/FIMsrc/utils/wtinfo.F90:    logical, intent(out) :: abort_on_bad_task_distrib_out
+./fim/FIMsrc/utils/wtinfo.F90:    logical, intent(out) :: debugmsg_on_out     ! write-task debug msg control
+./fim/FIMsrc/utils/wtinfo.F90:    logical, intent(out) :: root_own_node_out   ! rank 0 has node to himself?
+./fim/FIMsrc/utils/extract_atcf.F90:TYPE (ens_fcst), INTENT(OUT), DIMENSION(29)  :: hurricane_ens_fcst
+./fim/FIMsrc/utils/extract_atcf.F90:LOGICAL, INTENT(OUT)     :: iex ! did the forecast files exist?
+./fim/FIMsrc/utils/extract_atcf.F90:CHARACTER*120, INTENT(OUT) :: infile
+./fim/FIMsrc/utils/extract_atcf.F90:TYPE (ens_fcst), INTENT(OUT) :: eforecast
+./fim/FIMsrc/w3/MovChar.F90:character*1,intent(OUT) :: kbuf(LEN)
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_r_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer(sigio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    integer,intent(out):: iret
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    real,intent(out),optional:: pd(ix,km),pm(ix,km)
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    real,intent(out),optional:: dpddps(ix,km),dpddt(ix,km)
+./fim/FIMsrc/prep/sigio/sigio_module.F90:    real,intent(out),optional:: dpmdps(ix,km),dpmdt(ix,km)
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    type(sfcio_head),intent(out):: head
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/sfcio/sfcio_module.F90:    integer(sfcio_intkind),intent(out):: iret
+./fim/FIMsrc/prep/ssfc2icos/read_mtnvar.F90:  real,intent(out)::mdrag3d(imax,jmax,mvar)
+./fim/FIMsrc/prep/slint/kd.F90:    INTEGER, INTENT(OUT) :: nn(num_k)
+./fim/FIMsrc/prep/slint/kd.F90:    REAL, INTENT(OUT) :: nbs(3,3), min_dist
+./fim/FIMsrc/prep/slint/slint.F90:    INTEGER, INTENT(OUT) :: co_gc
+./fim/FIMsrc/prep/slint/slint.F90:    INTEGER, INTENT(out) :: nn(3), num
+./fim/FIMsrc/prep/slint/slint.F90:    REAL,INTENT(OUT) :: min_dist
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: us3d(nvl  ,nip)	 ! zonal wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: vs3d(nvl  ,nip)	 ! meridional wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: dp3d(nvl  ,nip)	 ! del p between coord levels (pascals)
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: mp3d(nvl  ,nip)	 ! Montgomery Potential (m^2/s^2)
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: pr3d(nvlp1,nip)	 ! pressure (pascal)
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: ex3d(nvlp1,nip)	 ! exner function
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: ph3d(nvlp1,nip)	 ! geopotential (=gz), m^2/s^2
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real,intent(out) :: tr3d(nvl  ,nip,ntra+ntrb)! 1=pot.temp, 2=water vapor, 3=cloud condensate, 4=ozone
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(npts),         intent(out) :: topo,psg
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(nlevs,npts),   intent(out) :: tempg,u3d,v3d,qg1,qg2,qg3
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(nlevs+1,npts), intent(out) :: pr3d,ph3d
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(npts),         intent(out) :: topo,psg
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(nlevs,npts),   intent(out) :: tempg,u3d,v3d,qg1,qg2,qg3
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, dimension(nlevs+1,npts), intent(out) :: pr3d,ph3d
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:        REAL, intent(out) :: data(nvc,nip)
+./fim/FIMsrc/prep/ss2icos/readenkfanal.F90:  real, intent(out), dimension(nlevs+1,npts) :: z
+./fim/FIMsrc/prep/ss2icos/lay2lay.F90:      real,intent(OUT) :: pnew(kknew+1,nip),thnew (kknew,nip),		&
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: us3d(nvl  ,nip)	 ! zonal wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: vs3d(nvl  ,nip)	 ! meridional wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: dp3d(nvl  ,nip)	 ! del p between coord levels (pascals)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: mp3d(nvl  ,nip)	 ! Montgomery Potential (m^2/s^2)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: pr3d(nvlp1,nip)	 ! pressure (pascal)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: ex3d(nvlp1,nip)	 ! exner function
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: ph3d(nvlp1,nip)	 ! geopotential (=gz), m^2/s^2
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out) :: tr3d(nvl  ,nip,ntra+ntrb)! 1=pot.temp, 2=water vapor, 3=cloud condensate, 4=ozone
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: hs_lev(nip),ps_lev(nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(OUT) :: sigak(head%levs+1),sigbk(head%levs+1)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: z_lev(nvp+1,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: p_lev(nvp+1,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: t_lyr(nvp,nip),qv_lyr(nvp,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: u_lyr(nvp,nip),v_lyr(nvp,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: qc_lyr(nvp,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real(4),intent(OUT) :: o3_lyr(nvp,nip)
+./fim/FIMsrc/prep/ss2icos/ss2icos.F90:  real,intent(out):: pm(ix,km),pd(ix,km)
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: us3d (nvl   ,nip)	   ! zonal wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: vs3d (nvl   ,nip)	   ! meridional wind (m/s), layer
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: dp3d (nvl   ,nip)	   ! layer thickness (pascal)
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: mp3d (nvl   ,nip)	   ! Montgomery Potential (m^2/s^2)
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: pr3d (nvlp1 ,nip)	   ! pressure (pascal)
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: ex3d (nvlp1 ,nip)	   ! exner function
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: ph3d (nvlp1 ,nip)    ! geopotential (=gz), m^2/s^2
+./fim/FIMsrc/prep/ss2icos/fimini.F90:  real,intent(OUT) :: tr3d (nvl   ,nip,ntra+ntrb)! 1=pot.temp
+./fim/FIMsrc/prep/ss2icos/lin2stp.F90:   real,intent(OUT)   :: ynew(knew)
+./fim/FIMsrc/prep/grid/SquareLayout.F90:integer,intent(OUT) :: perm(nip)    ! Mapping from ij order to desired order
+./fim/FIMsrc/prep/grid/SquareLayout.F90:INTEGER,intent(OUT) :: Rstart(nPEs) ! Global starting location for each PE
+./fim/FIMsrc/prep/grid/SquareLayout.F90:INTEGER,intent(OUT) :: Rend  (nPEs) ! Global ending location for each PE
+./fim/FIMsrc/prep/grid/IJblockLayout.F90:integer,intent(OUT) :: perm(nip)           ! Mapping from ij order to desired order
+./fim/FIMsrc/prep/grid/IJblockLayout.F90:INTEGER,intent(OUT) :: Rstart(nPEs)        ! Global starting location for each PE
+./fim/FIMsrc/prep/grid/IJblockLayout.F90:INTEGER,intent(OUT) :: Rend  (nPEs)        ! Global ending location for each PE
+./fim/FIMsrc/prep/grid/perm.F90:INTEGER,intent(OUT) :: Rstart(nPEs)        !Global starting location for each PE
+./fim/FIMsrc/prep/grid/perm.F90:INTEGER,intent(OUT) :: Rend  (nPEs)        !Global ending location for each PE
+./fim/FIMsrc/prep/grid/SquareDecomp.F90:integer,intent(OUT)   :: perm(nip)           ! Mapping from ij order to desired order
+./fim/FIMsrc/prep/grid/SquareDecomp.F90:INTEGER,intent(OUT)   :: Rstart(nPEs)        ! Global starting location for each region
+./fim/FIMsrc/prep/grid/SquareDecomp.F90:INTEGER,intent(OUT)   :: Rend  (nPEs)        ! Global ending location for each region
+./fim/FIMsrc/prep/grid/GridGen.F90:REAL*8, INTENT(OUT) :: p(3)
+./fim/FIMsrc/fim/column_chem/module_gocart_dust_afwa.F90:  REAL*8, INTENT(OUT)   :: bems(imx,jmx,nmx) 
+./fim/FIMsrc/fim/column_chem/module_chem_plumerise_scalar.F90: real,dimension(m1,nspecies), intent(out) :: eburn_out
+./fim/FIMsrc/fim/column_chem/module_chem_plumerise_scalar.F90:  REAL,    INTENT(OUT) :: vctrb(nzz2)
+./fim/FIMsrc/fim/column_chem/module_gocart_settling.F90:  REAL*8, INTENT(OUT)   :: bstl(imx,jmx,nmx)
+./fim/FIMsrc/fim/column_chem/module_vertmx_wrf.F90:      REAL, INTENT(OUT), DIMENSION (kts+1:ktem1) :: a_coeff
+./fim/FIMsrc/fim/column_chem/module_vertmx_wrf.F90:      REAL, INTENT(OUT), DIMENSION (kts:ktem1) :: b_coeff
+./fim/FIMsrc/fim/column_chem/module_gocart_drydep.F90:  REAL*8,    INTENT(OUT) :: dvel(imx,jmx), drydf(imx,jmx)
+./fim/FIMsrc/fim/column_chem/module_gocart_seasalt.F90:  REAL*8,    INTENT(OUT)   :: bems(imx,jmx,nmx)
+./fim/FIMsrc/fim/column_chem/module_chem_prep_fim.F90:      INTENT(OUT) ::                               smois
+./fim/FIMsrc/fim/column_chem/module_gocart_dmsemis.F90:  REAL*8,    INTENT(OUT)   :: bems(imx,jmx,nmx)
+./fim/FIMsrc/fim/column_chem/module_gocart_opt.F90: real, intent(out)   :: tau(its:ite, kts:kte,jts:jte,nband)      !total aerosol optical depth
+./fim/FIMsrc/fim/column_chem/module_gocart_opt.F90: real, intent(out)   :: ssa(its:ite, kts:kte,jts:jte,nband)      !total aerosol single scattering albedo
+./fim/FIMsrc/fim/column_chem/module_gocart_opt.F90: real, intent(out)   :: asy(its:ite, kts:kte,jts:jte,nband)      !total aerosol asymetry factor
+./fim/FIMsrc/fim/column_chem/module_vash_settling.F90:  REAL*8, INTENT(OUT)   :: bstl(imx,jmx,nmx)
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (1:nspint,kts:kte),intent(out) :: swsizeaer,swextaer,swwaer,swgaer,swtauaer
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (1:nlwbands,kts:kte),intent(out) :: lwextaer,lwtauaer
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (1:nspint,kts:kte),intent(out) :: l2,l3,l4,l5,l6,l7
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (1:nspint,kts:kte),intent(out) :: swbscoef  !JCB 2007/02/01
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        REAL, DIMENSION(nbin), INTENT(OUT) :: xnum_sect, xmas_sect
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:!jdf    real, dimension (nspint, kmaxd+1),intent(out) :: sizeaer,extaer,waer,gaer,tauaer
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:!jdf    real, dimension (nspint, kmaxd+1),intent(out) :: l2,l3,l4,l5,l6,l7
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:!jdf    real, dimension (nspint, kmaxd+1),intent(out) :: bscoef  !JCB 2007/02/01
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (nspint, lpar+1),intent(out) :: sizeaer,extaer,waer,gaer,tauaer
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (nspint, lpar+1),intent(out) :: l2,l3,l4,l5,l6,l7
+./fim/FIMsrc/fim/column_chem/module_optical_averaging.F90:        real, dimension (nspint, lpar+1),intent(out) :: bscoef  !JCB 2007/02/01
+./fim/FIMsrc/fim/column_chem/module_gocart_dust.F90:  REAL*8,    INTENT(OUT)   :: bems(imx,jmx,nmx) 
+./fim/FIMsrc/fim/column_chem/module_gocart_chem.F90:  REAL*8, DIMENSION(imx,jmx,lmx), INTENT(OUT)   :: pso2_dms, pmsa_dms
+./fim/FIMsrc/fim/column_chem/module_gocart_chem.F90:  REAL*8, INTENT(OUT) :: pso4_so2(imx,jmx,lmx)
+./fim/FIMsrc/fim/column_chem/module_gocart_chem.F90:  REAL,    INTENT(OUT)   :: sza(imx,jmx), cossza(imx,jmx)
+./fim/FIMsrc/fim/column_chem/module_dry_dep_driver.F90:          INTENT(OUT) ::                                      &
+./fim/FIMsrc/fim/column_chem/module_gocart_aerosols.F90:  REAL*8,    INTENT(OUT)   :: pc2(imx,jmx,lmx,2)
+./fim/FIMsrc/fim/column_chem/module_cu_g3.F90:   REAL,     DIMENSION( ims:ime , kms:kme , jms:jme ) , INTENT(OUT) ::       &
+./fim/FIMsrc/fim/column_chem/module_cu_g3.F90:   REAL,     DIMENSION( ims:ime , kms:kme , jms:jme ) , INTENT(OUT) ::       &
+./fim/FIMsrc/fim/column_chem/module_cu_g3.F90:   REAL,     DIMENSION( ims:ime , kms:kme , jms:jme ) , INTENT(OUT) ::       &
+./fim/FIMsrc/fim/column_chem/module_cu_g3.F90:   REAL,     DIMENSION( ims:ime , jms:jme ) , INTENT(OUT) ::        &
+./fim/FIMsrc/fim/column_chem/module_cu_g3.F90:         , intent(out) ::                                                   &
+./fim/FIMsrc/fim/framework/nems/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./fim/FIMsrc/fim/framework/nems/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./fim/FIMsrc/fim/framework/nems/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./fim/FIMsrc/fim/framework/nems/module_ERR_MSG.F90:      integer, intent(out)          :: rc
+./fim/FIMsrc/fim/framework/nems/module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_ATM_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE                     !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_EARTH_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_EARTH_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_EARTH_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_EARTH_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE                     !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_DYNAMICS_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                       !<-- Return code for Dyn register
+./fim/FIMsrc/fim/framework/nems/module_DYNAMICS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_INIT
+./fim/FIMsrc/fim/framework/nems/module_DYNAMICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/FIMsrc/fim/framework/nems/module_DYNAMICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RCFINAL
+./fim/FIMsrc/fim/framework/nems/module_DYN_PHY_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: IRC_REG               ! Return code for register
+./fim/FIMsrc/fim/framework/nems/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/FIMsrc/fim/framework/nems/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/FIMsrc/fim/framework/nems/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/FIMsrc/fim/framework/nems/module_NEMS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_NEMS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                         !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_NEMS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN                          !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_NEMS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE                     !<-- Error return code
+./fim/FIMsrc/fim/framework/nems/module_PHYSICS_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                       !<-- Return code for Register
+./fim/FIMsrc/fim/framework/nems/module_PHYSICS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_INIT
+./fim/FIMsrc/fim/framework/nems/module_PHYSICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/FIMsrc/fim/framework/nems/module_PHYSICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINAL
+./fim/FIMsrc/fim/framework/nems/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG
+./fim/FIMsrc/fim/framework/nems/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT
+./fim/FIMsrc/fim/framework/nems/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/FIMsrc/fim/framework/nems/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE
+./fim/FIMsrc/fim/column/funcphys_v.F90:    real(krealfp),intent(out):: tma,qma
+./fim/FIMsrc/fim/column/funcphys_v.F90:    real(krealfp),intent(out):: tma,qma
+./fim/FIMsrc/fim/column/funcphys_v.F90:    real(krealfp),intent(out):: tma,qma
+./fim/FIMsrc/fim/column/funcphys_v.F90:    real(krealfp),intent(out):: tma,qma
+./fim/FIMsrc/fim/horizontal/PhysicsGetIpnItsMype.F90:integer,intent(out):: ipnGlobal,itsOut,mype
+./fim/FIMsrc/fim/horizontal/PhysicsGetIpnItsMype.F90:logical,intent(out):: DiagPrint
+./fim/FIMsrc/fim/horizontal/cpl_init.F90:  real(kind=kind_rad) , intent(out) :: gfs_lon(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_init.F90:  real(kind=kind_rad) , intent(out) :: gfs_lat(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_ps(:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_dp(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_p(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_u(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_v(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_dpdt(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_q(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_oz(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_cld(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:  real(kind=kind_evod) , intent(out) :: gfs_t(:,:)
+./fim/FIMsrc/fim/horizontal/cpl_run.F90:!TBH:  intent(out) *or* intent(inout) ...  
+./fim/FIMsrc/fim/horizontal/cnuity.F90:  ! Initialize these local and INTENT(OUT) arrays so COMPARE_VAR does not get 
+./fim/FIMsrc/fim/horizontal/StartTimer.F90:real*8,intent(out) :: t0
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: u_edg   (nvl,npp,nip)	! west wind on edges
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: v_edg   (nvl,npp,nip)	! south wind on edges
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: dp_edg  (nvl,npp,nip)	! layer thknss on edges
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: lp_edg  (nvl,npp,nip)	! midlyr prs on edges
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: trc_edg (nvl,npp,nip,ntra)	! tracers on edges
+./fim/FIMsrc/fim/horizontal/edgvar.F90:  real   ,intent(OUT)   :: bnll_edg(nvl,npp,nip)	! bernoulli fct on edges
+./fim/FIMsrc/fim/horizontal/hystat.F90:!JR Cannot have intent(out) for ptdcy because this routine only sets half of the array, and Lahey
+./fim/FIMsrc/fim/horizontal/hystat.F90:!JR assigns a "bad sequence of bits" to all intent(out) variables.
+./fim/FIMsrc/fim/horizontal/globsum.F90:    real, intent(out) :: qtrcr(ntra+ntrb)
+./fim/FIMsrc/fim/horizontal/digifilt.F90:real, intent(out), allocatable, dimension(:) :: wts
+./fim/FIMsrc/fim/horizontal/digifilt.F90:integer, intent(out) :: nwts
+./fim/FIMsrc/fim/horizontal/digifilt.F90:      REAL, DIMENSION(0:M), INTENT(OUT)    ::  window
+./fim/FIMsrc/fim/horizontal/digifilt.F90:      real   ,  dimension(0:nmax), intent(out) :: ww
+./fim/FIMsrc/fim/horizontal/op_diag.F90:real   ,intent(OUT) :: rh3d(nvl  ,nip)
+./fim/FIMsrc/fim/horizontal/op_diag.F90:real   ,intent(OUT) :: tk3d(nvl  ,nip)
+./fim/FIMsrc/fim/horizontal/op_diag.F90:real   ,intent(OUT) :: g3p (nvlp ,nip, nvarp)
+./fim/FIMsrc/fim/horizontal/op_diag.F90:real   ,intent(OUT) :: g2d (nip  ,nvar2d)
+./fim/FIMsrc/fim/horizontal/gfs_physics_sfc_flx_set_mod.F90:    integer, intent(out)             :: iret
+./fim/FIMsrc/fim/horizontal/gfs_physics_sfc_flx_set_mod.F90:    integer, intent(out)             :: iret
+./fim/FIMsrc/fim/horizontal/gfs_physics_sfc_flx_set_mod.F90:    integer, intent(out)             :: iret
+./fim/FIMsrc/fim/horizontal/hybgen.F90:  real   ,intent(OUT)    :: sdot(nvlp1,nip)	! sdot*(dp/ds)
+./fim/FIMsrc/fim/horizontal/hybgen.F90:  real,intent(OUT)   :: thnew(knew),pknew(knew+1)
+./fim/FIMsrc/fim/horizontal/hybgen.F90:    real,   intent(OUT) :: fldnew(kk)
+./fim/FIMsrc/fim/horizontal/hybgen.F90:    real,intent(OUT)   :: ynew_r4(knew)
+./fim/FIMsrc/fim/horizontal/hybgen.F90:    real,intent(OUT)   :: ynew_r4(knew)
+./fim/FIMsrc/fim/horizontal/transp3d.F90:  real,intent(OUT)    :: cumufx(nvl,npp,nip)	! time-integrated mass flux
+./fim/FIMsrc/fim/horizontal/transp3d.F90:  real,intent(OUT)    :: dpinit(nvl,    nip)	! dp at start of time integr.
+./fim/FIMsrc/fim/horizontal/GetIpnGlobal.F90:integer,intent(out):: ipnGlobal,mype
+./fim/FIMsrc/fim/horizontal/GetIpnGlobal.F90:logical,intent(out):: DiagPrint
+./fim/FIMsrc/icosio/icosio.F90:    integer,intent(out)::comm_type
+./fim/FIMsrc/icosio/icosio.F90:    integer,intent(out)::comm_framecmd
+./fim/FIMsrc/icosio/icosio.F90:    integer,intent(out)::comm_varmeta
+./fim/module_DYNAMICS_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                       !<-- Return code for Dyn register
+./fim/module_DYNAMICS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_INIT
+./fim/module_DYNAMICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/module_DYNAMICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RCFINAL
+./fim/fim_grid_comp_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG
+./fim/fim_grid_comp_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT
+./fim/fim_grid_comp_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/fim_grid_comp_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE
+./fim/module_DYN_PHY_CPL_COMP.F90:      INTEGER,INTENT(OUT) :: IRC_REG               ! Return code for register
+./fim/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/module_DYN_PHY_CPL_COMP.F90:      INTEGER,           INTENT(OUT)   :: IRC_CPL
+./fim/module_PHYSICS_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                                       !<-- Return code for Register
+./fim/module_PHYSICS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_INIT
+./fim/module_PHYSICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/module_PHYSICS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINAL
+./fim/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG
+./fim/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT
+./fim/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./fim/fim_grid_comp.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE
+./io/module_WRITE_ROUTINES_GFS.F90:      INTEGER,INTENT(OUT) :: DIM1,DIM2,NFRAME
+./io/module_GET_CONFIG_WRITE_GFS.F90:      INTEGER                   ,INTENT(OUT)    :: RC_CONF                !<-- Final return code
+./io/module_WRITE_GRID_COMP_GFS.F90:      INTEGER,INTENT(OUT)               :: RC_WRT                       ! Final return code
+./io/module_WRITE_GRID_COMP_GFS.F90:      INTEGER,INTENT(OUT)               :: RC_INIT
+./io/module_WRITE_GRID_COMP_GFS.F90:      INTEGER,INTENT(OUT)            :: RC_RUN 
+./io/module_WRITE_GRID_COMP_GFS.F90:      INTEGER,INTENT(OUT)              :: RCFINAL
+./share/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./share/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./share/module_ERR_MSG.F90:      integer, intent(out)          :: rcfinal
+./share/module_ERR_MSG.F90:      integer, intent(out)          :: rc
+./share/module_CPLFIELDS.F90:    integer, intent(out), optional              :: rc
+./share/module_CPLFIELDS.F90:    integer, intent(out), optional              :: rc
+./gsm/module_GFS_CORE_SETUP.F90:      type(ESMF_grid),    intent(out)   :: grid_atmos  ! the ESMF grid for the integration attached to
+./gsm/module_GFS_GRID_COMP.F90:      INTEGER,INTENT(OUT) :: RC_REG                       !<-- Return code for register
+./gsm/module_GFS_GRID_COMP.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT                      !<-- Return code for Initialize step
+./gsm/module_GFS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_RUN              !<-- Return code for the Run step
+./gsm/module_GFS_GRID_COMP.F90:      INTEGER,            INTENT(OUT)   :: RC_FINAL                        !<-- Return code for the Finalize step
+./gsm/module_GOCART_ROUTINES.F90:      INTEGER,OPTIONAL,   INTENT(OUT)   :: RC_SETUP                        !<-- Return code for the SETUP step
+./gsm/module_GOCART_ROUTINES.F90:      INTEGER,OPTIONAL,   INTENT(OUT)   :: RC_INIT                         !<-- Return code for the INIT step
+./gsm/module_GOCART_ROUTINES.F90:      INTEGER,INTENT(OUT)      :: RC_LOOP                                  !<-- Return code
+./gsm/module_GFS_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_REG
+./gsm/module_GFS_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_INIT
+./gsm/module_GFS_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_RUN
+./gsm/module_GFS_GRID_COMP_stub.F90:      INTEGER            ,INTENT(OUT)   :: RC_FINALIZE
+./gsm/module_GOCART_ROUTINES_stub.F90:      INTEGER,OPTIONAL,   INTENT(OUT)   :: RC_SETUP                        !<-- Return code for the SETUP step
+./gsm/module_GOCART_ROUTINES_stub.F90:      INTEGER,OPTIONAL,   INTENT(OUT)   :: RC_INIT                         !<-- Return code for the INIT step
+./gsm/module_GOCART_ROUTINES_stub.F90:      INTEGER,INTENT(OUT) :: RC_LOOP                                  !<-- Return code
+./gsm/libutil/module_gfs_tropp.F90:  integer,intent(out):: l2(km2)
+./gsm/libutil/module_gfs_tropp.F90:    real,intent(out):: ptp,utp,vtp,ttp,htp,shrtp
+./gsm/libutil/module_gfs_funcphys.F90:    real(krealfp),intent(out):: tma,qma
+./gsm/libutil/module_gfs_funcphys.F90:    real(krealfp),intent(out):: tma,qma
+./gsm/libutil/module_gfs_funcphys.F90:    real(krealfp),intent(out):: tma,qma
+./gsm/libutil/module_gfs_funcphys.F90:    real(krealfp),intent(out):: tma,qma
+./gsm/libutil/atmos_chem_phy_cpl_comp_mod.F90:      integer,intent(out) :: rc_reg                  ! return code for register
+./gsm/libutil/atmos_chem_phy_cpl_comp_mod.F90:      integer,           intent(out)   :: RC_CPL
+./gsm/libutil/gfs_dyn_phy_cpl_comp_mod.F90:      integer,intent(out) :: rc_reg               	! return code for register
+./gsm/libutil/gfs_dyn_phy_cpl_comp_mod.F90:      integer,           intent(out)   :: rc_cpl
+./gsm/libutil/gfs_dyn_phy_cpl_comp_mod.F90:      integer,           intent(out)   :: rc_cpl
+./gsm/libutil/gfs_dyn_phy_cpl_comp_mod.F90:      integer,           intent(out)   :: rc_cpl
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:      integer,intent(out) :: rc_reg                  ! return code for register
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:      integer,           intent(out)   :: RC_CPL
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:      integer,           intent(out)   :: RC_CPL
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:        integer, intent(out)                 :: RC_CPL
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:        real(ESMF_KIND_R8), pointer, intent(OUT)  :: Array(:,:)
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:        real(ESMF_KIND_R8), pointer, intent(OUT)  :: Array(:,:,:)
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:        real(ESMF_KIND_R8), pointer, intent(OUT) :: Array(:,:,:)
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:        real(ESMF_KIND_R8), pointer, intent(OUT) :: ARRAY(:,:)
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:       real,intent(out):: shs(km),rh(km)
+./gsm/libutil/atmos_phy_chem_cpl_comp_mod.F90:      character*(*), intent(out)  ::  name_out

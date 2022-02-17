@@ -1,0 +1,151 @@
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+The following is a list of the modules currently available:
+--------------------------------------------------------------------------------------------------------------------------------------------
+  CFP: CFP/2.0.1
+
+  ESMF: ESMF/4_0_0rp2, ESMF/7_0_0, ESMF/7_1_0r
+
+  EnvVars: EnvVars/1.0.2
+
+  GrADS: GrADS/2.2.0
+
+  HDF5-parallel: HDF5-parallel/1.8.20, HDF5-parallel/1.10.1
+
+  HDF5-serial: HDF5-serial/1.8.20, HDF5-serial/1.10.1
+
+  HPSS: HPSS/5.0.2.5
+
+  NCARG: NCARG/6.4.0
+
+  NCL: NCL/6.4.0
+
+  NCO: NCO/4.7.0
+
+  NetCDF: NetCDF/3.6.3, NetCDF/4.5.0
+
+  PNetCDF: PNetCDF/1.8.1
+
+  bacio: bacio/2.0.2
+
+  bufr: bufr/11.2.0
+
+  bufr_dumplist: bufr_dumplist/2.0.0, bufr_dumplist/2.0.1
+
+  cmake: cmake/3.10.0
+
+  crtm: crtm/2.2.5, crtm/2.2.6
+
+  dev/ecflow: dev/ecflow/4.7.1
+
+  dev/prod_util: dev/prod_util/1.1.0
+
+  dev/w3nco: dev/w3nco/2.0.6
+
+  dumpjb: dumpjb/5.0.0.orig, dumpjb/5.0.0, dumpjb/5.0.1.orig, dumpjb/5.0.1
+
+  ecflow: ecflow/4.7.1
+
+  g2: g2/3.1.0
+
+  g2c: g2c/1.5.0
+
+  g2tmpl: g2tmpl/1.5.0
+
+  gempak: gempak/7.3.1
+
+  gfsio: gfsio/1.1.0
+
+  git: git/2.14.3
+
+  gnu: gnu/4.8.5
+
+  graphics: graphics/2.0.0
+
+  grib_util: grib_util/1.0.6, grib_util/1.1.0
+
+  idl: idl/8.6.1
+
+  imagemagick: imagemagick/6.9.9-25
+
+  impi: impi/18.0.1
+    IntelMPI variable intialization
+
+  ip: ip/3.0.1
+
+  ips: ips/18.0.1.163
+
+  jasper: jasper/1.900.1, jasper/1.900.29
+
+  landsfcutil: landsfcutil/2.1.0
+
+  libpng: libpng/1.2.44, libpng/1.2.59
+
+  lmod: lmod/7.7
+    Lmod: An Environment Module System
+
+  lsf: lsf/10.1
+
+  mktgs: mktgs/1.0
+
+  nemsio: nemsio/2.2.3
+
+  nemsiogfs: nemsiogfs/2.0.1
+
+  perl/DateTime: perl/DateTime/1.44
+
+  perl/XML-Parser: perl/XML-Parser/2.44
+
+  pigz: pigz/2.3.4
+
+  pm5: pm5/1.0
+
+  prod_envir: prod_envir/1.0.2
+
+  prod_util: prod_util/1.1.0
+
+  python: python/2.7.13, python/2.7.14, python/3.6.3
+
+  rsync: rsync/3.1.2
+
+  settarg: settarg/7.7
+
+  sfcio: sfcio/1.0.0
+
+  sigio: sigio/2.0.1, sigio/2.1.0
+
+  smpi: smpi/10.1.1.0
+
+  sp: sp/2.0.2
+
+  subversion: subversion/1.7.16
+
+  udunits: udunits/2.2.25
+
+  util_shared: util_shared/1.1.0
+
+  w3emc: w3emc/2.3.0
+
+  w3nco: w3nco/2.0.6
+
+  xmlparse: xmlparse/2.0.0
+
+  zlib: zlib/1.2.11
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+To learn more about a package execute:
+
+   $ module spider Foo
+
+where "Foo" is the name of a module.
+
+To find detailed information about a particular package you
+must specify the version if there is more than one version:
+
+   $ module spider Foo/11.1
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+

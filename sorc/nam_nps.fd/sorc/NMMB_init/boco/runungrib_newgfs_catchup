@@ -1,0 +1,197 @@
+#!/bin/ksh
+
+#BSUB -oo out.nps_catchup
+#BSUB -eo out.nps_catchup
+#BSUB -n 6
+#BSUB -J nam_catchup_bocos_18
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#BSUB -q "dev2_shared"
+#BSUB -R span[ptile=6]
+#BSUB -R "affinity[core]"
+#BSUB -R rusage[mem=4000]
+#####BSUB -x
+#BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+set -x
+
+NDATE=/nwprod/util/exec/ndate
+
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_ungrib
+cd /stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup
+
+export mod=AVN
+
+LENGTH=01
+export cyc=12
+
+export DOMNAM=nam
+
+CYCLE=2016122012
+PDY=20161220
+
+export NDATE=/nwprod/util/exec/ndate
+export NHOUR=/nwprod/util/exec/nhour
+export UTIL_USHnam=/meso/save/Eric.Rogers/nam.v4.1.5/util/ush
+
+export TM06=`${NDATE} -06 $CYCLE`
+PDYtm06=`echo $TM06 | cut -c 1-8`
+export TM05=`${NDATE} -05 $CYCLE`
+PDYtm05=`echo $TM05 | cut -c 1-8`
+export TM04=`${NDATE} -04 $CYCLE`
+PDYtm04=`echo $TM04 | cut -c 1-8`
+export TM03=`${NDATE} -03 $CYCLE`
+PDYtm03=`echo $TM03 | cut -c 1-8`
+export TM02=`${NDATE} -02 $CYCLE`
+PDYtm02=`echo $TM02 | cut -c 1-8`
+export TM01=`${NDATE} -01 $CYCLE`
+PDYtm01=`echo $TM01 | cut -c 1-8`
+
+export envir_getges=para
+
+###export GETGES_COM=/gpfs/hps/ptmp/emc.glopara/com2
+export GETGES_COM=/meso/noscrub/Eric.Rogers/com
+
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM06 01 $envir_getges tm06
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM05 01 $envir_getges tm05
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM04 01 $envir_getges tm04
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM03 01 $envir_getges tm03
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM02 01 $envir_getges tm02
+${UTIL_USHnam}/getgfsbc_nam_hourlypgrb.sh $TM01 01 $envir_getges tm01
+
+export PARMnam=/meso/save/Eric.Rogers/nam.v4.1.5/parm
+export PARMnps=/meso/save/Eric.Rogers/tempscripts
+export FIXnam=/meso/save/Eric.Rogers/nam.v4.1.5/fix
+export EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec
+export USHnps=/meso/save/Eric.Rogers/tempscripts
+
+mkdir -p $DATA/run_ungrib_tm06
+mkdir -p $DATA/run_ungrib_tm05
+mkdir -p $DATA/run_ungrib_tm04
+mkdir -p $DATA/run_ungrib_tm03
+mkdir -p $DATA/run_ungrib_tm02
+mkdir -p $DATA/run_ungrib_tm01
+
+yy=`echo $PDYtm06 | cut -c1-4`
+mm=`echo $PDYtm06 | cut -c5-6`
+dd=`echo $PDYtm06 | cut -c7-8`
+
+ystart=`echo $PDYtm06 | cut -c1-4`
+mstart=`echo $PDYtm06 | cut -c5-6`
+dstart=`echo $PDYtm06 | cut -c7-8`
+hstart=`echo $TM06 | cut -c9-10`
+
+int1=`$NDATE +01 $TM06`
+yyint1=`echo $int1 | cut -c1-4`
+mmint1=`echo $int1 | cut -c5-6`
+ddint1=`echo $int1 | cut -c7-8`
+hhint1=`echo $int1 | cut -c9-10`
+
+int2=`$NDATE +01 $int1`
+yyint2=`echo $int2 | cut -c1-4`
+mmint2=`echo $int2 | cut -c5-6`
+ddint2=`echo $int2 | cut -c7-8`
+hhint2=`echo $int2 | cut -c9-10`
+
+int3=`$NDATE +01 $int2`
+yyint3=`echo $int3 | cut -c1-4`
+mmint3=`echo $int3 | cut -c5-6`
+ddint3=`echo $int3 | cut -c7-8`
+hhint3=`echo $int3 | cut -c9-10`
+
+int4=`$NDATE +01 $int3`
+yyint4=`echo $int4 | cut -c1-4`
+mmint4=`echo $int4 | cut -c5-6`
+ddint4=`echo $int4 | cut -c7-8`
+hhint4=`echo $int4 | cut -c9-10`
+
+int5=`$NDATE +01 $int4`
+yyint5=`echo $int5 | cut -c1-4`
+mmint5=`echo $int5 | cut -c5-6`
+ddint5=`echo $int5 | cut -c7-8`
+hhint5=`echo $int5 | cut -c9-10`
+
+int6=`$NDATE +01 $int5`
+yyint6=`echo $int6 | cut -c1-4`
+mmint6=`echo $int6 | cut -c5-6`
+ddint6=`echo $int6 | cut -c7-8`
+hhint6=`echo $int6 | cut -c9-10`
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$ystart: | sed s:MSTART:$mstart: \
+ | sed s:DSTART:$dstart: | sed s:HSTART:$hstart: | sed s:YEND:$yyint1: \
+ | sed s:MEND:$mmint1:   | sed s:DEND:$ddint1: | sed s:HEND:$hhint1: > $DATA/namelist.nps.tm06
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$yyint1: | sed s:MSTART:$mmint1: \
+ | sed s:DSTART:$ddint1: | sed s:HSTART:$hhint1: | sed s:YEND:$yyint2: \
+ | sed s:MEND:$mmint2:   | sed s:DEND:$ddint2: | sed s:HEND:$hhint2: > $DATA/namelist.nps.tm05
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$yyint2: | sed s:MSTART:$mmint2: \
+ | sed s:DSTART:$ddint2: | sed s:HSTART:$hhint2: | sed s:YEND:$yyint3: \
+ | sed s:MEND:$mmint3:   | sed s:DEND:$ddint3: | sed s:HEND:$hhint3: > $DATA/namelist.nps.tm04
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$yyint3: | sed s:MSTART:$mmint3: \
+ | sed s:DSTART:$ddint3: | sed s:HSTART:$hhint3: | sed s:YEND:$yyint4: \
+ | sed s:MEND:$mmint4:   | sed s:DEND:$ddint4: | sed s:HEND:$hhint4: > $DATA/namelist.nps.tm03
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$yyint4: | sed s:MSTART:$mmint4: \
+ | sed s:DSTART:$ddint4: | sed s:HSTART:$hhint4: | sed s:YEND:$yyint5: \
+ | sed s:MEND:$mmint5:   | sed s:DEND:$ddint5: | sed s:HEND:$hhint5: > $DATA/namelist.nps.tm02
+
+cat $PARMnps/nam_namelist.nps_bocos_catchup | sed s:YSTART:$yyint5: | sed s:MSTART:$mmint5: \
+ | sed s:DSTART:$ddint5: | sed s:HSTART:$hhint5: | sed s:YEND:$yyint6: \
+ | sed s:MEND:$mmint6:   | sed s:DEND:$ddint6: | sed s:HEND:$hhint6: > $DATA/namelist.nps.tm01
+
+#####
+
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm06/Vtable
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm05/Vtable
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm04/Vtable
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm03/Vtable
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm02/Vtable
+cp $PARMnps/nam_Vtable.GFS.bocos  $DATA/run_ungrib_tm01/Vtable
+
+GRIBSRC=GFS
+
+### Get the needed GRIB files into each of the six run_ungrib subdirectories
+
+cp gfspgrb0.tm06 ./run_ungrib_tm06/GRIBFILE.AAA
+cp gfspgrb1.tm06 ./run_ungrib_tm06/GRIBFILE.AAB
+cp gfspgrb0.tm05 ./run_ungrib_tm05/GRIBFILE.AAA
+cp gfspgrb1.tm05 ./run_ungrib_tm05/GRIBFILE.AAB
+cp gfspgrb0.tm04 ./run_ungrib_tm04/GRIBFILE.AAA
+cp gfspgrb1.tm04 ./run_ungrib_tm04/GRIBFILE.AAB
+cp gfspgrb0.tm03 ./run_ungrib_tm03/GRIBFILE.AAA
+cp gfspgrb1.tm03 ./run_ungrib_tm03/GRIBFILE.AAB
+cp gfspgrb0.tm02 ./run_ungrib_tm02/GRIBFILE.AAA
+cp gfspgrb1.tm02 ./run_ungrib_tm02/GRIBFILE.AAB
+cp gfspgrb0.tm01 ./run_ungrib_tm01/GRIBFILE.AAA
+cp gfspgrb1.tm01 ./run_ungrib_tm01/GRIBFILE.AAB
+
+### run_ungrib
+cd $DATA
+
+rm -rf poescript
+
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm06" >> poescript
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm05" >> poescript
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm04" >> poescript
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm03" >> poescript
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm02" >> poescript
+echo "$USHnps/nam_boco_ungrib_gen_catchup.sh $cyc tm01" >> poescript
+
+chmod 775 $DATA/poescript
+export MP_PGMMODEL=mpmd
+export MP_CMDFILE=$DATA/poescript
+
+export pgm=nam_boco_ungrib_gen_catchup.sh
+mpirun.lsf
+###export err=$?; err_chk
+

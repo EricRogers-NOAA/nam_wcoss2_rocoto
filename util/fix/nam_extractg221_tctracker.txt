@@ -1,0 +1,13 @@
+PRMSL:mean sea level
+HGT:850 mb:
+HGT:700 mb:
+UGRD:10 m above ground:
+VGRD:10 m above ground:
+UGRD:850 mb:
+UGRD:700 mb:
+UGRD:500 mb:
+VGRD:850 mb:
+VGRD:700 mb:
+VGRD:500 mb:
+ABSV:700 mb:
+ABSV:850 mb:

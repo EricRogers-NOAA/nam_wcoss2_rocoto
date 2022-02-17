@@ -1,0 +1,235 @@
+#!/bin/bash
+set -x
+
+export retro=${retro:-no}
+export RERUN=${RERUN:-NO}
+
+##For dev test with canned dataj
+####export prodenvir=prod
+####. /lfs/h2/emc/lam/noscrub/Eric.Rogers/nam.v4.2.0/parm/nam_general_config
+
+# * NOTE * #
+# We assume HOMEnam is set in the J-Job which calls this script
+# * NOTE * #
+
+###################################
+# Specify NET and RUN Name and model
+####################################
+export NET=${NET:-nam}
+export RUN=${RUN:-nam}
+
+export PS4='$SECONDS + '
+date
+
+######################################################
+export MACHID=${MACHID:-wcoss2}
+
+####################################
+# obtain unique process id (pid) and make temp directory
+#  WKDIRNAME is obtained from the parent J-JOB
+####################################
+export pid=$$
+export pgmout="OUTPUT.${pid}"
+export DATA=${DATAROOT:?}/${WKDIRNAME:?}
+mkdir -p $DATA
+cd $DATA
+
+export tmmark
+export cycle=t${cyc}z
+
+####################################
+# Specify Execution Areas
+####################################
+
+export EXECnam=${EXECnam:-${HOMEnam}/exec}
+export FIXnam=${FIXnam:-${HOMEnam}/fix}
+export PARMnam=${PARMnam:-${HOMEnam}/parm}
+export USHnam=${USHnam:-${HOMEnam}/ush}
+
+####################################################################
+# Add NAM-specific utilities via util/exec and util/ush directories
+####################################################################
+
+export UTIL_USHnam=${UTIL_USHnam:-${HOMEnam}/util/ush}
+export UTIL_EXECnam=${UTIL_EXECnam:-${HOMEnam}/util/exec}
+export UTIL_FIXnam=${UTIL_FIXnam:-${HOMEnam}/util/fix}
+export FIXCRTM=${FIXCRTM:-${FIXnam}/nam_CRTM_Coefficients}
+# Change wgrib2 used to be the custom version with MCONV fix
+export WGRIB2=${UTIL_EXECnam}/wgrib2
+
+####################################################################
+# Specify envir for GDAS/GFS
+####################################################################
+
+export envir_getges=${envir_getges:-prod}
+
+###########################################
+# Identify NAM RUNTYPE
+# It is always CATCHUP
+###########################################
+export RUNTYPE=CATCHUP
+
+###########################################
+# Run setpdy and initialize PDY variables
+###########################################
+COMDATEROOT=${COMDATEROOT:-${COMROOT:?}}
+
+if [ $tmmark != tm00 ] ; then
+    if test "$cyc" = "12"
+    then
+  #  Since this job runs before the 12 UTC 100 job runs
+  #  we need to use the /com/date/t00z file for our PDY
+	export cycle=t00z
+	$USHnam/setpdy_private.sh
+	. PDY.${jobid:?}
+	export cycle=t12z
+    elif test "$cyc" = "00"
+    then
+	$USHnam/setpdy_private.sh
+	. PDY.${jobid:?}
+	edate=`cat ${COMDATEROOT}/date/t12z | cut -c7-14`
+	if [ $edate -eq $PDY ]
+	then
+	    export PDY=`finddate.sh $PDY d+1`
+	    $USHnam/setpdy_private.sh
+	    . PDY.${jobid:?}
+	fi
+    else
+	$USHnam/setpdy_private.sh
+	. PDY.${jobid:?}
+    fi
+else
+    $USHnam/setpdy_private.sh
+    . PDY.${jobid:?}
+    #end tmmark check
+fi
+
+export CDATE=$PDY$cyc
+
+#########################################
+# Specify MPI execution
+#########################################
+export MPIEXEC=${MPIEXEC:-mpiexec}
+
+#########################################
+# Specify forecast lengths
+#########################################
+export FMAX_CATCHUP_PARENT=${FMAX_CATCHUP_PARENT:-84}
+export FMAX_CATCHUP_PARENT_BOCO=${FMAX_CATCHUP_PARENT_BOCO:-81}
+export FMAX_CATCHUP_NEST=${FMAX_CATCHUP_NEST:-60}
+export FMAX_CATCHUP_NEST_Firewx=${FMAX_CATCHUP_NEST_Firewx:-36}
+export FMAX_HOURLY_PARENT=${FMAX_HOURLY_PARENT:-18}
+export FMAX_HOURLY_NEST=${FMAX_HOURLY_NEST:-18}
+export PRDGENSWITCH_HOUR_PARENT=${PRDGENSWITCH_HOUR_PARENT:-36}
+export PRDGENSWITCH_HOUR_NEST=${PRDGENSWITCH_HOUR_NEST:-60}
+
+##############################################
+# Define COM directories
+##############################################
+## COMROOT's set in prod_envir module
+##
+export COM_IN=${COM_IN:-$(compath.py $envir/nam/$nam_ver)}
+export COM_OUT=${COM_OUT:-$(compath.py $envir/nam/$nam_ver)}
+export GESROOT=${GESROOT:-$(compath.py $envir/nam/$nam_ver)/nwges}
+
+export COMIN=${COMIN:-$(compath.py $envir/nam/$nam_ver)/${RUN}.${PDY}}
+export COMOUT=${COMOUT:-$(compath.py $envir/nam/$nam_ver)/${RUN}.${PDY}}
+export COMAWP=${COMAWP:-${COMOUT}/gempak}
+
+#for testing w/canned data
+##export COMNAM=${COMNAM:-/lfs/h1/ops/${prodenvir}/com/nam/${nam_ver}}
+#for WCOSS2 ops
+export COMINobsproc=${COMINopbsproc:-$(compath.py $envir/obsproc/$obsproc_ver)}
+export COMNAM=${COMNAM:-$(compath.py $envir/nam/$nam_ver)}
+export COMINrap=${COMINrap:-$(compath.py $envir/rap/$rap_ver)}
+export COMINgfs=${COMINgfs:-$(compath.py $envir/gfs/$gfs_ver)}
+export COMINgdas=${COMINgdas:-$(compath.py $envir/gfs/$gfs_ver)}
+export COMINsst=${COMINsst:-$(compath.py $envir/gfs/$gfs_ver)}
+export COMINrtma=${COMINrtma:-$(compath.py $envir/rtma/$rtma_ver)}
+export COMINccpa=${COMINccpa:-$(compath.py $envir/ccpa/$ccpa_ver)}
+export COMINpcpanl=${COMINpcpanl:-$(compath.py $envir/pcpanl/$pcpanl_ver)}
+#For testing
+###export COMINradar=${COMINradar:-$(compath.py $envir/hourly/$radar_ver)}
+#For WCOSS2 ops
+export COMINradar=${COMINradar:-$(compath.py $envir/radarl2/$radarl2_ver)}
+export INPUT_FIRE_DIR=${INPUT_FIRE_DIR:-${DCOMROOT}/burned_area}
+export NAMFIXgem=${NAMFIXgem:-${HOMEnam}/gempak/fix}
+export GETGES_COM=${GETGES_COM:-${COMROOT}}
+export GETGES_NWG=${GETGES_NWG:-${GESROOT}}
+export pcom=$COMOUT/wmo  # needed by JNAM_POSTSND
+# Input directory for PCP data, need to point to the current run environment
+export COM_HRLY_PCP=${COM_HRLY_PCP:-${COMNAM}}
+mkdir -m 775 -p $COM_HRLY_PCP
+export COM_HRLY=${COM_HRLY:-${COMROOT}/hourly/prod}
+
+# Specify the directory where forecasts run
+export FCSTDIR=${DATAROOT}/nam_${cyc}_${tmmark}_${envir}
+
+##############################################
+# Define Paths to Observations
+##############################################
+
+# PREPBUFR
+export COM_PREPBUFR=${COM_PREPBUFR:-$COMINobsproc}
+# IASI
+export COM_IASI=${COM_IASI:-$COMINobsproc}
+# HIRS3
+export COM_HIRS3=${COM_HIRS3:-$COMINobsproc}
+# HIRS4
+export COM_HIRS4=${COM_HIRS4:-$COMINobsproc}
+# AMSUA
+export COM_AMSUA=${COM_AMSUA:-$COMINobsproc}
+# AMSUB 
+export COM_AMSUB=${COM_AMSUB:-$COMINobsproc}
+# MHS
+export COM_MHS=${COM_MHS:-$COMINobsproc}
+# GPSRO
+export COM_GPSRO=${COM_GPSRO:-$COMINobsproc}
+# GOESFV
+export COM_GOESFV=${COM_GOESFV:-$COMINobsproc}
+# AIRS
+export COM_AIRS=${COM_AIRS:-$COMINobsproc}
+# RADWND
+export COM_RADWND=${COM_RADWND:-$COMINobsproc}
+# NEXRAD
+export COM_NEXRAD=${COM_NEXRAD:-$COMINobsproc}
+# ESAMUA
+export COM_ESAMUA=${COM_ESAMUA:-$COMINobsproc}
+# LGYCLD
+export COM_LGYCLD=${COM_LGYCLD:-$COMINobsproc}
+# LGHTNG
+export COM_LGHTNG=${COM_LGHTNG:-$COMINobsproc}
+# SATWND
+export COM_SATWND=${COM_SATWND:-$COMINobsproc}
+# ATMS
+export COM_ATMS=${COM_ATMS:-$COMINobsproc}
+# CRIS
+export COM_CRIS=${COM_CRIS:-$COMINobsproc}
+# SEVIRI
+export COM_SEVIRI=${COM_SEVIRI:-$COMINobsproc}
+# SSMIS
+export COM_SSMIS=${COM_SSMIS:-$COMINobsproc}
+
+###########################################
+# SPECIFY PATH TO FIREWX NEST CENTER POINTS
+###########################################
+## Used when nam_firewx_loc file is on Dell
+export FIRE_WX_CENTER_POINTS=${FIRE_WX_CENTER_POINTS:-${COM_IN}/input/nam_firewx_loc}
+
+mkdir -m 775 -p $COMOUT
+mkdir -m 775 -p $COMOUT/input
+mkdir -m 775 -p $COMAWP
+mkdir -m 775 -p $COMAWP
+
+##############################################
+# Define GES directories
+##############################################
+export GESIN=${GESIN:-$(compath.py $envir/nam/$nam_ver)/nwges}
+export GESOUT=${GESOUT:-$(compath.py $envir/nam/$nam_ver)/nwges}
+mkdir -m 775 -p ${GESIN}
+
+export GESDIR=${GESDIR:-${GESIN}/${RUN}.${PDY}}
+export gespath=${gespath:-${GESIN}}
+mkdir -m 775 -p $GESDIR $gespath
+mkdir -p ${gespath}/${RUN}.hold
+

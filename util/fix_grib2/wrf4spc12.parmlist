@@ -1,0 +1,37 @@
+HLCY:3000-0 m above ground
+TMP:30-0 mb above ground
+RH:30-0 mb above ground
+CAPE:180-0 mb above ground
+CIN:180-0 mb above ground
+TMP:2 m above ground
+RH:2 m above ground
+UGRD:10 m above ground
+VGRD:10 m above ground
+HGT:850 mb
+UGRD:850 mb
+VGRD:850 mb
+HGT:700 mb
+TMP:700 mb
+RH:700 mb
+UGRD:700 mb
+VGRD:700 mb
+VVEL:700 mb
+HGT:500 mb
+TMP:500 mb
+RH:500 mb
+UGRD:500 mb
+VGRD:500 mb
+VVEL:500 mb
+UGRD:250 mb
+VGRD:250 mb
+MSLET:mean sea level
+PRMSL:mean sea level
+APCP:surface
+ACPCP:surface
+REFD:1000 m above ground
+MAXUW:10 m above ground
+MAXVW:10 m above ground
+CSNOW:surface
+CICEP:surface
+CFRZR:surface
+CRAIN:surface

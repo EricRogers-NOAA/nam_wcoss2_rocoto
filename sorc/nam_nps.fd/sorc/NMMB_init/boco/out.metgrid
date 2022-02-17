@@ -1,0 +1,2710 @@
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ DATAROOT=/gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ export DATAROOT
++ DATA=/gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid
++ export DATA
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid
++ PDY=20190117
++ export PDY
++ cyc=12
++ export cyc
++ CYCLE=2019011712
++ export CYCLE
++ PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ export PARMnam
++ PARMnps=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ export PARMnps
++ FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
++ export FIXnam
++ USHnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush
++ export USHnam
++ USHnps=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco
++ export USHnps
++ EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
++ export EXECnam
++ jlogfile=/u/Matthew.Pyle/jlog
++ export jlogfile
++ pgmout=myout.log
++ export pgmout
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_1
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_2
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_3
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_4
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_5
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_6
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_7
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_8
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_9
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_10
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_11
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_12
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_13
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_14
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_15
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid
++ rm -rf poescript
++ send=1
++ export send
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 00 03 1 1'
++ 1> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 06 09 2 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 12 15 3 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 18 21 4 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 24 27 5 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 30 33 6 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 36 39 7 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 42 45 8 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 48 51 9 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 54 57 10 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 60 63 11 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 66 69 12 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 72 75 13 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 78 81 14 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh 12 84 84 15 1'
++ 1>> poescript
++ chmod 775 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/poescript
++ MP_PGMMODEL=mpmd
++ export MP_PGMMODEL
++ MP_CMDFILE=poescript
++ export MP_CMDFILE
++ MP_LABELIO=YES
++ export MP_LABELIO
++ MP_STDOUTMODE=ordered
++ export MP_STDOUTMODE
++ ./poescript
++ INT=3
++ CYC=12
++ STARTHR=00
++ ENDHR=03
++ ICOUNT=1
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011712
++ start=2019011712
++ echo 2019011712
++ cut -c1-4
++ ystart=2019
++ echo 2019011712
++ cut -c5-6
++ mstart=01
++ echo 2019011712
++ cut -c7-8
++ dstart=17
++ echo 2019011712
++ cut -c9-10
++ hstart=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +03 2019011712
++ end=2019011715
++ echo 2019011715
++ cut -c1-4
++ yend=2019
++ echo 2019011715
++ cut -c5-6
++ mend=01
++ echo 2019011715
++ cut -c7-8
++ dend=17
++ echo 2019011715
++ cut -c9-10
++ hend=15
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_1
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_1/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:15:
++ sed s:DEND:17:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ sed s:HSTART:12:
++ 1> namelist.nps.1
++ sed s:DSTART:17:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.1 namelist.nps
++ FHR=00
++ [ 00 -le 03 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011712
++ time=2019011712
++ echo 2019011712
++ cut -c1-4
++ yy=2019
++ echo 2019011712
++ cut -c5-6
++ mm=01
++ echo 2019011712
++ cut -c7-8
++ dd=17
++ echo 2019011712
++ cut -c9-10
++ hh=12
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-17_12 .
++ expr 00 + 3
++ FHR=3
++ [ 3 -le 03 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +3 2019011712
++ time=2019011715
++ echo 2019011715
++ cut -c1-4
++ yy=2019
++ echo 2019011715
++ cut -c5-6
++ mm=01
++ echo 2019011715
++ cut -c7-8
++ dd=17
++ echo 2019011715
++ cut -c9-10
++ hh=15
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-17_15 .
++ expr 3 + 3
++ FHR=6
++ [ 6 -le 03 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-17_12
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-17_12:00:00.dio opened 
+ Processing 2019-01-17_15
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-17_15:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.1
++ ls met_nmb.d01.2019-01-17_12:00:00.dio met_nmb.d01.2019-01-17_15:00:00.dio
++ files=$'met_nmb.d01.2019-01-17_12:00:00.dio\nmet_nmb.d01.2019-01-17_15:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-17_12:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-17_12:00:00.dio
++ mv met_nmb.d01.2019-01-17_15:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-17_15:00:00.dio
++ mv metgriddone.1 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=06
++ ENDHR=09
++ ICOUNT=2
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +06 2019011712
++ start=2019011718
++ echo 2019011718
++ cut -c1-4
++ ystart=2019
++ echo 2019011718
++ cut -c5-6
++ mstart=01
++ echo 2019011718
++ cut -c7-8
++ dstart=17
++ echo 2019011718
++ cut -c9-10
++ hstart=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +09 2019011712
++ end=2019011721
++ echo 2019011721
++ cut -c1-4
++ yend=2019
++ echo 2019011721
++ cut -c5-6
++ mend=01
++ echo 2019011721
++ cut -c7-8
++ dend=17
++ echo 2019011721
++ cut -c9-10
++ hend=21
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_2
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_2/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:21:
++ sed s:DEND:17:
++ 1> namelist.nps.2
++ sed s:YEND:2019:
++ sed s:DSTART:17:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ sed s:MEND:01:
++ sed s:HSTART:18:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.2 namelist.nps
++ FHR=06
++ [ 06 -le 09 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +06 2019011712
++ time=2019011718
++ echo 2019011718
++ cut -c1-4
++ yy=2019
++ echo 2019011718
++ cut -c5-6
++ mm=01
++ echo 2019011718
++ cut -c7-8
++ dd=17
++ echo 2019011718
++ cut -c9-10
++ hh=18
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-17_18 .
++ expr 06 + 3
++ FHR=9
++ [ 9 -le 09 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +9 2019011712
++ time=2019011721
++ echo 2019011721
++ cut -c1-4
++ yy=2019
++ echo 2019011721
++ cut -c5-6
++ mm=01
++ echo 2019011721
++ cut -c7-8
++ dd=17
++ echo 2019011721
++ cut -c9-10
++ hh=21
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-17_21 .
++ expr 9 + 3
++ FHR=12
++ [ 12 -le 09 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-17_18
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-17_18:00:00.dio opened 
+ Processing 2019-01-17_21
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-17_21:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.2
++ ls met_nmb.d01.2019-01-17_18:00:00.dio met_nmb.d01.2019-01-17_21:00:00.dio
++ files=$'met_nmb.d01.2019-01-17_18:00:00.dio\nmet_nmb.d01.2019-01-17_21:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-17_18:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-17_18:00:00.dio
++ mv met_nmb.d01.2019-01-17_21:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-17_21:00:00.dio
++ mv metgriddone.2 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=12
++ ENDHR=15
++ ICOUNT=3
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011712
++ start=2019011800
++ echo 2019011800
++ cut -c1-4
++ ystart=2019
++ echo 2019011800
++ cut -c5-6
++ mstart=01
++ echo 2019011800
++ cut -c7-8
++ dstart=18
++ echo 2019011800
++ cut -c9-10
++ hstart=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +15 2019011712
++ end=2019011803
++ echo 2019011803
++ cut -c1-4
++ yend=2019
++ echo 2019011803
++ cut -c5-6
++ mend=01
++ echo 2019011803
++ cut -c7-8
++ dend=18
++ echo 2019011803
++ cut -c9-10
++ hend=03
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_3
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_3/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:03:
++ sed s:DEND:18:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ sed s:DSTART:18:
++ 1> namelist.nps.3
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ sed s:HSTART:00:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.3 namelist.nps
++ FHR=12
++ [ 12 -le 15 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011712
++ time=2019011800
++ echo 2019011800
++ cut -c1-4
++ yy=2019
++ echo 2019011800
++ cut -c5-6
++ mm=01
++ echo 2019011800
++ cut -c7-8
++ dd=18
++ echo 2019011800
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_00 .
++ expr 12 + 3
++ FHR=15
++ [ 15 -le 15 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +15 2019011712
++ time=2019011803
++ echo 2019011803
++ cut -c1-4
++ yy=2019
++ echo 2019011803
++ cut -c5-6
++ mm=01
++ echo 2019011803
++ cut -c7-8
++ dd=18
++ echo 2019011803
++ cut -c9-10
++ hh=03
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_03 .
++ expr 15 + 3
++ FHR=18
++ [ 18 -le 15 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-18_00
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_00:00:00.dio opened 
+ Processing 2019-01-18_03
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_03:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.3
++ ls met_nmb.d01.2019-01-18_00:00:00.dio met_nmb.d01.2019-01-18_03:00:00.dio
++ files=$'met_nmb.d01.2019-01-18_00:00:00.dio\nmet_nmb.d01.2019-01-18_03:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-18_00:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_00:00:00.dio
++ mv met_nmb.d01.2019-01-18_03:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_03:00:00.dio
++ mv metgriddone.3 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=18
++ ENDHR=21
++ ICOUNT=4
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +18 2019011712
++ start=2019011806
++ echo 2019011806
++ cut -c1-4
++ ystart=2019
++ echo 2019011806
++ cut -c5-6
++ mstart=01
++ echo 2019011806
++ cut -c7-8
++ dstart=18
++ echo 2019011806
++ cut -c9-10
++ hstart=06
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +21 2019011712
++ end=2019011809
++ echo 2019011809
++ cut -c1-4
++ yend=2019
++ echo 2019011809
++ cut -c5-6
++ mend=01
++ echo 2019011809
++ cut -c7-8
++ dend=18
++ echo 2019011809
++ cut -c9-10
++ hend=09
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_4
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_4/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:09:
++ sed s:DEND:18:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.4
++ sed s:HSTART:06:
++ sed s:DSTART:18:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.4 namelist.nps
++ FHR=18
++ [ 18 -le 21 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +18 2019011712
++ time=2019011806
++ echo 2019011806
++ cut -c1-4
++ yy=2019
++ echo 2019011806
++ cut -c5-6
++ mm=01
++ echo 2019011806
++ cut -c7-8
++ dd=18
++ echo 2019011806
++ cut -c9-10
++ hh=06
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_06 .
++ expr 18 + 3
++ FHR=21
++ [ 21 -le 21 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +21 2019011712
++ time=2019011809
++ echo 2019011809
++ cut -c1-4
++ yy=2019
++ echo 2019011809
++ cut -c5-6
++ mm=01
++ echo 2019011809
++ cut -c7-8
++ dd=18
++ echo 2019011809
++ cut -c9-10
++ hh=09
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_09 .
++ expr 21 + 3
++ FHR=24
++ [ 24 -le 21 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-18_06
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_06:00:00.dio opened 
+ Processing 2019-01-18_09
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_09:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.4
++ ls met_nmb.d01.2019-01-18_06:00:00.dio met_nmb.d01.2019-01-18_09:00:00.dio
++ files=$'met_nmb.d01.2019-01-18_06:00:00.dio\nmet_nmb.d01.2019-01-18_09:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-18_06:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_06:00:00.dio
++ mv met_nmb.d01.2019-01-18_09:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_09:00:00.dio
++ mv metgriddone.4 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=24
++ ENDHR=27
++ ICOUNT=5
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +24 2019011712
++ start=2019011812
++ echo 2019011812
++ cut -c1-4
++ ystart=2019
++ echo 2019011812
++ cut -c5-6
++ mstart=01
++ echo 2019011812
++ cut -c7-8
++ dstart=18
++ echo 2019011812
++ cut -c9-10
++ hstart=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +27 2019011712
++ end=2019011815
++ echo 2019011815
++ cut -c1-4
++ yend=2019
++ echo 2019011815
++ cut -c5-6
++ mend=01
++ echo 2019011815
++ cut -c7-8
++ dend=18
++ echo 2019011815
++ cut -c9-10
++ hend=15
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_5
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_5/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:15:
++ sed s:HSTART:12:
++ sed s:DSTART:18:
++ 1> namelist.nps.5
++ sed s:DEND:18:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.5 namelist.nps
++ FHR=24
++ [ 24 -le 27 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +24 2019011712
++ time=2019011812
++ echo 2019011812
++ cut -c1-4
++ yy=2019
++ echo 2019011812
++ cut -c5-6
++ mm=01
++ echo 2019011812
++ cut -c7-8
++ dd=18
++ echo 2019011812
++ cut -c9-10
++ hh=12
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_12 .
++ expr 24 + 3
++ FHR=27
++ [ 27 -le 27 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +27 2019011712
++ time=2019011815
++ echo 2019011815
++ cut -c1-4
++ yy=2019
++ echo 2019011815
++ cut -c5-6
++ mm=01
++ echo 2019011815
++ cut -c7-8
++ dd=18
++ echo 2019011815
++ cut -c9-10
++ hh=15
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_15 .
++ expr 27 + 3
++ FHR=30
++ [ 30 -le 27 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-18_12
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_12:00:00.dio opened 
+ Processing 2019-01-18_15
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_15:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.5
++ ls met_nmb.d01.2019-01-18_12:00:00.dio met_nmb.d01.2019-01-18_15:00:00.dio
++ files=$'met_nmb.d01.2019-01-18_12:00:00.dio\nmet_nmb.d01.2019-01-18_15:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-18_12:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_12:00:00.dio
++ mv met_nmb.d01.2019-01-18_15:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_15:00:00.dio
++ mv metgriddone.5 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=30
++ ENDHR=33
++ ICOUNT=6
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +30 2019011712
++ start=2019011818
++ echo 2019011818
++ cut -c1-4
++ ystart=2019
++ echo 2019011818
++ cut -c5-6
++ mstart=01
++ echo 2019011818
++ cut -c7-8
++ dstart=18
++ echo 2019011818
++ cut -c9-10
++ hstart=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +33 2019011712
++ end=2019011821
++ echo 2019011821
++ cut -c1-4
++ yend=2019
++ echo 2019011821
++ cut -c5-6
++ mend=01
++ echo 2019011821
++ cut -c7-8
++ dend=18
++ echo 2019011821
++ cut -c9-10
++ hend=21
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_6
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_6/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:21:
++ sed s:DEND:18:
++ sed s:DSTART:18:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.6
++ sed s:HSTART:18:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.6 namelist.nps
++ FHR=30
++ [ 30 -le 33 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +30 2019011712
++ time=2019011818
++ echo 2019011818
++ cut -c1-4
++ yy=2019
++ echo 2019011818
++ cut -c5-6
++ mm=01
++ echo 2019011818
++ cut -c7-8
++ dd=18
++ echo 2019011818
++ cut -c9-10
++ hh=18
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_18 .
++ expr 30 + 3
++ FHR=33
++ [ 33 -le 33 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +33 2019011712
++ time=2019011821
++ echo 2019011821
++ cut -c1-4
++ yy=2019
++ echo 2019011821
++ cut -c5-6
++ mm=01
++ echo 2019011821
++ cut -c7-8
++ dd=18
++ echo 2019011821
++ cut -c9-10
++ hh=21
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-18_21 .
++ expr 33 + 3
++ FHR=36
++ [ 36 -le 33 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-18_18
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_18:00:00.dio opened 
+ Processing 2019-01-18_21
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-18_21:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.6
++ ls met_nmb.d01.2019-01-18_18:00:00.dio met_nmb.d01.2019-01-18_21:00:00.dio
++ files=$'met_nmb.d01.2019-01-18_18:00:00.dio\nmet_nmb.d01.2019-01-18_21:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-18_18:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_18:00:00.dio
++ mv met_nmb.d01.2019-01-18_21:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-18_21:00:00.dio
++ mv metgriddone.6 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=36
++ ENDHR=39
++ ICOUNT=7
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +36 2019011712
++ start=2019011900
++ echo 2019011900
++ cut -c1-4
++ ystart=2019
++ echo 2019011900
++ cut -c5-6
++ mstart=01
++ echo 2019011900
++ cut -c7-8
++ dstart=19
++ echo 2019011900
++ cut -c9-10
++ hstart=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +39 2019011712
++ end=2019011903
++ echo 2019011903
++ cut -c1-4
++ yend=2019
++ echo 2019011903
++ cut -c5-6
++ mend=01
++ echo 2019011903
++ cut -c7-8
++ dend=19
++ echo 2019011903
++ cut -c9-10
++ hend=03
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_7
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_7/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:03:
++ sed s:DEND:19:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.7
++ sed s:HSTART:00:
++ sed s:DSTART:19:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.7 namelist.nps
++ FHR=36
++ [ 36 -le 39 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +36 2019011712
++ time=2019011900
++ echo 2019011900
++ cut -c1-4
++ yy=2019
++ echo 2019011900
++ cut -c5-6
++ mm=01
++ echo 2019011900
++ cut -c7-8
++ dd=19
++ echo 2019011900
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_00 .
++ expr 36 + 3
++ FHR=39
++ [ 39 -le 39 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +39 2019011712
++ time=2019011903
++ echo 2019011903
++ cut -c1-4
++ yy=2019
++ echo 2019011903
++ cut -c5-6
++ mm=01
++ echo 2019011903
++ cut -c7-8
++ dd=19
++ echo 2019011903
++ cut -c9-10
++ hh=03
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_03 .
++ expr 39 + 3
++ FHR=42
++ [ 42 -le 39 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-19_00
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_00:00:00.dio opened 
+ Processing 2019-01-19_03
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_03:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.7
++ ls met_nmb.d01.2019-01-19_00:00:00.dio met_nmb.d01.2019-01-19_03:00:00.dio
++ files=$'met_nmb.d01.2019-01-19_00:00:00.dio\nmet_nmb.d01.2019-01-19_03:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-19_00:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_00:00:00.dio
++ mv met_nmb.d01.2019-01-19_03:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_03:00:00.dio
++ mv metgriddone.7 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=42
++ ENDHR=45
++ ICOUNT=8
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +42 2019011712
++ start=2019011906
++ echo 2019011906
++ cut -c1-4
++ ystart=2019
++ echo 2019011906
++ cut -c5-6
++ mstart=01
++ echo 2019011906
++ cut -c7-8
++ dstart=19
++ echo 2019011906
++ cut -c9-10
++ hstart=06
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +45 2019011712
++ end=2019011909
++ echo 2019011909
++ cut -c1-4
++ yend=2019
++ echo 2019011909
++ cut -c5-6
++ mend=01
++ echo 2019011909
++ cut -c7-8
++ dend=19
++ echo 2019011909
++ cut -c9-10
++ hend=09
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_8
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_8/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:09:
++ sed s:DEND:19:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.8
++ sed s:DSTART:19:
++ sed s:MSTART:01:
++ sed s:HSTART:06:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.8 namelist.nps
++ FHR=42
++ [ 42 -le 45 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +42 2019011712
++ time=2019011906
++ echo 2019011906
++ cut -c1-4
++ yy=2019
++ echo 2019011906
++ cut -c5-6
++ mm=01
++ echo 2019011906
++ cut -c7-8
++ dd=19
++ echo 2019011906
++ cut -c9-10
++ hh=06
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_06 .
++ expr 42 + 3
++ FHR=45
++ [ 45 -le 45 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +45 2019011712
++ time=2019011909
++ echo 2019011909
++ cut -c1-4
++ yy=2019
++ echo 2019011909
++ cut -c5-6
++ mm=01
++ echo 2019011909
++ cut -c7-8
++ dd=19
++ echo 2019011909
++ cut -c9-10
++ hh=09
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_09 .
++ expr 45 + 3
++ FHR=48
++ [ 48 -le 45 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-19_06
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_06:00:00.dio opened 
+ Processing 2019-01-19_09
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_09:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.8
++ ls met_nmb.d01.2019-01-19_06:00:00.dio met_nmb.d01.2019-01-19_09:00:00.dio
++ files=$'met_nmb.d01.2019-01-19_06:00:00.dio\nmet_nmb.d01.2019-01-19_09:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-19_06:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_06:00:00.dio
++ mv met_nmb.d01.2019-01-19_09:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_09:00:00.dio
++ mv metgriddone.8 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=48
++ ENDHR=51
++ ICOUNT=9
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +48 2019011712
++ start=2019011912
++ echo 2019011912
++ cut -c1-4
++ ystart=2019
++ echo 2019011912
++ cut -c5-6
++ mstart=01
++ echo 2019011912
++ cut -c7-8
++ dstart=19
++ echo 2019011912
++ cut -c9-10
++ hstart=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +51 2019011712
++ end=2019011915
++ echo 2019011915
++ cut -c1-4
++ yend=2019
++ echo 2019011915
++ cut -c5-6
++ mend=01
++ echo 2019011915
++ cut -c7-8
++ dend=19
++ echo 2019011915
++ cut -c9-10
++ hend=15
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_9
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_9/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:15:
++ sed s:DEND:19:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.9
++ sed s:DSTART:19:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ sed s:HSTART:12:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.9 namelist.nps
++ FHR=48
++ [ 48 -le 51 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +48 2019011712
++ time=2019011912
++ echo 2019011912
++ cut -c1-4
++ yy=2019
++ echo 2019011912
++ cut -c5-6
++ mm=01
++ echo 2019011912
++ cut -c7-8
++ dd=19
++ echo 2019011912
++ cut -c9-10
++ hh=12
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_12 .
++ expr 48 + 3
++ FHR=51
++ [ 51 -le 51 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +51 2019011712
++ time=2019011915
++ echo 2019011915
++ cut -c1-4
++ yy=2019
++ echo 2019011915
++ cut -c5-6
++ mm=01
++ echo 2019011915
++ cut -c7-8
++ dd=19
++ echo 2019011915
++ cut -c9-10
++ hh=15
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_15 .
++ expr 51 + 3
++ FHR=54
++ [ 54 -le 51 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-19_12
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_12:00:00.dio opened 
+ Processing 2019-01-19_15
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_15:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.9
++ ls met_nmb.d01.2019-01-19_12:00:00.dio met_nmb.d01.2019-01-19_15:00:00.dio
++ files=$'met_nmb.d01.2019-01-19_12:00:00.dio\nmet_nmb.d01.2019-01-19_15:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-19_12:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_12:00:00.dio
++ mv met_nmb.d01.2019-01-19_15:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_15:00:00.dio
++ mv metgriddone.9 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=54
++ ENDHR=57
++ ICOUNT=10
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +54 2019011712
++ start=2019011918
++ echo 2019011918
++ cut -c1-4
++ ystart=2019
++ echo 2019011918
++ cut -c5-6
++ mstart=01
++ echo 2019011918
++ cut -c7-8
++ dstart=19
++ echo 2019011918
++ cut -c9-10
++ hstart=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +57 2019011712
++ end=2019011921
++ echo 2019011921
++ cut -c1-4
++ yend=2019
++ echo 2019011921
++ cut -c5-6
++ mend=01
++ echo 2019011921
++ cut -c7-8
++ dend=19
++ echo 2019011921
++ cut -c9-10
++ hend=21
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_10
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_10/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:21:
++ sed s:DEND:19:
++ sed s:MEND:01:
++ 1> namelist.nps.10
++ sed s:HSTART:18:
++ sed s:YEND:2019:
++ sed s:DSTART:19:
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.10 namelist.nps
++ FHR=54
++ [ 54 -le 57 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +54 2019011712
++ time=2019011918
++ echo 2019011918
++ cut -c1-4
++ yy=2019
++ echo 2019011918
++ cut -c5-6
++ mm=01
++ echo 2019011918
++ cut -c7-8
++ dd=19
++ echo 2019011918
++ cut -c9-10
++ hh=18
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_18 .
++ expr 54 + 3
++ FHR=57
++ [ 57 -le 57 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +57 2019011712
++ time=2019011921
++ echo 2019011921
++ cut -c1-4
++ yy=2019
++ echo 2019011921
++ cut -c5-6
++ mm=01
++ echo 2019011921
++ cut -c7-8
++ dd=19
++ echo 2019011921
++ cut -c9-10
++ hh=21
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-19_21 .
++ expr 57 + 3
++ FHR=60
++ [ 60 -le 57 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-19_18
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_18:00:00.dio opened 
+ Processing 2019-01-19_21
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-19_21:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.10
++ ls met_nmb.d01.2019-01-19_18:00:00.dio met_nmb.d01.2019-01-19_21:00:00.dio
++ files=$'met_nmb.d01.2019-01-19_18:00:00.dio\nmet_nmb.d01.2019-01-19_21:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-19_18:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_18:00:00.dio
++ mv met_nmb.d01.2019-01-19_21:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-19_21:00:00.dio
++ mv metgriddone.10 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=60
++ ENDHR=63
++ ICOUNT=11
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +60 2019011712
++ start=2019012000
++ echo 2019012000
++ cut -c1-4
++ ystart=2019
++ echo 2019012000
++ cut -c5-6
++ mstart=01
++ echo 2019012000
++ cut -c7-8
++ dstart=20
++ echo 2019012000
++ cut -c9-10
++ hstart=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +63 2019011712
++ end=2019012003
++ echo 2019012003
++ cut -c1-4
++ yend=2019
++ echo 2019012003
++ cut -c5-6
++ mend=01
++ echo 2019012003
++ cut -c7-8
++ dend=20
++ echo 2019012003
++ cut -c9-10
++ hend=03
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_11
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_11/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:03:
++ sed s:DEND:20:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.11
++ sed s:YSTART:2019:
++ sed s:DSTART:20:
++ sed s:MSTART:01:
++ sed s:HSTART:00:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.11 namelist.nps
++ FHR=60
++ [ 60 -le 63 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +60 2019011712
++ time=2019012000
++ echo 2019012000
++ cut -c1-4
++ yy=2019
++ echo 2019012000
++ cut -c5-6
++ mm=01
++ echo 2019012000
++ cut -c7-8
++ dd=20
++ echo 2019012000
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_00 .
++ expr 60 + 3
++ FHR=63
++ [ 63 -le 63 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +63 2019011712
++ time=2019012003
++ echo 2019012003
++ cut -c1-4
++ yy=2019
++ echo 2019012003
++ cut -c5-6
++ mm=01
++ echo 2019012003
++ cut -c7-8
++ dd=20
++ echo 2019012003
++ cut -c9-10
++ hh=03
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_03 .
++ expr 63 + 3
++ FHR=66
++ [ 66 -le 63 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-20_00
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_00:00:00.dio opened 
+ Processing 2019-01-20_03
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_03:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.11
++ ls met_nmb.d01.2019-01-20_00:00:00.dio met_nmb.d01.2019-01-20_03:00:00.dio
++ files=$'met_nmb.d01.2019-01-20_00:00:00.dio\nmet_nmb.d01.2019-01-20_03:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-20_00:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_00:00:00.dio
++ mv met_nmb.d01.2019-01-20_03:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_03:00:00.dio
++ mv metgriddone.11 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=66
++ ENDHR=69
++ ICOUNT=12
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +66 2019011712
++ start=2019012006
++ echo 2019012006
++ cut -c1-4
++ ystart=2019
++ echo 2019012006
++ cut -c5-6
++ mstart=01
++ echo 2019012006
++ cut -c7-8
++ dstart=20
++ echo 2019012006
++ cut -c9-10
++ hstart=06
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +69 2019011712
++ end=2019012009
++ echo 2019012009
++ cut -c1-4
++ yend=2019
++ echo 2019012009
++ cut -c5-6
++ mend=01
++ echo 2019012009
++ cut -c7-8
++ dend=20
++ echo 2019012009
++ cut -c9-10
++ hend=09
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_12
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_12/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:09:
++ sed s:DEND:20:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ sed s:HSTART:06:
++ 1> namelist.nps.12
++ sed s:DSTART:20:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.12 namelist.nps
++ FHR=66
++ [ 66 -le 69 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +66 2019011712
++ time=2019012006
++ echo 2019012006
++ cut -c1-4
++ yy=2019
++ echo 2019012006
++ cut -c5-6
++ mm=01
++ echo 2019012006
++ cut -c7-8
++ dd=20
++ echo 2019012006
++ cut -c9-10
++ hh=06
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_06 .
++ expr 66 + 3
++ FHR=69
++ [ 69 -le 69 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +69 2019011712
++ time=2019012009
++ echo 2019012009
++ cut -c1-4
++ yy=2019
++ echo 2019012009
++ cut -c5-6
++ mm=01
++ echo 2019012009
++ cut -c7-8
++ dd=20
++ echo 2019012009
++ cut -c9-10
++ hh=09
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_09 .
++ expr 69 + 3
++ FHR=72
++ [ 72 -le 69 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-20_06
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_06:00:00.dio opened 
+ Processing 2019-01-20_09
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_09:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.12
++ ls met_nmb.d01.2019-01-20_06:00:00.dio met_nmb.d01.2019-01-20_09:00:00.dio
++ files=$'met_nmb.d01.2019-01-20_06:00:00.dio\nmet_nmb.d01.2019-01-20_09:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-20_06:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_06:00:00.dio
++ mv met_nmb.d01.2019-01-20_09:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_09:00:00.dio
++ mv metgriddone.12 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=72
++ ENDHR=75
++ ICOUNT=13
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +72 2019011712
++ start=2019012012
++ echo 2019012012
++ cut -c1-4
++ ystart=2019
++ echo 2019012012
++ cut -c5-6
++ mstart=01
++ echo 2019012012
++ cut -c7-8
++ dstart=20
++ echo 2019012012
++ cut -c9-10
++ hstart=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +75 2019011712
++ end=2019012015
++ echo 2019012015
++ cut -c1-4
++ yend=2019
++ echo 2019012015
++ cut -c5-6
++ mend=01
++ echo 2019012015
++ cut -c7-8
++ dend=20
++ echo 2019012015
++ cut -c9-10
++ hend=15
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_13
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_13/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:15:
++ sed s:DEND:20:
++ 1> namelist.nps.13
++ sed s:MEND:01:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ sed s:YEND:2019:
++ sed s:HSTART:12:
++ sed s:DSTART:20:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.13 namelist.nps
++ FHR=72
++ [ 72 -le 75 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +72 2019011712
++ time=2019012012
++ echo 2019012012
++ cut -c1-4
++ yy=2019
++ echo 2019012012
++ cut -c5-6
++ mm=01
++ echo 2019012012
++ cut -c7-8
++ dd=20
++ echo 2019012012
++ cut -c9-10
++ hh=12
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_12 .
++ expr 72 + 3
++ FHR=75
++ [ 75 -le 75 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +75 2019011712
++ time=2019012015
++ echo 2019012015
++ cut -c1-4
++ yy=2019
++ echo 2019012015
++ cut -c5-6
++ mm=01
++ echo 2019012015
++ cut -c7-8
++ dd=20
++ echo 2019012015
++ cut -c9-10
++ hh=15
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_15 .
++ expr 75 + 3
++ FHR=78
++ [ 78 -le 75 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-20_12
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_12:00:00.dio opened 
+ Processing 2019-01-20_15
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_15:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.13
++ ls met_nmb.d01.2019-01-20_12:00:00.dio met_nmb.d01.2019-01-20_15:00:00.dio
++ files=$'met_nmb.d01.2019-01-20_12:00:00.dio\nmet_nmb.d01.2019-01-20_15:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-20_12:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_12:00:00.dio
++ mv met_nmb.d01.2019-01-20_15:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_15:00:00.dio
++ mv metgriddone.13 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=78
++ ENDHR=81
++ ICOUNT=14
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +78 2019011712
++ start=2019012018
++ echo 2019012018
++ cut -c1-4
++ ystart=2019
++ echo 2019012018
++ cut -c5-6
++ mstart=01
++ echo 2019012018
++ cut -c7-8
++ dstart=20
++ echo 2019012018
++ cut -c9-10
++ hstart=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +81 2019011712
++ end=2019012021
++ echo 2019012021
++ cut -c1-4
++ yend=2019
++ echo 2019012021
++ cut -c5-6
++ mend=01
++ echo 2019012021
++ cut -c7-8
++ dend=20
++ echo 2019012021
++ cut -c9-10
++ hend=21
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_14
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_14/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:21:
++ sed s:DEND:20:
++ sed s:MEND:01:
++ sed s:YEND:2019:
++ 1> namelist.nps.14
++ sed s:HSTART:18:
++ sed s:DSTART:20:
++ sed s:MSTART:01:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.14 namelist.nps
++ FHR=78
++ [ 78 -le 81 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +78 2019011712
++ time=2019012018
++ echo 2019012018
++ cut -c1-4
++ yy=2019
++ echo 2019012018
++ cut -c5-6
++ mm=01
++ echo 2019012018
++ cut -c7-8
++ dd=20
++ echo 2019012018
++ cut -c9-10
++ hh=18
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_18 .
++ expr 78 + 3
++ FHR=81
++ [ 81 -le 81 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +81 2019011712
++ time=2019012021
++ echo 2019012021
++ cut -c1-4
++ yy=2019
++ echo 2019012021
++ cut -c5-6
++ mm=01
++ echo 2019012021
++ cut -c7-8
++ dd=20
++ echo 2019012021
++ cut -c9-10
++ hh=21
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-20_21 .
++ expr 81 + 3
++ FHR=84
++ [ 84 -le 81 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-20_18
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_18:00:00.dio opened 
+ Processing 2019-01-20_21
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-20_21:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.14
++ ls met_nmb.d01.2019-01-20_18:00:00.dio met_nmb.d01.2019-01-20_21:00:00.dio
++ files=$'met_nmb.d01.2019-01-20_18:00:00.dio\nmet_nmb.d01.2019-01-20_21:00:00.dio'
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-20_18:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_18:00:00.dio
++ mv met_nmb.d01.2019-01-20_21:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-20_21:00:00.dio
++ mv metgriddone.14 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
++ INT=3
++ CYC=12
++ STARTHR=84
++ ENDHR=84
++ ICOUNT=15
++ SENDCOM=1
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ hstart=12
++ orig_start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +84 2019011712
++ start=2019012100
++ echo 2019012100
++ cut -c1-4
++ ystart=2019
++ echo 2019012100
++ cut -c5-6
++ mstart=01
++ echo 2019012100
++ cut -c7-8
++ dstart=21
++ echo 2019012100
++ cut -c9-10
++ hstart=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +84 2019011712
++ end=2019012100
++ echo 2019012100
++ cut -c1-4
++ yend=2019
++ echo 2019012100
++ cut -c5-6
++ mend=01
++ echo 2019012100
++ cut -c7-8
++ dend=21
++ echo 2019012100
++ cut -c9-10
++ hend=00
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_15
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
+-rw-r--r-- 1 Eric.Rogers emcmodel 331525607 Dec 17 21:36 /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid_15/geo_nmb.d01.dio
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:HEND:00:
++ sed s:YEND:2019:
++ sed s:DSTART:21:
++ sed s:MSTART:01:
++ 1> namelist.nps.15
++ sed s:DEND:21:
++ sed s:MEND:01:
++ sed s:HSTART:00:
++ sed s:YSTART:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam.METGRID.TBL.bocos METGRID.TBL
++ mv namelist.nps.15 namelist.nps
++ FHR=84
++ [ 84 -le 84 ]
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +84 2019011712
++ time=2019012100
++ echo 2019012100
++ cut -c1-4
++ yy=2019
++ echo 2019012100
++ cut -c5-6
++ mm=01
++ echo 2019012100
++ cut -c7-8
++ dd=21
++ echo 2019012100
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib/FILE:2019-01-21_00 .
++ expr 84 + 3
++ FHR=87
++ [ 87 -le 84 ]
++ pgm=nam_metgrid_boco
++ export pgm
++ . prep_step
++ [ -n nam_metgrid_boco ]
++ [ -n myout.log ]
++ echo nam_metgrid_boco
++ 1>> myout.log
++ [ -f errfile ]
++ FORT01=0
++ export FORT01
++ env
++ grep '^FORT[0-9]\{1,\}='
++ awk '-F=' '{print $1}'
++ unset FORT01
++ ls -l /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+-rwxr-xr-x 1 Matthew.Pyle emcmodel 4331808 Jan 18 15:43 /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid_boco
+Processing domain 1 of 1
+ my_endianness = 2
+ is_little_endian() = T
+ File: ./geo_nmb.d01.dio opened 
+ call map_set (a)
+ Processing 2019-01-21_00
+    ./FILE
+ my_endianness = 2
+ is_little_endian() = T
+ dfile%endianness = 1
+ File: ./met_nmb.d01.2019-01-21_00:00:00.dio opened 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  Successful completion of metgrid.  !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
++ err=0
++ export err
++ err_chk
+nam_metgrid_boco completed cleanly
++ [ 0 -eq 0 ]
++ echo DONE
++ 1> metgriddone.15
++ ls met_nmb.d01.2019-01-21_00:00:00.dio
++ files=met_nmb.d01.2019-01-21_00:00:00.dio
++ [ 1 '=' 1 ]
++ mv met_nmb.d01.2019-01-21_00:00:00.dio /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_metgrid/nam.t12z.met_nmb.d01.2019-01-21_00:00:00.dio
++ mv metgriddone.15 ../
++ echo EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
+EXITING /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco/nam_boco_metgrid_gen.sh
++ exit
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@v66c46f>
+Subject: Job 2376724: <metgrid> in cluster <venus> Done
+
+Job <metgrid> was submitted from host <v72a3f> by user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 16:40:42 2019
+Job was executed on host(s) <v66c46f>, in queue <debug>, as user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 16:40:42 2019
+</u/Matthew.Pyle> was used as the home directory.
+</gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco> was used as the working directory.
+Started at Fri Jan 18 16:40:42 2019
+Terminated at Fri Jan 18 16:52:22 2019
+Results reported at Fri Jan 18 16:52:22 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/ksh
+
+#BSUB -oo out.metgrid
+#BSUB -eo out.metgrid
+#BSUB -n 1
+#BSUB -J metgrid
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#BSUB -q "debug"
+#BSUB -R span[ptile=1]
+#BSUB -R "affinity[core]"
+####BSUB -R rusage[mem=4000]
+#BSUB -x
+####BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+. /usrx/local/prod/lmod/lmod/init/ksh
+module load prod_util/1.1.0
+module load NetCDF/4.5.0
+
+BASE=/gpfs/dell2/ptmp/Matthew.Pyle
+
+set -x
+
+mkdir -p ${BASE}/testnps_origcode
+mkdir -p ${BASE}/testnps_origcode/run_metgrid
+cd ${BASE}/testnps_origcode
+export DATAROOT=${BASE}/testnps_origcode
+export DATA=${BASE}/testnps_origcode/run_metgrid
+cd $DATA
+
+export PDY=20190117
+export cyc=12
+
+export CYCLE=$PDY$cyc
+
+export PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
+export PARMnps=$PARMnam
+export FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
+export USHnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush
+export USHnps=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco
+# path to your binaries
+###EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec/wcoss.exec
+export EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
+
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   689.68 sec.
+    Max Memory :                                 1224 MB
+    Average Memory :                             786.46 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                7
+    Run time :                                   729 sec.
+    Turnaround time :                            700 sec.
+
+The output (if any) is above this job summary.
+
+[Fri Jan 18 16:52:22 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: /var/lsf/ecflow_post_in.Matthew.Pyle.2376724 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Fri Jan 18 16:52:22 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Adding mmpmon postexec records to /var/lsf/mmpmon.2376724 for nodes: v66c46f
+[Fri Jan 18 16:52:23 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Performing IPCS Clean-up Check on nodes: v66c46f
+[Fri Jan 18 16:52:23 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Reporting summary of GPFS mmpmon activity:
+
+LSF_SUMMARY: GPFS
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell1
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():               877
+    close():              877
+    read():                 9
+    write():                0
+    readdir():            132
+
+  Data:
+
+    READ:                  2.9 MB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            1
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell2
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():               688
+    close():              534
+    read():              6752
+    write():             3881
+    readdir():             45
+
+  Data:
+
+    READ:                 72.2 GB
+    WRITTEN:              54.5 GB
+
+  Inode_Updates:          678
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell3
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                82
+    close():               82
+    read():                 0
+    write():                0
+    readdir():             28
+
+  Data:
+
+    READ:                 18.2 KB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-lsf
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                14
+    close():               14
+    read():                 3
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                265.9 KB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            1
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-iodprod-dell
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-ioddev-dell
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd1
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd2
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd3
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp1
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp2
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-hps
+---------------------------------
+
+  Time_Interval:          700 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+===============================================
+AGGREGATE TOTALS (ALL Hosts, ALL File Systems):
+===============================================
+
+  Requests:
+
+    open():              1661
+    close():             1507
+    read():              6764
+    write():             3881
+    readdir():            205
+
+  Data:
+
+    READ:                 72.2 GB
+    WRITTEN:              54.5 GB
+
+  Inode_Updates:          680
+

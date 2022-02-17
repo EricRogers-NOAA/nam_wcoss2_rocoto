@@ -1,0 +1,36 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=nam_${cyc}_main_${envir}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+  # Got these from the FV3GFS env.
+  export MPI_LABELIO=YES
+  export MP_STDOUTMODE="ORDERED"
+
+#
+# Get needed variables from exnam_prelim.sh.sms
+#
+. $GESDIR/nam.t${cyc}z.envir.sh
+
+# For coldstart of parent domain at start of catchup cycle
+
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_ungrib_boco.sh
+jerr=$?
+########################################################
+
+cat $pgmout
+cat errfile
+
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+exit $jerr

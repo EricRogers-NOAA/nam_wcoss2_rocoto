@@ -1,0 +1,40 @@
+#%Module######################################################################
+##                                                        Eric.Rogers@noaa.gov
+##                                                           NOAA/NWS/NCEP/EMC
+## ref2nemsio
+##_____________________________________________________
+
+set ver v1.0.0
+
+module load envvar/${envvar_ver}
+module load PrgEnv-intel/${PrgEnv_intel_ver}
+module load intel/${intel_ver}
+module load craype/${craype_ver}
+module load cray-mpich/${cray_mpich_ver}
+
+setenv COMP ftn
+setenv COMP_MP ftn
+setenv COMP_MPI ftn
+
+setenv C_COMP cc
+setenv C_COMP_MP cc
+
+set COMPILER intel
+
+setenv FFLAGS_COM "-fp-model strict"
+setenv LDFLAGS_COM "-mkl"
+setenv OMPFLAG "-qopenmp"
+
+# Loading nceplibs modules
+
+module load bufr/${bufr_ver}
+module load nemsio/${nemsio_ver}
+module load sfcio/${sfcio_ver}
+module load sigio/${sigio_ver}
+module load sp/${sp_ver}
+module load w3nco/${w3nco_ver}
+module load w3emc/${w3emc_ver}
+module load crtm/${crtm_ver}
+module load bacio/${bacio_ver}
+module load wrf_io/${wrf_io_ver}
+module load netcdf/${netcdf_ver}

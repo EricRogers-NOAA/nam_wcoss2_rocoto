@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -x
+
+#Compile the 3hr bucket code
+rm nam_get1236hpcp_3hrbuckets 
+
+ftn -convert big_endian -o nam_get1236hpcp_3hrbuckets get1236hpcp_3hrbucket.f movdat.f ${W3NCO_LIB4} ${W3EMC_LIB4} ${BACIO_LIB4}  
+
+#Compile the code which assumes 12 hour buckets
+rm nam_get1236hpcp_12hrbuckets
+
+ftn -convert big_endian -o nam_get1236hpcp_12hrbuckets get1236hpcp.f movdat.f ${W3NCO_LIB4} ${W3EMC_LIB4} ${BACIO_LIB4} 
+
+mv nam_get1236hpcp_3hrbuckets ${OUTDIR}/nam_get1236hpcp_3hrbuckets
+mv nam_get1236hpcp_12hrbuckets ${OUTDIR}/nam_get1236hpcp_12hrbuckets
+

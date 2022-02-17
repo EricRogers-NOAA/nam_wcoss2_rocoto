@@ -1,0 +1,139 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=${jobid:?}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+#################################################
+# Set up model and cycle specific variables
+#################################################
+
+export fstart=${fstart:-00}
+export finc=${finc:-3}
+if [ $RUNTYPE = CATCHUP ] ; then
+  export fend=${FMAX_CATCHUP_NEST:-60}
+else
+  export fend=${FMAX_HOURLY_NEST:-18}
+fi
+
+export model=`echo $RUN | awk '{print tolower($0)}'`
+export EXT=.tm00
+export GRIB=hiresf
+export GRIB1=null
+export DBN_ALERT_TYPE=NAM_GEMPAK_NEST
+
+rm poescript
+
+#################################################################
+# Execute the script to make conus GEMPAK grids
+
+mkdir -p $DATA/nam_conusnest
+cd $DATA/nam_conusnest
+
+# Copy model specific GEMPAK tables into working directory
+#
+cp ${NAMFIXgem}/namnests_ncepgrib129.tbl ncepgrib129.tbl
+cp ${NAMFIXgem}/namnests_ncepgrib2.tbl ncepgrib2.tbl
+cp ${NAMFIXgem}/namnests_wmogrib2.tbl wmogrib2.tbl
+cp ${NAMFIXgem}/namnests_vcrdgrib1.tbl vcrdgrib1.tbl
+
+cd $DATA
+export type=nam_conusnest
+echo "$HOMEnam/scripts/exnam_nawips.sh $type $GRIB $GRIB1 $finc $fend" >> $DATA/poescript
+#################################################################
+
+#################################################################
+# Execute the script to make conus GEMPAK grids (for Model Analysis and Guidance page graphics)
+mkdir -p $DATA/nam_conusnest_mag
+cd $DATA/nam_conusnest_mag
+
+# Copy model specific GEMPAK tables into working directory
+#
+cp ${NAMFIXgem}/namnests_ncepgrib129.tbl ncepgrib129.tbl
+cp ${NAMFIXgem}/namnests_ncepgrib2.tbl ncepgrib2.tbl
+cp ${NAMFIXgem}/namnests_wmogrib2.tbl wmogrib2.tbl
+cp ${NAMFIXgem}/namnests_vcrdgrib1.tbl vcrdgrib1.tbl
+
+cd $DATA
+export type=nam_conusnest_mag
+echo "$HOMEnam/scripts/exnam_nawips.sh $type $GRIB $GRIB1 $finc $fend" >> $DATA/poescript
+#################################################################
+
+#################################################################
+# Execute the script to make conus GEMPAK grids (Common convection-allowing model fields)
+mkdir -p $DATA/nam_conusnest_cam
+cd $DATA/nam_conusnest_cam
+
+# Copy model specific GEMPAK tables into working directory
+#
+cp ${NAMFIXgem}/namnests_ncepgrib129.tbl ncepgrib129.tbl
+cp ${NAMFIXgem}/namnests_ncepgrib2.tbl ncepgrib2.tbl
+cp ${NAMFIXgem}/namnests_wmogrib2.tbl wmogrib2.tbl
+cp ${NAMFIXgem}/namnests_vcrdgrib1.tbl vcrdgrib1.tbl
+
+cd $DATA
+export GRIB=camfld
+export type=nam_conusnest_cam
+echo "$HOMEnam/scripts/exnam_nawips.sh $type $GRIB $GRIB1 $finc $fend" >> $DATA/poescript
+#################################################################
+
+#################################################################
+# Execute the script to make alaska GEMPAK grids
+mkdir -p $DATA/nam_alaskanest
+cd $DATA/nam_alaskanest
+
+# Copy model specific GEMPAK tables into working directory
+#
+cp ${NAMFIXgem}/namnests_ncepgrib129.tbl ncepgrib129.tbl
+cp ${NAMFIXgem}/namnests_ncepgrib2.tbl ncepgrib2.tbl
+cp ${NAMFIXgem}/namnests_wmogrib2.tbl wmogrib2.tbl
+cp ${NAMFIXgem}/namnests_vcrdgrib1.tbl vcrdgrib1.tbl
+
+cd $DATA
+export GRIB=hiresf
+export type=nam_alaskanest
+echo "$HOMEnam/scripts/exnam_nawips.sh $type $GRIB $GRIB1 $finc $fend" >> $DATA/poescript
+#################################################################
+# Execute the script to make Puerto Rico GEMPAK grids
+mkdir -p $DATA/nam_priconest
+cd $DATA/nam_priconest
+
+# Copy model specific GEMPAK tables into working directory
+#
+cp ${NAMFIXgem}/namnests_ncepgrib129.tbl ncepgrib129.tbl
+cp ${NAMFIXgem}/namnests_ncepgrib2.tbl ncepgrib2.tbl
+cp ${NAMFIXgem}/namnests_wmogrib2.tbl wmogrib2.tbl
+cp ${NAMFIXgem}/namnests_vcrdgrib1.tbl vcrdgrib1.tbl
+
+cd $DATA
+export GRIB=hiresf
+export type=nam_priconest
+echo "$HOMEnam/scripts/exnam_nawips.sh $type $GRIB $GRIB1 $finc $fend" >> $DATA/poescript
+#################################################################
+
+cat poescript
+
+chmod 775 $DATA/poescript
+
+export CMDFILE=$DATA/poescript
+# Execute the script.
+${MPIEXEC} -cpu-bind core -configfile $CMDFILE
+export err=$?; err_chk
+
+cat $pgmout
+date
+msg="ENDED NORMALLY."
+postmsg "$msg"
+
+#############################
+# Remove the Temporary working directory
+##############################
+cd $DATAROOT
+if [ ${KEEPDATA:-YES} = NO ] ; then rm -rf $DATA ; fi
+
+exit $jerr

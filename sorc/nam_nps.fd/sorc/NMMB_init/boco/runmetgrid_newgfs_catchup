@@ -1,0 +1,96 @@
+#!/bin/ksh
+
+#BSUB -oo out.metgrid_catchup
+#BSUB -eo out.metgrid_catchup
+#BSUB -n 6
+#BSUB -J metgrid
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#####BSUB -q "dev2_shared"
+#BSUB -q "dev2"
+#BSUB -R span[ptile=6]
+#BSUB -R "affinity[core]"
+####BSUB -R rusage[mem=4000]
+#BSUB -x
+#BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+set -x
+
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+cd /stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATAROOT=/stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid
+cd $DATA
+
+export NDATE=/nwprod/util/exec/ndate
+
+export PDY=20161220
+export cyc=12
+
+export CYCLE=$PDY$cyc
+
+export TM06=`${NDATE} -06 $CYCLE`
+PDYtm06=`echo $TM06 | cut -c 1-8`
+export TM05=`${NDATE} -05 $CYCLE`
+PDYtm05=`echo $TM05 | cut -c 1-8`
+export TM04=`${NDATE} -04 $CYCLE`
+PDYtm04=`echo $TM04 | cut -c 1-8`
+export TM03=`${NDATE} -03 $CYCLE`
+PDYtm03=`echo $TM03 | cut -c 1-8`
+export TM02=`${NDATE} -02 $CYCLE`
+PDYtm02=`echo $TM02 | cut -c 1-8`
+export TM01=`${NDATE} -01 $CYCLE`
+PDYtm01=`echo $TM01 | cut -c 1-8`
+
+export PARMnam=/meso/save/Eric.Rogers/nam.v4.1.5/parm
+export PARMnps=/meso/save/Eric.Rogers/tempscripts
+export FIXnam=/meso/save/Eric.Rogers/nam.v4.1.5/fix
+export EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec
+export USHnps=/meso/save/Eric.Rogers/tempscripts
+
+mkdir -p $DATAROOT/run_metgrid_tm06
+mkdir -p $DATAROOT/run_metgrid_tm05
+mkdir -p $DATAROOT/run_metgrid_tm04
+mkdir -p $DATAROOT/run_metgrid_tm03
+mkdir -p $DATAROOT/run_metgrid_tm02
+mkdir -p $DATAROOT/run_metgrid_tm01
+
+#########################################################
+# RUN MULTIPLE METGRID STEPS USING POE
+#########################################################
+
+# Create a script to be poe'd
+cd $DATA
+rm -rf poescript
+
+# Rename metgrid files with /com type names
+export send=0
+
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM06 00 01 tm06 $send" > poescript
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM05 00 01 tm05 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM04 00 01 tm04 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM03 00 01 tm03 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM02 00 01 tm02 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen_catchup.sh $TM01 00 01 tm01 $send" >> poescript
+
+chmod 775 $DATA/poescript
+export MP_PGMMODEL=mpmd
+export MP_CMDFILE=poescript
+export MP_LABELIO=YES
+export MP_STDOUTMODE=ordered
+
+mpirun.lsf 
+###export err=$?
+####${DATA}/err_chk
+
+####cat $DATA/metgrid.log.0000_* > $COMOUT/hiresw.t${cyc}z.${NEST}${MODEL}.metgrid.log
+
+##msg="JOB $job FOR WRF NEST=${NEST}${MODEL} HAS COMPLETED NORMALLY"
+##postmsg "$jlogfile" "$msg"

@@ -1,0 +1,108 @@
+################################################################################
+# 
+#     Makefile for WRFBUFR code
+#
+#     Use:
+#     make         -  build the executable
+#     make clean   -  start with a clean slate
+#
+#     The following macros will be of interest:
+#
+#         TARGET   - name of the executable
+#         FC       - name of Fortran compiler
+#         CPP      - name of CPP
+#         ARCH     - architecture
+#         CPPFLAGS - CPP flags
+#         OPTS     - compiler code optimizations
+#         LIST     - source listing
+#         SMP      - threading
+#         TRAPS    - runtime traps for floating point exceptions
+#         PROFILE  - source code profiling ( -pg )
+#         DEBUG    - -g
+#         MEM      - user data area and stack size
+#         MAP      - load map
+#         W3LIB    - w3lib
+#         BACIO    - bacio lib
+#         ESSL     - ESSL library
+#         MASS     - MASS library
+#         HPMLIB   - hpm lib
+#         SEARCH   - library search location
+#
+#################################################################################
+#
+# Define the name of the executable
+#
+TARGET = nam_post0
+#
+# CPP, Compiler, and Linker Options
+#
+
+FC       = mpifort
+CPP      = /lib/cpp -P
+ARCH     =
+CPPFLAGS = 
+OPTS     = -O
+LIST     = 
+FREE     = -FR
+TRAPS    = 
+PROFILE  = 
+DEBUG    = -g -traceback -convert big_endian 
+MEM      =
+MAP      =
+ESSL     =
+MASS     =
+W3FLAGS = -I/scratch3/NCEPDEV/nwprod/lib
+NEMSIOFLAG = -I/scratch3/NCEPDEV/nwprod/lib/incmod/nemsio
+
+SEARCH   =
+#
+# Assemble Options
+#
+FFLAGS   = $(OPTS) $(LIST) $(TRAPS) $(PROFILE) $(DEBUG) $(W3FLAGS) $(NEMSIOFLAG)
+FFLAGST  = $(OPTS) $(LIST) $(FREE) $(TRAPS) $(PROFILE) $(DEBUG) $(W3FLAGS) $(NEMSIOFLAG)
+LDFLAGS  = $(MEM) $(MAP) $(SMP) $(PROFILE)
+LIBS     = $(ESSL) $(MASS) $(SEARCH) \
+           -L/scratch3/NCEPDEV/nwprod/lib -lnemsio \
+           -L/scratch3/NCEPDEV/nwprod/lib \
+           -lsigio_4 -lsfcio_4 -lbacio_4 -lsp_4 -lw3nco_4 -lw3emc_4
+#
+#
+# free-format object files
+#
+OBJST=	kinds_mod.o \
+        next_buf.o retrieve_index.o GETNEMSANDPLACE.o
+#
+# fixed-format object files
+#
+OBJS=	VRBLS2D_mod.o VRBLS3D_mod.o MASKS_mod.o SOIL_mod.o \
+        WRFBUFR.o PROF_NMMB.o \
+        iw3jdn.o w3fs26.o w3movdat.o w3reddat.o gdswiz.o gdswiz01.o \
+        gdswiz03.o gdswiz05.o
+#
+# Includes
+#
+INCLUDES= parmsoil
+#
+# Common Blocks
+#
+COMMS=
+
+DEPS= $(COMMS) $(INCLUDES)
+
+.SUFFIXES:	.F .f .o
+
+.F.f:
+	$(CPP) $(CPPFLAGS) $< > $*.f
+
+$(TARGET):	$(OBJST) $(OBJS)
+	$(FC) $(LDFLAGS) -o $@ $(OBJST) $(OBJS) $(LIBS) 
+
+$(OBJS):	$(DEPS)
+	$(FC) -c $(FFLAGS) $(@:.o=.f)
+
+$(OBJST):	$(DEPS)
+	$(FC) -c $(FFLAGST) $(@:.o=.f)
+
+clean:	
+	/bin/rm -f  $(TARGET) *.lst *.o *.mod
+#

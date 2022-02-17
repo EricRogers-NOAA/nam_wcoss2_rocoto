@@ -1,0 +1,8 @@
+set -x
+
+qsub run_nam_catchup_post_alaska_tm06_f00.sh
+qsub run_nam_catchup_post_alaska_tm06_f01.sh
+qsub run_nam_catchup_post_conus_tm06_f00.sh
+qsub run_nam_catchup_post_conus_tm06_f01.sh
+qsub run_nam_catchup_post_tm06_f00.sh
+qsub run_nam_catchup_post_tm06_f01.sh

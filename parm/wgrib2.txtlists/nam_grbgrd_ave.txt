@@ -1,0 +1,11 @@
+DSWRF:surface:
+LHTFL:surface:
+SHTFL:surface:
+GFLUX:surface:
+TCDC:entire atmosphere (considered as a single layer):
+DLWRF:surface:
+USWRF:surface:
+ULWRF:surface:
+USWRF:top of atmosphere:
+ULWRF:top of atmosphere:
+CDCON:entire atmosphere (considered as a single layer):

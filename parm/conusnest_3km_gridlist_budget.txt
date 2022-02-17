@@ -1,0 +1,3 @@
+APCP:kpds5=61:kpds6=1:kpds7=0:
+ACPCP:kpds5=63:kpds6=1:kpds7=0:
+CPCP:kpds5=62:kpds6=1:kpds7=0:

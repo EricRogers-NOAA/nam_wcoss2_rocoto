@@ -1,0 +1,1 @@
+*/3 * * * * test -f /lfs/h2/emc/lam/noscrub/Eric.Rogers/nam.v4.2.0_rocoto/run_NAM.sh && /lfs/h2/emc/lam/noscrub/Eric.Rogers/nam.v4.2.0_rocoto/run_NAM.sh >> /lfs/h2/emc/ptmp/Eric.Rogers/output_para/cron_nam_$(date +\%Y\%m\%d).log 2>&1

@@ -1,0 +1,8 @@
+TCDC:entire atmosphere (considered as a single layer):
+DSWRF:surface:
+SHTFL:surface:
+LHTFL:surface:
+DSWRF:surface:
+DLWRF:surface:
+USWRF:surface:
+ULWRF:surface:

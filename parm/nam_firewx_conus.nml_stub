@@ -1,0 +1,77 @@
+
+&grid
+ domain_name="b_d03"
+ domain_type="bgrid"
+ imdl = 333
+ jmdl = 333
+ dx_mdl = .01575
+ dy_mdl = .0135
+ centlat_mdl = CENTLAT_FWX
+ centlon_mdl = CENTLON_FWX
+ imdl_parent = 954, 1827
+ jmdl_parent = 835, 1467
+ dx_parent_mdl = .126, .0315
+ dy_parent_mdl = .108, .027
+ centlat_parent_mdl = 54.0, 38.61676
+ centlon_parent_mdl = -106.0, -98.87040
+/
+
+&tiling
+ max_total_land_tiles=1
+/
+
+&veg_tiling
+ max_veg_tiles=1
+ veg_tile_threshold=0.05
+ default_veg_category=7
+ num_veg_groups = 5
+!-------------------------------------------------------------
+! veg groups
+! 1 - forest           categories - 1,2,3,4,5,8,9
+! 2 - barren           categories - 15,16,20
+! 3 - urban            categories - 13
+! 4 - grass/cropland   categories - 10,12,14
+! 5 - wetland/tundra   categories - 6,7,11,18,19
+!
+ veg_groups =1,1,1,1,1,5,5,1,1,4,5,4,3,4,2,2,9,5,5,2
+!--------------------------------------------------------------
+/
+
+&soil_tiling
+ max_soil_tiles=1
+ soil_tile_threshold=0.05
+ default_soil_category=7
+ num_soil_groups = 5
+!----------------------------------------------
+! soil groups
+! 1 - sand  - cats 1,2,3
+! 2 - silt  - cats 4,5,8
+! 3 - loam  - cats 6,7,9
+! 4 - clay  - cats 10,11,12
+! 5 - other - cats 13,15,16
+!----------------------------------------------
+ soil_groups = 1,1,1,2,2,3,3,2,3,4,4,4,5,9,5,5
+/
+
+!----------------------------------------------------------
+! smooth = 1, peak smoothing with 'num_smooth_passes1' passes.
+! smooth = 2, smoother/desmoother with 'num_smooth_passes2' passes.
+! smooth = 3, both (1, then 2)
+! both options smooth the lateral boundaries in
+! the same heavy-handed manner.
+!----------------------------------------------------------
+
+&lsmask_orog_tiling
+ lsmask_aavg=.false.
+ lsmask_tiles=.false.
+ lsmask_tile_threshold=0.0
+ lsmask_flake=.true.
+ orog_gwd_tiles=.false.
+ max_orog_tiles=1
+ orog_bin_width=300.0
+ orog_tile_threshold=0.05
+ smooth=2
+ num_smooth_passes1=0
+ num_smooth_passes2=1
+ smooth_bndy=.true.
+/

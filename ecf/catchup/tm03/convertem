@@ -1,0 +1,28 @@
+#
+set files = ( `cat list` )
+foreach file ($files)
+sed 's/$VERFILE\/nam.ver/$VERFILE\/run.ver/g' $file > $file.new
+mv $file.new $file
+end
+
+exit
+
+set files = ( `cat list` )
+foreach file ($files)
+sed 's/cyc=18/cyc=12/g' $file > $file.new
+mv $file.new $file
+end
+
+set files = ( `cat list` )
+foreach file ($files)
+sed 's/18/_12/g' $file > $file.new
+mv $file.new $file
+end
+
+exit
+
+set files = ( `cat list` )
+foreach file ($files)
+sed 's/PDY=20210825/PDY=20210824/g' $file > $file.new
+mv $file.new $file
+end

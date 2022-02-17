@@ -1,0 +1,29 @@
+  00001C02  0754DA80  0B690002...00012D00       11         2M/SFC TMP
+    218  00  ZTBQ98   0                        EOM
+  00001C02  0754DA80  2169000A...00012D00       33        10M/SFC U GRD
+    218  00  ZUBQ98   0                        EOM
+  00001C02  0754DA80  2269000A...00012D00       34        10M/SFC V GRD
+    218  00  ZVBQ98   0                        EOM
+  00001C02  0754DA80  34690002...00012D00       52         2M/SFC R H
+    218  00  ZRBQ98   0                        EOM
+  00001C02  0754DA80  01010000...00012D00        1         SFC PRES
+    218  00  ZPBQ98   0                        EOM
+  00001C02  0754DA80  82660000...00012D00      130         MSL MSLET
+    218  00  ZPBQ89   0                        EOM
+  00001C02  0754DA80  02660000...00012D00        2         PRMSL
+    218  00  ZZBQ89   0                        EOM
+  00001C02  0754DA80  9D010000...00012D00      157         SFC CAPE
+    218  00  ZWBQ98   0                        EOM
+  00001C02  0754DA80  9C010000...00012D00      156         SFC CIN
+    218  00  ZYBQ98   0                        EOM
+  00001C02  0754DA80  8474B400...00012D00      132    180/0 SPDY   4LFTX
+    218  00  ZQBQ86   0                        EOM
+  00001C02  0754DA80  36C80000...00012D00       54         EATM P WAT
+    218  00  ZFBQ00   0                        EOM
+  00001C02  0754DA80  BE6A1E00...00012D00      190    30 HM  0 HM  HLCY
+    218  00  ZZBQ86   0                        EOM  
+  00001C02  0754DA80  3F010000...00012A2D       63    3 HR ACUM   SFC ACPCP
+    218  00  ZGBQ98   0                        EOM
+  00001C02  0754DA80  3D010000...00012A2D       61    3 HR ACUM   SFC A PCP
+    218  00  ZEBQ98   0                        EOM
+  FFFFFFFF

@@ -1,0 +1,429 @@
++ MP_EUILIB=us
++ export MP_EUILIB
++ MP_EUIDEVICE=sn_all
++ export MP_EUIDEVICE
++ MP_MPILIB=mpich2
++ export MP_MPILIB
++ MP_STDOUTMODE=unordered
++ export MP_STDOUTMODE
++ MP_LABELIO=yes
++ export MP_LABELIO
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp
++ tmmark=tm06
++ export tmmark
++ DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup
++ export DATA
++ DATAROOT=/stmpp2/Eric.Rogers/testnps_origcode_catchup
++ export DATAROOT
++ mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp_tm06
++ cd /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp_tm06
++ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/namelist.nps /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp_tm06/.
+cp: cannot stat `/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/namelist.nps': No such file or directory
++ NDATE=/nwprod/util/exec/ndate
++ COMOUT=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp
++ LENGTH=1
++ PDY=20161220
++ cyc=12
++ CYCLE=2016122012
++ export CYCLE
++ rm 'fort.*'
+rm: cannot remove `fort.*': No such file or directory
++ MP_PGMMODEL=spmd
++ export MP_PGMMODEL
++ unset MP_CMDFILE
++ PARMnam=/meso/save/Eric.Rogers/nam.v4.1.5/parm
++ export PARMnam
++ PARMnps=/meso/save/Eric.Rogers/tempscripts
++ export PARMnps
++ FIXnam=/meso/save/Eric.Rogers/nam.v4.1.5/fix
++ export FIXnam
++ EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec
++ export EXECnam
++ USHnps=/meso/save/Eric.Rogers/tempscripts
++ export USHnps
++ echo NEED TO RUN NEMSINTERP
+NEED TO RUN NEMSINTERP
++ INPUT_DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06
++ echo tm06
++ cut -c 3-4
++ offset=06
++ /nwprod/util/exec/ndate -06 2016122012
++ npsstart=2016122006
++ export npsstart
++ . /usrx/local/Modules/default/init/ksh
++ [ 3.2.10 '=' '' ]
++ MODULE_VERSION_STACK=3.2.10
++ export MODULE_VERSION_STACK
++ MODULESHOME=/usrx/local/Modules/3.2.10
++ export MODULESHOME
++ [ EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam '=' '' ]
++ [ '/hwrf/noscrub/soft/modulefiles/:/usrx/local/Modules/versions:/usrx/local/Modules/$MODULE_VERSION/modulefiles:/usrx/local/modulefiles:/nwprod2/modulefiles:/nwprod2/lib/modulefiles:/nwprod/lib/modulefiles' '=' '' ]
++ module load NetCDF/4.2/serial
++ /usrx/local/Modules/3.2.10/bin/modulecmd ksh load NetCDF/4.2/serial
++ eval HDF5=/usrx/local/HDF5/1.8.9/serial ';export' 'HDF5;HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CFLAGS;HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_CXXFLAGS;HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_FFLAGS;HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include' ';export' 'HDF5_INCLUDE;HDF5_LDFLAGS=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS;HDF5_LDFLAGS_C=-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'HDF5_LDFLAGS_C;HDF5_LDFLAGS_CXX=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'HDF5_LDFLAGS_CXX;HDF5_LDFLAGS_F=-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'HDF5_LDFLAGS_F;LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib' ';export' 'LD_LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial' ';export' 'LOADEDMODULES;MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man' ';export' 'MANPATH;NETCDF=/usrx/local/NetCDF/4.2/serial' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' -lhdf5 ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdf_c++4\' '-lnetcdf_c++\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_cpp ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/4.2/serial/lib\' '-lnetcdf\' '-lnetcdff\' '-L/usrx/local/HDF5/1.8.9/serial/lib\' '-lhdf5\' -lhdf5_fortran ';export' 'NETCDF_LDFLAGS_F;PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec' ';export' 'PATH;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial' ';export' '_LMFILES_;'
++ HDF5=/usrx/local/HDF5/1.8.9/serial
++ export HDF5
++ HDF5_CFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
++ export HDF5_CFLAGS
++ HDF5_CXXFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
++ export HDF5_CXXFLAGS
++ HDF5_FFLAGS=-I/usrx/local/HDF5/1.8.9/serial/include
++ export HDF5_FFLAGS
++ HDF5_INCLUDE=-I/usrx/local/HDF5/1.8.9/serial/include
++ export HDF5_INCLUDE
++ HDF5_LDFLAGS='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
++ export HDF5_LDFLAGS
++ HDF5_LDFLAGS_C='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
++ export HDF5_LDFLAGS_C
++ HDF5_LDFLAGS_CXX='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
++ export HDF5_LDFLAGS_CXX
++ HDF5_LDFLAGS_F='-L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
++ export HDF5_LDFLAGS_F
++ LD_LIBRARY_PATH=/usrx/local/NetCDF/4.2/serial/lib:/usrx/local/HDF5/1.8.9/serial/lib:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib:/usrx/local/ImageMagick/6.8.3-3/lib:/usrx/local/intel/itac/8.0.3.007/itac/slib_impi4:/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64:/usrx/local/intel/composerxe/mkl/lib/intel64:/usrx/local/intel/impi/4.0.3.008/intel64/lib:/usrx/local/intel/composerxe/ipp/lib/intel64:/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usrx/local/intel/composer_xe_2011_sp1.11.339/debugger/lib/intel64:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/lib/intel64:/usrx/local/netcdf-3.6.3/lib
++ export LD_LIBRARY_PATH
++ LOADEDMODULES=EnvVars/1.0.1:ibmpe/1.3.0.12:ics/12.1:lsf/9.1:GrADS/2.0.2:hpss/4.0.1.2:imagemagick/6.8.3-3:ruby/1.8.7:emc-utils/1.0.0:rocoto/sam:HDF5/1.8.9/serial:NetCDF/4.2/serial
++ export LOADEDMODULES
++ MANPATH=/usrx/local/NetCDF/4.2/serial/share/man:/usrx/local/HDF5/1.8.9/serial/share/man:/hwrf/noscrub/soft/rocoto-1.2/man:/usrx/local/ImageMagick/6.8.3-3/share/man:/usrx/local/lsf/9.1/man:/usrx/local/intel/itac/8.0.3.007/man:/usrx/local/intel/composer_xe_2011_sp1.11.339/man/en_US:/usrx/local/intel/impi/4.0.3.008/man:/opt/ibmhpc/pecurrent/ppe.man:/usr/share/man:/usrx/local/intel/inspector_xe_2011/man:/usrx/local/intel/vtune_amplifier_xe_2011/man
++ export MANPATH
++ NETCDF=/usrx/local/NetCDF/4.2/serial
++ export NETCDF
++ NETCDF_CFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
++ export NETCDF_CFLAGS
++ NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
++ export NETCDF_CXXFLAGS
++ NETCDF_FFLAGS=-I/usrx/local/NetCDF/4.2/serial/include
++ export NETCDF_FFLAGS
++ NETCDF_INCLUDE=-I/usrx/local/NetCDF/4.2/serial/include
++ export NETCDF_INCLUDE
++ NETCDF_LDFLAGS='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
++ export NETCDF_LDFLAGS
++ NETCDF_LDFLAGS_C='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5'
++ export NETCDF_LDFLAGS_C
++ NETCDF_LDFLAGS_CXX='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdf_c++4 -lnetcdf_c++ -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_cpp'
++ export NETCDF_LDFLAGS_CXX
++ NETCDF_LDFLAGS_F='-L/usrx/local/NetCDF/4.2/serial/lib -lnetcdf -lnetcdff -L/usrx/local/HDF5/1.8.9/serial/lib -lhdf5 -lhdf5_fortran'
++ export NETCDF_LDFLAGS_F
++ PATH=/usrx/local/NetCDF/4.2/serial/bin:/usrx/local/HDF5/1.8.9/serial/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/hwrf/noscrub/soft/rocoto-1.2/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/ImageMagick/6.8.3-3/bin:/usrx/local/hpss:/usrx/local/GrADS/2.0.2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/intel/icsxe/2012.0.032/bin:/usrx/local/intel/vtune_amplifier_xe_2011/bin64:/usrx/local/intel/inspector_xe_2011/bin64:/usrx/local/intel/itac/8.0.3.007/bin:/usrx/local/intel/impi/4.0.3.008/intel64/bin:/usrx/local/intel/composer_xe_2011_sp1.11.339/bin/intel64:/opt/ibmhpc/pecurrent/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Eric.Rogers/bin:/nwprod/util/exec:/usrx/local/intel/composer_xe_2011_sp1.11.339/mpirt/bin/intel64:/u/Eric.Rogers/bin:/nwprod/util/exec
++ export PATH
++ _LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.1:/usrx/local/modulefiles/ibmpe/1.3.0.12:/usrx/local/modulefiles/ics/12.1:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/GrADS/2.0.2:/usrx/local/modulefiles/hpss/4.0.1.2:/usrx/local/modulefiles/imagemagick/6.8.3-3:/hwrf/noscrub/soft/modulefiles//ruby/1.8.7:/hwrf/noscrub/soft/modulefiles//emc-utils/1.0.0:/hwrf/noscrub/soft/modulefiles//rocoto/sam:/usrx/local/modulefiles/HDF5/1.8.9/serial:/usrx/local/modulefiles/NetCDF/4.2/serial
++ export _LMFILES_
++ EXECnps=/meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS
++ echo 2016122006
++ cut -c1-4
++ yy1=2016
++ echo 2016122006
++ cut -c5-6
++ mm1=12
++ echo 2016122006
++ cut -c7-8
++ dd1=20
++ echo 2016122006
++ cut -c9-10
++ hh1=06
++ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/met_nmb.d01.2016-12-20_06:00:00.dio .
+cp: cannot stat `/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/met_nmb.d01.2016-12-20_06:00:00.dio': No such file or directory
++ /nwprod/util/exec/ndate +1 2016122006
++ t2=2016122007
++ echo 2016122007
++ cut -c1-4
++ yy2=2016
++ echo 2016122007
++ cut -c5-6
++ mm2=12
++ echo 2016122007
++ cut -c7-8
++ dd2=20
++ echo 2016122007
++ cut -c9-10
++ hh2=07
++ cp /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/met_nmb.d01.2016-12-20_07:00:00.dio .
+cp: cannot stat `/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_metgrid_tm06/met_nmb.d01.2016-12-20_07:00:00.dio': No such file or directory
++ cp /meso/save/Eric.Rogers/nam_gfs2017q3/sorc/nam_nps_bocos.fd/NMMB_init/NPS/nemsinterp.exe .
++ mpirun.lsf ./nemsinterp.exe
+Execute poe command line: poe  ./nemsinterp.exe
+ATTENTION: 0031-408  4 tasks allocated by Resource Manager, continuing...
+   1: Error opening file namelist.nps
+   2: Error opening file namelist.nps
+   0: Error opening file namelist.nps
+   3: Error opening file namelist.nps
++ cp boco.0000 /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp/nam.t12z.boco.0000.tm06
+cp: cannot stat `boco.0000': No such file or directory
++ echo DONE
++ 1> ../nemsinterpdone1.tm06
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@g26c71f>
+Subject: Job 1273899: <nemsinterp_tm06> in cluster <gyre> Done
+
+Job <nemsinterp_tm06> was submitted from host <g14a2f> by user <Eric.Rogers> in cluster <gyre>.
+Job was executed on host(s) <4*g26c71f>, in queue <dev2>, as user <Eric.Rogers> in cluster <gyre>.
+</u/Eric.Rogers> was used as the home directory.
+</meso/save/Eric.Rogers/tempscripts/newboco> was used as the working directory.
+Started at Tue Dec 27 15:45:04 2016
+Results reported on Tue Dec 27 15:45:06 2016
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/ksh
+
+#BSUB -oo out.nemsinterp_tm06
+#BSUB -eo out.nemsinterp_tm06
+#BSUB -n 4
+#BSUB -J nemsinterp_tm06
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#BSUB -q "dev2"
+#BSUB -R span[ptile=4] -R affinity[core]
+#BSUB -x
+#BSUB -a poe
+
+set -x
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup
+mkdir -p /stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp
+
+export tmmark=tm06
+
+export DATA=/stmpp2/Eric.Rogers/testnps_origcode_catchup
+export DATAROOT=/stmpp2/Eric.Rogers/testnps_origcode_catchup
+mkdir -p $DATAROOT/run_nemsinterp_${tmmark}
+cd $DATAROOT/run_nemsinterp_${tmmark}
+cp $DATAROOT/run_metgrid_${tmmark}/namelist.nps $DATA/run_nemsinterp_${tmmark}/.
+
+NDATE=/nwprod/util/exec/ndate
+COMOUT=/stmpp2/Eric.Rogers/testnps_origcode_catchup/run_nemsinterp
+
+LENGTH=1
+
+PDY=20161220
+cyc=12
+export CYCLE=$PDY$cyc
+
+###echo "export CYCLE=$CYCLE" >> $COMOUT/nam.t${cyc}z.${RUNLOC}.envir.sh
+
+#########################################################
+# RUN NEMSINTERP PROGRAM to generate input/boco files (NMMB)
+#########################################################
+
+rm fort.*
+
+export MP_PGMMODEL=spmd
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :               0.30 sec.
+    Max Memory :             14 MB
+    Total Requested Memory : -
+    Delta Memory :           -
+    (Delta: the difference between Total Requested Memory and Max Memory.)
+
+The output (if any) is above this job summary.
+
+[Tue Dec 27 15:45:06 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: /var/lsf/ecflow_post_in.1273899 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Tue Dec 27 15:45:06 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Adding mmpmon postexec record to /var/lsf/mmpmon.1273899 for node g26c71f:
+[Tue Dec 27 15:45:06 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Performing IPCS cleanup on node g26c71f:
+[Tue Dec 27 15:45:06 UTC 2016] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Reporting summary of GPFS mmpmon activity:
+
+LSF_SUMMARY: GPFS
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd1
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 5
+    close():                4
+    read():                 3
+    write():               75
+    readdir():              0
+
+  Data:
+
+    READ:                  5.2 MB
+    WRITTEN:              15.4 KB
+
+  Inode_Updates:            1
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd2
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd3
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp1
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                86
+    close():               82
+    read():                58
+    write():                5
+    readdir():              0
+
+  Data:
+
+    READ:                  1.9 MB
+    WRITTEN:               5.2 KB
+
+  Inode_Updates:            1
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp2
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():               144
+    close():               94
+    read():                79
+    write():              869
+    readdir():              2
+
+  Data:
+
+    READ:                 14.7 MB
+    WRITTEN:               5.2 MB
+
+  Inode_Updates:            5
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-ioddev
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-iodprod
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-hps
+---------------------------------
+
+  Time_Interval:            2 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+===============================================
+AGGREGATE TOTALS (ALL Hosts, ALL File Systems):
+===============================================
+
+  Requests:
+
+    open():               235
+    close():              180
+    read():               140
+    write():              949
+    readdir():              2
+
+  Data:
+
+    READ:                 21.8 MB
+    WRITTEN:               5.2 MB
+
+  Inode_Updates:            7
+

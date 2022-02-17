@@ -1,0 +1,56 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=nam_${cyc}_main_${envir}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+  # Got these from the FV3GFS env.
+  export MPI_LABELIO=YES
+  export MP_STDOUTMODE="ORDERED"
+
+  if [ $tmmark = tm00 ] ; then
+     export procs=14
+     export procspernode=14
+  else
+     export procs=6
+     export procspernode=6
+  fi
+#
+# Get needed variables from exnam_prelim.sh.sms
+#
+. $GESDIR/nam.t${cyc}z.envir.sh
+
+########################################################
+# Execute the script.
+# run_nemsinterp_${inum} or run_nemsinterp_${tmmark} 
+# created in nam_prelim job
+
+if [ $tmmark = tm00 ] ; then
+  # inum set in ECFLOW LSF script or ROCOTO xml
+  cd $DATA/run_nemsinterp_${inum}
+  # Remove preexisting boco files in case of a rerun
+  rm boco*
+  ${HOMEnam}/scripts/exnam_nemsinterp_boco${inum}.sh
+  jerr=$?
+else
+  # tmmark set in ECFLOW LSF script or ROCOTO xml
+  cd $DATA/run_nemsinterp_${tmmark}
+  # Remove preexisting boco files in case of a rerun
+  rm boco*
+  ${HOMEnam}/scripts/exnam_catchup_nemsinterp_boco.sh $tmmark
+  jerr=$?
+fi
+########################################################
+
+cat $pgmout
+cat errfile
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+exit $jerr

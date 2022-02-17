@@ -1,0 +1,190 @@
+#!/bin/ksh
+
+#BSUB -oo out.nps
+#BSUB -eo out.nps
+#BSUB -n 48
+#BSUB -J ndas_coldstart_prep_06
+#BSUB -W 00:12
+#BSUB -P NAM-T2O
+#BSUB -q "debug"
+#BSUB -R span[ptile=8]
+#BSUB -R "affinity[core:distribute=balance]"
+#BSUB -x
+####BSUB -a poe
+
+set -x
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+. /usrx/local/prod/lmod/lmod/init/ksh
+module load prod_util/1.1.0
+module load NetCDF/4.5
+
+mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps
+cd /gpfs/dell2/stmp/Matthew.Pyle/testnps
+DATA=/gpfs/dell2/stmp/Matthew.Pyle/testnps
+
+# mod=AVN
+# LENGTH=3
+
+cyc=12
+
+export DOMNAM=nam
+
+PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
+FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
+# path to your binaries
+###EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec/wcoss.exec
+EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
+
+INPUT=/gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117
+
+mkdir -p $DATA/ungrib
+mkdir -p $DATA/metgrid
+mkdir -p $DATA/nemsinterp
+
+cd $DATA/ungrib
+
+cd $DATA/metgrid
+rm met*.dio
+rm FILE*
+
+cd $DATA/ungrib
+rm GRIBFILE.*
+rm FILE*
+
+cd $DATA/nemsinterp
+rm test*d01
+rm boco*
+rm GWD.bin
+
+
+# run ungrib
+
+cd $DATA/ungrib
+
+CYCLE=2019011706
+
+datetm06=`${NDATE} -6 $CYCLE`
+
+echo DATEXX${datetm06} > ncepdate.npstm06
+cp ncepdate.npstm06 $DATA/metgrid/.
+
+### modify namelist file
+PDYstart=`cat ncepdate.npstm06 | cut -c7-14`
+ystart=`cat ncepdate.npstm06 | cut -c7-10`
+mstart=`cat ncepdate.npstm06 | cut -c11-12`
+dstart=`cat ncepdate.npstm06 | cut -c13-14`
+hstart=`cat ncepdate.npstm06 | cut -c15-16`
+
+start=$ystart$mstart$dstart$hstart
+
+CYCer=`cat ncepdate.npstm06 | cut -c 7-16`
+CYCstart=`${NDATE} -0 $CYCer`
+CYCgdas=`${NDATE} -6 $CYCer`
+
+echo DATEXX${CYCgdas} > nmcdate.gdas
+
+PDYgds=`cat nmcdate.gdas | cut -c7-14`
+yygds=`cat nmcdate.gdas | cut -c7-10`
+mmgds=`cat nmcdate.gdas | cut -c11-12`
+ddgds=`cat nmcdate.gdas | cut -c13-14`
+cycgds=`cat nmcdate.gdas | cut -c15-16`
+
+end=`${NDATE} +00 $start`
+
+yend=`echo $end | cut -c1-4`
+mend=`echo $end | cut -c5-6`
+dend=`echo $end | cut -c7-8`
+hend=`echo $end | cut -c9-10`
+
+echo $yend $mend $dend $hend
+
+ignore_gridgen_sfc=".false."
+
+cat $PARMnam/nam_namelist.nps | sed s:YSTART:$ystart: | sed s:MSTART:$mstart: \
+ | sed s:DSTART:$dstart: | sed s:HSTART:$hstart: | sed s:YEND:$yend: \
+ | sed s:MEND:$mend:     | sed s:DEND:$dend: | sed s:HEND:$hend: \
+ | sed s:IGNORE_GRIDGEN:${ignore_gridgen_sfc}: > namelist.nps
+
+DATE=`echo $start | cut -c1-8`
+
+rm Vtable
+
+#####
+
+cp $PARMnam/nam_Vtable.GFS_spectral Vtable
+
+filedir=$COMIN
+
+cp $INPUT/sigges.tm06 sf06
+cp $INPUT/gfs.t18z.pgrb2.0p50.f006 gdas.pgbf06
+
+ln -sf gdas.pgbf06 GRIBFILE.AAA
+ln -sf sf06 fort.27
+
+echo where am I
+
+pwd
+
+ls
+
+####
+
+ls -l $EXECnam/nam_ungrib
+
+mpirun $EXECnam/nam_ungrib > pgmout 2>errfile
+
+mv errfile $DATA/errfile.ungrib
+
+# exit
+
+### run metgrid
+
+cd $DATA/metgrid
+
+ignore_gridgen_sfc=".false."
+
+cat $PARMnam/nam_namelist.nps | sed s:YSTART:$ystart: | sed s:MSTART:$mstart: \
+ | sed s:DSTART:$dstart: | sed s:HSTART:${hstart}: | sed s:YEND:$yend: \
+ | sed s:MEND:$mend:     | sed s:DEND:$dend: | sed s:HEND:$hend: \
+ | sed s:IGNORE_GRIDGEN:${ignore_gridgen_sfc}: > namelist.nps
+
+cp $PARMnam/nam_METGRID.TBL.NMM METGRID.TBL
+cp $FIXnam/nam_geo_nmb.d01.dio geo_nmb.d01.dio
+
+FHR=00
+
+time=`$NDATE +${FHR} ${start}`
+yy=`echo $time | cut -c1-4`
+mm=`echo $time | cut -c5-6`
+dd=`echo $time | cut -c7-8`
+hh=`echo $time | cut -c9-10`
+ 
+cp $DATA/ungrib/FILE:${yy}-${mm}-${dd}_${hh} .
+
+mpirun $EXECnam/nam_metgrid >> pgmout 2>errfile
+
+mv errfile $DATA/errfile.metgrid
+
+### run nemsinterp
+
+cd $DATA/nemsinterp
+
+cp $DATA/metgrid/$pgmout .
+cp $DATA/metgrid/met_nmb*dio . 
+cp $DATA/metgrid/namelist.nps .
+
+mpirun $EXECnam/nam_nemsinterp >> pgmout 2>errfile
+
+mv errfile $DATA/errfile.nemsinterp
+
+cd $DATA
+
+cat errfile.ungrib errfile.metgrid errfile.nemsinterp > errfile
+
+exit

@@ -1,0 +1,147 @@
+(TSOIL):0-0.1 m below ground:
+(SOILW):0-0.1 m below ground:
+(TSOIL):0.1-0.4 m below ground:
+(SOILW):0.1-0.4 m below ground:
+(TSOIL):0.4-1 m below ground:
+(SOILW):0.4-1 m below ground:
+(TSOIL):1-2 m below ground:
+(SOILW):1-2 m below ground:
+(LAND):surface:
+(MSLET):mean sea level:
+(PRMSL):mean sea level:
+(PRES):surface:
+(HGT):surface:
+(TMP):surface:
+(TMP):2 m above ground:
+(RH):2 m above ground:
+(UGRD):10 m above ground:
+(VGRD):10 m above ground:
+(APCP):surface:
+(ACPCP):surface:
+(VVEL):700 mb:
+(HGT):250 mb:
+(UGRD):250 mb:
+(VGRD):250 mb:
+(HGT):500 mb:
+(HGT):850 mb:
+(TMP):850 mb:
+(UGRD):850 mb:
+(VGRD):850 mb:
+(HGT):1000 mb:
+(SFCR):surface:
+(CD):surface:
+(SHTFL):surface:
+(LHTFL):surface:
+(DSWRF):surface:
+(DLWRF):surface:
+(USWRF):surface:
+(ULWRF):surface:
+(BMIXL):1 hybrid level:
+(FRICV):surface:
+(TMP):30-0 mb above ground:
+(RH):30-0 mb above ground:
+(UGRD):30-0 mb above ground:
+(VGRD):30-0 mb above ground:
+(4LFTX):180-0 mb above ground:
+(CAPE):180-0 mb above ground:
+(CAPE):surface:
+(VIS):surface:
+(WEASD):surface:
+(NCPCP):surface:
+(SPFH):2 m above ground:
+(POT):10 m above ground:
+(SPFH):10 m above ground:
+(SFEXC):surface:
+(SNOD):surface:
+(MXSALB):surface:
+(SOILL):0-0.1 m below ground:
+(SOILL):0.1-0.4 m below ground:
+(SOILL):0.4-1 m below ground:
+(SOILL):1-2 m below ground:
+(SNFALB):surface:
+(RLYRS):surface:
+(CCOND):surface:
+(RSMIN):surface:
+(WILT):surface:
+(HPBL):surface:
+(SOTYP):surface:
+(VGTYP):surface:
+(SMREF):surface:
+(SMDRY):surface:
+(SNOWC):surface:
+(POROS):surface:
+(RCS):surface:
+(RCT):surface:
+(RCQ):surface:
+(RCSOL):surface:
+(PRES):1 hybrid level:
+(HGT):1 hybrid level:
+(TMP):1 hybrid level:
+(POT):1 hybrid level:
+(DPT):1 hybrid level:
+(RH):1 hybrid level:
+(SPFH):1 hybrid level:
+(UGRD):1 hybrid level:
+(VGRD):1 hybrid level:
+(VVEL):1 hybrid level:
+(RIME):1 hybrid level:
+(TKE):1 hybrid level:
+(TSOIL):3 m underground:
+(MSTAV):0-1 m below ground:
+(SOILM):0-2 m below ground:
+(CNWAT):surface:
+(WEASD):surface:
+(CPOFP):surface:
+(PRATE):surface:
+(SNOM):surface:
+(SSRUN):surface:
+(BGRUN):surface:
+(CSNOW):surface:
+(CICEP):surface:
+(CFRZR):surface:
+(CRAIN):surface:
+(LHTFL):surface:
+(SHTFL):surface:
+(GFLUX):surface:
+(SNOHF):surface:
+(EVP):surface:
+(PEVAP):surface:
+(UFLX):surface:
+(VFLX):surface:
+(VEG):surface:
+(GFLUX):surface:
+(LFTX):500-1000 mb:
+(CIN):surface:
+(PWAT):entire atmosphere (considered as a single layer):
+(TCOLC):entire atmosphere (considered as a single layer):
+(LCDC):low cloud layer:
+(MCDC):middle cloud layer:
+(HCDC):high cloud layer:
+(TCDC):entire atmosphere (considered as a single layer):
+(CDCON):entire atmosphere (considered as a single layer):
+(CDLYR):entire atmosphere (considered as a single layer):
+(CDCON):entire atmosphere (considered as a single layer):
+(DSWRF):surface:
+(DLWRF):surface:
+(USWRF):surface:
+(ULWRF):surface:
+(USWRF):top of atmosphere:
+(ULWRF):top of atmosphere:
+(PRES):30-0 mb above ground:
+(POT):30-0 mb above ground:
+(DPT):30-0 mb above ground:
+(SPFH):30-0 mb above ground:
+(MCONV):30-0 mb above ground:
+(VVEL):30-0 mb above ground:
+(PWAT):30-0 mb above ground:
+(CIN):180-0 mb above ground:
+(CAPE):90-0 mb above ground:
+(CIN):90-0 mb above ground:
+(NLAT):surface:
+(ELON):surface:
+(ICEC):surface:
+(ALBDO):surface:
+(ABSV):500 mb:
+(SPFH):850 mb:
+(MCONV):850 mb:
+(CPRAT):surface:

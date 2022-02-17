@@ -1,0 +1,59 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=${jobid:?}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+  # Got these from the production ecflow jobs.
+  # For best portability, this really needs to be in one spot,
+  # i.e. - the J-jobs.   
+  # Got these from the FV3GFS env.
+  export MPI_LABELIO=YES
+  export MP_STDOUTMODE="ORDERED"
+
+  export FI_OFI_RXM_SAR_LIMIT=3145728
+  export MPICH_COLL_OPT_OFF=1
+
+  if [ $domain = alaska -o $domain = conus ] ; 
+  then
+    export ntasks=176
+    export ppn=16
+    export threads=8
+  else
+    export ntasks=128
+    export ppn=32
+    export threads=4
+  fi
+
+  # OMP settings
+  export OMP_PLACES=cores
+  export OMP_NUM_THREADS=$threads
+  export OMP_STACKSIZE=1G
+
+# Get the domain id number. Note $domain is provided via the
+# LSF job card or via Rocoto.
+export numdomain=${numdomain:-`grep ${domain} ${PARMnam}/nam_nestdomains | awk '{print $2}'`}
+
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_gsireg_nest.sh
+jerr=$?
+########################################################
+
+cat $pgmout
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+##############################
+# Remove the Temporary working directory
+##############################
+cd $DATAROOT
+if [ ${KEEPDATA:-YES} = NO ] ; then rm -rf $DATA ; fi
+
+exit $jerr

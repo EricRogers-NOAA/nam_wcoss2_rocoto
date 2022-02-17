@@ -1,0 +1,31 @@
+#%Module######################################################################
+## NOAA-EMC/GSI
+##_____________________________________________________
+proc ModulesHelp { } {
+puts stderr "Set environment variables for NOAA-EMC/GSI"
+puts stderr "This module initializes the environment "
+puts stderr "for the Intel Compiler Suite $version\n"
+}
+module-whatis " NOAA-EMC/GSI whatis description"
+
+# Load modules
+
+module load envvar/$::env(envvar_ver)
+module load intel/$::env(intel_ver)
+module load PrgEnv-intel/$::env(PrgEnv_intel_ver)
+module load craype/$::env(craype_ver)
+module load cray-mpich/$::env(cray_mpich_ver)
+module load bacio/$::env(bacio_ver)
+module load bufr/$::env(bufr_ver)
+module load crtm/$::env(crtm_ver)
+module load ip/$::env(ip_ver)
+module load nemsio/$::env(nemsio_ver)
+module load prod_util/$::env(prod_util_ver)
+module load sfcio/$::env(sfcio_ver)
+module load netcdf/$::env(netcdf_ver)
+module load sigio/$::env(sigio_ver)
+module load sp/$::env(sp_ver)
+module load w3nco/$::env(w3nco_ver)
+module load w3emc/$::env(w3emc_ver)
+module load cmake/$::env(cmake_ver)
+module load git/$::env(git_ver)

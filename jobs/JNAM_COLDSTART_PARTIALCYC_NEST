@@ -1,0 +1,59 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=${jobid:?}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+  # Got these from the FV3GFS env.
+  export MPI_LABELIO=YES
+  export MP_STDOUTMODE="ORDERED"
+
+# Get the domain id number. Note $domain is provided via the
+# LSF job card or via Rocoto.
+export numdomain=${numdomain:-`grep ${domain} ${PARMnam}/nam_nestdomains | awk '{print $2}'`}
+
+#
+# Get needed variables from exnam_prelim.sh.sms
+#
+. $GESDIR/nam.t${cyc}z.envir.sh
+
+# For coldstart of cycled nests at start of catchup cycle
+# or of non-cycled nests at tm01
+
+if [ $tmmark = tm06 -o $tmmark = tm01 ] ; then
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_coldstart_partialcyc_nest.sh
+jerr=$?
+########################################################
+fi
+
+# For coldstart of all nests at tm00 if catchup cycle did not run
+
+if [ $tmmark = tm00 ] ; then
+  if [ $GUESStm00 = GDAS ] ; then
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_coldstart_partialcyc_nest_tm00.sh
+jerr=$?
+########################################################
+  fi
+fi
+
+cat $pgmout
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+##############################
+# Remove the Temporary working directory
+##############################
+cd $DATAROOT
+if [ ${KEEPDATA:-YES} = NO ] ; then rm -rf $DATA ; fi
+
+exit $jerr

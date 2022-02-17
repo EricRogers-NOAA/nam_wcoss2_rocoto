@@ -1,0 +1,11 @@
+(MSLET):mean sea level:
+(PRMSL):mean sea level:
+(PRES):surface:
+(APCP):surface:
+(ACPCP):surface:
+(VVEL):700 mb:
+(NCPCP):surface:
+(TMP):0.9823 sigma level:
+(UGRD):0.9823 sigma level:
+(VGRD):0.9823 sigma level:
+(MCONV):0.85-1 sigma layer:

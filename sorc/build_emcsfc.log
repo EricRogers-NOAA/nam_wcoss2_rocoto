@@ -1,0 +1,22 @@
+rm -f *.o *.mod emcsfc_accum_firedata ../../exec/emcsfc_accum_firedata
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod surface_chgres.i emcsfc_coldstart ../../exec/emcsfc_coldstart
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_fire2mdl ../../exec/emcsfc_fire2mdl
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod libgridgen_sfc.a ../../../incmod/emcsfc_gridgen_sfc/*.mod ../../../lib/libgridgen_sfc.a
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_gridgen_sfc ../../../exec/emcsfc_gridgen_sfc
+dlogin05.dogwood.wcoss2.ncep.noaa.gov
+/lfs/h2/emc/lam/noscrub/Eric.Rogers/nam.v4.2.0/sorc/nam_land_utilities.fd/sorc/emcsfc_gridgen_sfc.fd/driver/../../../modulefiles
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_ice2mdl ../../exec/emcsfc_ice2mdl
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_sfcupdate ../../exec/emcsfc_sfcupdate
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_snow2mdl ../../exec/emcsfc_snow2mdl
+MACHINE OPTION NOT FOUND. EXIT.
+rm -f *.o *.mod emcsfc_sst2mdl ../../exec/emcsfc_sst2mdl
+MACHINE OPTION NOT FOUND. EXIT.
+
+DONE BUILDING EMCSFC PROGRAMS

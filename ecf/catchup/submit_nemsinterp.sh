@@ -1,0 +1,7 @@
+set -x
+qsub run_nam_catchup_nemsinterp_boco_tm01.sh
+qsub run_nam_catchup_nemsinterp_boco_tm02.sh
+qsub run_nam_catchup_nemsinterp_boco_tm03.sh
+qsub run_nam_catchup_nemsinterp_boco_tm04.sh
+qsub run_nam_catchup_nemsinterp_boco_tm05.sh
+qsub run_nam_catchup_nemsinterp_boco_tm06.sh

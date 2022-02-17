@@ -1,0 +1,15 @@
+SHELL=/bin/sh
+
+####################################################################################################
+#
+# post using module compile standard
+#
+# 10/15 Lin Gan:        Create module load version
+# 01/16 Lin Gan:	Update to use GFS Vertical Structure
+# 07/16 J. Carley:      Generalize for other machines using modules
+#
+#####################################################################################################
+#####################################################################################################
+
+cd ncep_post.fd
+make -f makefile_module clean

@@ -1,0 +1,4 @@
+ &MODTOP
+   etop=2.0, ivcoord=1, ptsgm=30000., b_smooth=.false., b_flux=.true.
+ /
+

@@ -1,0 +1,76 @@
+(MSLET):mean sea level:
+(PRMSL):mean sea level:
+(VIS):surface:
+(ABSV):250 mb:
+(ABSV):500 mb:
+(ABSV):700 mb:
+(ABSV):850 mb:
+(ABSV):1000 mb:
+(PRES):surface:
+(HGT):surface:
+(TMP):2 m above ground:
+:(RH):2 m above ground:
+(UGRD):10 m above ground:
+(VGRD):10 m above ground:
+(APCP):surface:
+(ACPCP):surface:
+(WEASD):surface:
+(CSNOW):surface:
+(CICEP):surface:
+(CFRZR):surface:
+(CRAIN):surface:
+(CAPE):surface:
+(CIN):surface:
+(PWAT):entire atmosphere (considered as a single layer):
+(HLCY):3000-0 m above ground:
+(USTM):6000-0 m above ground:
+(VSTM):6000-0 m above ground:
+(TMP):30-0 mb above ground:
+(RH):30-0 mb above ground:
+(UGRD):30-0 mb above ground:
+(VGRD):30-0 mb above ground:
+(PLI):30-0 mb above ground:
+(TMP):60-30 mb above ground:
+(UGRD):60-30 mb above ground:
+(VGRD):60-30 mb above ground:
+(TMP):90-60 mb above ground:
+(RH):90-60 mb above ground:
+(UGRD):90-60 mb above ground:
+(VGRD):90-60 mb above ground:
+(TMP):120-90 mb above ground:
+(UGRD):120-90 mb above ground:
+(VGRD):120-90 mb above ground:
+(TMP):150-120 mb above ground:
+(RH):150-120 mb above ground:
+(UGRD):150-120 mb above ground:
+(VGRD):150-120 mb above ground:
+(4LFTX):180-0 mb above ground:
+(CAPE):180-0 mb above ground:
+(CIN):180-0 mb above ground:
+(LFTX):500-1000 mb:
+(RIME):1 hybrid level:
+:(TMP):surface:
+(PRES):cloud base:
+(PRES):cloud top:
+(CAPE):90-0 mb above ground:
+(CIN):90-0 mb above ground:
+(HLCY):1000-0 m above ground:
+(CAPE):255-0 mb above ground:
+(CIN):255-0 mb above ground:
+(PLPL):255-0 mb above ground:
+(CPOFP):surface:
+(PRES):convective cloud bottom level:
+(PRES):convective cloud top level:
+(PRES):shallow convective cloud bottom level:
+(PRES):shallow convective cloud top level:
+(PRES):deep convective cloud bottom level:
+(PRES):deep convective cloud top level:
+(PRES):grid scale cloud bottom level:
+(PRES):grid scale cloud top level:
+(CDCON):entire atmosphere (considered as a single layer):
+(CUEFI):entire atmosphere (considered as a single layer):
+(HPBL):surface:
+(GUST):surface:
+(LAND):surface:
+(RH):60-30 mb above ground:
+(RH):120-90 mb above ground:

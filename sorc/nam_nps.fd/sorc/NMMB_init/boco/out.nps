@@ -1,0 +1,916 @@
++ BASE=/gpfs/dell2/ptmp/Matthew.Pyle
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ DATA=/gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ export DATA
++ INPUT=/gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06
++ mod=AVN
++ export mod
++ LENGTH=87
++ jlogfile=/u/Matthew.Pyle/jlog
++ export jlogfile
++ cyc=12
++ export cyc
++ DOMNAM=nam
++ export DOMNAM
++ GFSDATE=2019011706
++ cycgfs=06
++ CYCLE=2019011712
++ PDY=20190117
++ INPUT=/gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06
++ PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ export PARMnam
++ PARMnps=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ export PARMnps
++ FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
++ export FIXnam
++ USHnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush
++ export USHnam
++ USHnps=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush
++ export USHnps
++ EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
++ export EXECnam
++ pgmout=myout.log
++ export pgmout
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_1
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_2
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_3
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_4
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_5
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_6
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_7
++ mkdir -p /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_8
++ mod=gfs
++ type=pgrb2.0p25.f0
++ suf=''
++ fhr=06
++ [ 06 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f006 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 09 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f009 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 12 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f012 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 15 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f015 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 18 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f018 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 21 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f021 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 24 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f024 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 27 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f027 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 30 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f030 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 33 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f033 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 36 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f036 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 39 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f039 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 42 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f042 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 45 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f045 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 48 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f048 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 51 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f051 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 54 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f054 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 57 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f057 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 60 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f060 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 63 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f063 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 66 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f066 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 69 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f069 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 72 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f072 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 75 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f075 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 78 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f078 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 81 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f081 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 84 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f084 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 87 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f087 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 90 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f090 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 93 -le 93 ]
++ cp /gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06/gfs.t06z.pgrb2.0p25.f093 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/.
++ let fhr=fhr+3
++ typeset -Z2 fhr
++ [ 96 -le 93 ]
++ echo 20190117
++ cut -c1-4
++ yy=2019
++ echo 20190117
++ cut -c5-6
++ mm=01
++ echo 20190117
++ cut -c7-8
++ dd=17
++ echo 20190117
++ cut -c1-4
++ ystart=2019
++ echo 20190117
++ cut -c5-6
++ mstart=01
++ echo 20190117
++ cut -c7-8
++ dstart=17
++ start=2019011712
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011712
++ int1=2019011800
++ echo 2019011800
++ cut -c1-4
++ yyint1=2019
++ echo 2019011800
++ cut -c5-6
++ mmint1=01
++ echo 2019011800
++ cut -c7-8
++ ddint1=18
++ echo 2019011800
++ cut -c9-10
++ hhint1=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011800
++ int2=2019011812
++ echo 2019011812
++ cut -c1-4
++ yyint2=2019
++ echo 2019011812
++ cut -c5-6
++ mmint2=01
++ echo 2019011812
++ cut -c7-8
++ ddint2=18
++ echo 2019011812
++ cut -c9-10
++ hhint2=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011812
++ int3=2019011900
++ echo 2019011900
++ cut -c1-4
++ yyint3=2019
++ echo 2019011900
++ cut -c5-6
++ mmint3=01
++ echo 2019011900
++ cut -c7-8
++ ddint3=19
++ echo 2019011900
++ cut -c9-10
++ hhint3=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011900
++ int4=2019011912
++ echo 2019011912
++ cut -c1-4
++ yyint4=2019
++ echo 2019011912
++ cut -c5-6
++ mmint4=01
++ echo 2019011912
++ cut -c7-8
++ ddint4=19
++ echo 2019011912
++ cut -c9-10
++ hhint4=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019011912
++ int5=2019012000
++ echo 2019012000
++ cut -c1-4
++ yyint5=2019
++ echo 2019012000
++ cut -c5-6
++ mmint5=01
++ echo 2019012000
++ cut -c7-8
++ ddint5=20
++ echo 2019012000
++ cut -c9-10
++ hhint5=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019012000
++ int6=2019012012
++ echo 2019012012
++ cut -c1-4
++ yyint6=2019
++ echo 2019012012
++ cut -c5-6
++ mmint6=01
++ echo 2019012012
++ cut -c7-8
++ ddint6=20
++ echo 2019012012
++ cut -c9-10
++ hhint6=12
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +12 2019012012
++ int7=2019012100
++ echo 2019012100
++ cut -c1-4
++ yyint7=2019
++ echo 2019012100
++ cut -c5-6
++ mmint7=01
++ echo 2019012100
++ cut -c7-8
++ ddint7=21
++ echo 2019012100
++ cut -c9-10
++ hhint7=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate 87 2019011712
++ end=2019012103
++ echo 2019012103
++ cut -c1-4
++ yend=2019
++ echo 2019012103
++ cut -c5-6
++ mend=01
++ echo 2019012103
++ cut -c7-8
++ dend=21
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:HEND:00:
++ sed s:DSTART:17:
++ sed s:HSTART:12:
++ sed s:YEND:2019:
++ sed s:MEND:01:
++ sed s:DEND:18:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.1
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:HEND:12:
++ sed s:DSTART:18:
++ sed s:DEND:18:
++ sed s:YEND:2019:
++ sed s:HSTART:00:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.2
++ sed s:MEND:01:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:HEND:00:
++ sed s:DSTART:18:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.3
++ sed s:HSTART:12:
++ sed s:YEND:2019:
++ sed s:MEND:01:
++ sed s:DEND:19:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:HEND:12:
++ sed s:DSTART:19:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.4
++ sed s:HSTART:00:
++ sed s:YEND:2019:
++ sed s:DEND:19:
++ sed s:MEND:01:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:HEND:00:
++ sed s:MSTART:01:
++ sed s:DSTART:19:
++ sed s:YEND:2019:
++ sed s:MEND:01:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.5
++ sed s:HSTART:12:
++ sed s:DEND:20:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:HEND:12:
++ sed s:MSTART:01:
++ sed s:YEND:2019:
++ sed s:HSTART:00:
++ sed s:DSTART:20:
++ sed s:MEND:01:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.6
++ sed s:DEND:20:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_bocos
++ sed s:YSTART:2019:
++ sed s:HEND:00:
++ sed s:MSTART:01:
++ sed s:DSTART:20:
++ sed s:YEND:2019:
++ sed s:MEND:01:
++ 1> /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.7
++ sed s:HSTART:12:
++ sed s:DEND:21:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_1/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_2/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_3/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_4/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_5/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_6/Vtable
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS.bocos /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_7/Vtable
++ GRIBSRC=GFS
++ mv gfs.t06z.pgrb2.0p25.f006 ./run_ungrib_1/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f009 ./run_ungrib_1/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f012 ./run_ungrib_1/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f015 ./run_ungrib_1/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f018 ./run_ungrib_1/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f018 ./run_ungrib_2/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f021 ./run_ungrib_2/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f024 ./run_ungrib_2/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f027 ./run_ungrib_2/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f030 ./run_ungrib_2/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f030 ./run_ungrib_3/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f033 ./run_ungrib_3/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f036 ./run_ungrib_3/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f039 ./run_ungrib_3/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f042 ./run_ungrib_3/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f042 ./run_ungrib_4/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f045 ./run_ungrib_4/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f048 ./run_ungrib_4/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f051 ./run_ungrib_4/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f054 ./run_ungrib_4/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f054 ./run_ungrib_5/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f057 ./run_ungrib_5/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f060 ./run_ungrib_5/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f063 ./run_ungrib_5/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f066 ./run_ungrib_5/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f066 ./run_ungrib_6/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f069 ./run_ungrib_6/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f072 ./run_ungrib_6/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f075 ./run_ungrib_6/GRIBFILE.AAD
++ cp gfs.t06z.pgrb2.0p25.f078 ./run_ungrib_6/GRIBFILE.AAE
++ mv gfs.t06z.pgrb2.0p25.f078 ./run_ungrib_7/GRIBFILE.AAA
++ mv gfs.t06z.pgrb2.0p25.f081 ./run_ungrib_7/GRIBFILE.AAB
++ mv gfs.t06z.pgrb2.0p25.f084 ./run_ungrib_7/GRIBFILE.AAC
++ mv gfs.t06z.pgrb2.0p25.f087 ./run_ungrib_7/GRIBFILE.AAD
++ mv gfs.t06z.pgrb2.0p25.f090 ./run_ungrib_7/GRIBFILE.AAE
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode
++ rm -rf poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 2'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 1'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 3'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 4'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 5'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 6'
++ 1>> poescript
++ echo '/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush/nam_boco_ungrib_gen.sh 12 7'
++ 1>> poescript
++ chmod 775 /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/poescript
++ MP_PGMMODEL=mpmd
++ export MP_PGMMODEL
++ MP_CMDFILE=/gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/poescript
++ export MP_CMDFILE
++ ./poescript
++ cyc=12
++ stream=2
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_2
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.2 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.2 ../run_ungrib/
++ cp FILE:2019-01-18_00 FILE:2019-01-18_03 FILE:2019-01-18_06 FILE:2019-01-18_09 FILE:2019-01-18_12 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.2
++ cyc=12
++ stream=1
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_1
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.1 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.1 ../run_ungrib/
++ cp FILE:2019-01-17_12 FILE:2019-01-17_15 FILE:2019-01-17_18 FILE:2019-01-17_21 FILE:2019-01-18_00 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.1
++ cyc=12
++ stream=3
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_3
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.3 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.3 ../run_ungrib/
++ cp FILE:2019-01-18_12 FILE:2019-01-18_15 FILE:2019-01-18_18 FILE:2019-01-18_21 FILE:2019-01-19_00 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.3
++ cyc=12
++ stream=4
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_4
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.4 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.4 ../run_ungrib/
++ cp FILE:2019-01-19_00 FILE:2019-01-19_03 FILE:2019-01-19_06 FILE:2019-01-19_09 FILE:2019-01-19_12 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.4
++ cyc=12
++ stream=5
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_5
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.5 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.5 ../run_ungrib/
++ cp FILE:2019-01-19_12 FILE:2019-01-19_15 FILE:2019-01-19_18 FILE:2019-01-19_21 FILE:2019-01-20_00 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.5
++ cyc=12
++ stream=6
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_6
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.6 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.6 ../run_ungrib/
++ cp FILE:2019-01-20_00 FILE:2019-01-20_03 FILE:2019-01-20_06 FILE:2019-01-20_09 FILE:2019-01-20_12 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.6
++ cyc=12
++ stream=7
++ cd /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/run_ungrib_7
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.7 namelist.nps
++ pgm=nam_ungrib_boco
++ export pgm
++ startmsg
++ /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib_boco
++ 1>> myout.log 2> errfile
++ err=0
++ export err
++ err_chk
+nam_ungrib_boco completed cleanly
++ cp /gpfs/dell2/ptmp/Matthew.Pyle/testnps_origcode/namelist.nps.7 ../run_ungrib/
++ cp FILE:2019-01-20_12 FILE:2019-01-20_15 FILE:2019-01-20_18 FILE:2019-01-20_21 FILE:2019-01-21_00 ../run_ungrib/
++ echo DONE
++ 1> ../ungribdone.7
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@v60c37f>
+Subject: Job 2376432: <ndas_coldstart_prep_18> in cluster <venus> Done
+
+Job <ndas_coldstart_prep_18> was submitted from host <v72a3f> by user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 16:04:20 2019
+Job was executed on host(s) <7*v60c37f>, in queue <debug>, as user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 16:04:20 2019
+</u/Matthew.Pyle> was used as the home directory.
+</gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco> was used as the working directory.
+Started at Fri Jan 18 16:04:20 2019
+Terminated at Fri Jan 18 16:08:02 2019
+Results reported at Fri Jan 18 16:08:02 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/ksh
+
+#BSUB -oo out.nps
+#BSUB -eo out.nps
+#BSUB -n 7
+#BSUB -J ndas_coldstart_prep_18
+#BSUB -W 00:10
+#BSUB -P NAM-T2O
+#BSUB -q "debug"
+#BSUB -R span[ptile=7]
+#BSUB -R "affinity[core]"
+#BSUB -R rusage[mem=4000]
+#####BSUB -x
+## BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+. /usrx/local/prod/lmod/lmod/init/ksh
+module load prod_util/1.1.0
+module load NetCDF/4.5.0
+module load lsf/10.1
+module load ips/18.0.1.163
+module load impi/18.0.1
+module load CFP/2.0.1
+
+set -x
+
+# NDATE=/nwprod/util/exec/ndate
+
+BASE=/gpfs/dell2/ptmp/Matthew.Pyle
+
+mkdir -p ${BASE}/testnps_origcode
+mkdir -p ${BASE}/testnps_origcode/run_ungrib
+cd ${BASE}/testnps_origcode
+export DATA=${BASE}/testnps_origcode
+
+INPUT=/gpfs/dell1/nco/ops/com/gfs/para/gfs.20190117/06
+
+export mod=AVN
+
+# grab fhrs 6-93 to get six groups of five GFS files
+LENGTH=87
+
+export jlogfile=~/jlog
+
+export cyc=12
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   193.93 sec.
+    Max Memory :                                 794 MB
+    Average Memory :                             694.62 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3206.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                7
+    Run time :                                   222 sec.
+    Turnaround time :                            222 sec.
+
+The output (if any) is above this job summary.
+
+[Fri Jan 18 16:08:02 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: /var/lsf/ecflow_post_in.Matthew.Pyle.2376432 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Fri Jan 18 16:08:02 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Adding mmpmon postexec records to /var/lsf/mmpmon.2376432 for nodes: v60c37f
+[Fri Jan 18 16:08:03 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Performing IPCS Clean-up Check on nodes: v60c37f
+[Fri Jan 18 16:08:03 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Reporting summary of GPFS mmpmon activity:
+
+LSF_SUMMARY: GPFS
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell1
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():              2286
+    close():             2286
+    read():               672
+    write():                0
+    readdir():            456
+
+  Data:
+
+    READ:                  9.5 GB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:           58
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell2
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():               835
+    close():              687
+    read():             60710
+    write():            74654
+    readdir():             97
+
+  Data:
+
+    READ:                 62.7 GB
+    WRITTEN:              86.4 GB
+
+  Inode_Updates:          777
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell3
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():               246
+    close():              246
+    read():                 0
+    write():                0
+    readdir():             84
+
+  Data:
+
+    READ:                 54.5 KB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-lsf
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                14
+    close():               14
+    read():                 3
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                365.9 KB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            2
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-iodprod-dell
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-ioddev-dell
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd1
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd2
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd3
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp1
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp2
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-hps
+---------------------------------
+
+  Time_Interval:          222 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+===============================================
+AGGREGATE TOTALS (ALL Hosts, ALL File Systems):
+===============================================
+
+  Requests:
+
+    open():              3381
+    close():             3233
+    read():             61385
+    write():            74654
+    readdir():            637
+
+  Data:
+
+    READ:                 72.2 GB
+    WRITTEN:              86.4 GB
+
+  Inode_Updates:          837
+

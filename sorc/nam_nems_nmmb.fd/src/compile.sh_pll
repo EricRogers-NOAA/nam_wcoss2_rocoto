@@ -1,0 +1,12 @@
+set -x
+
+rm build.log.wcoss2
+
+CODE=$PWD/..
+
+cd $CODE/src
+gmake clean
+gmake nmm J=-j4 > build.log.wcoss2 2>&1
+
+cd $CODE
+mv $CODE/exe/NEMS.x ../../exec/nam_nems_nmmb_fcst

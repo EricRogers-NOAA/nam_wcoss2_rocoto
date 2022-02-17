@@ -1,0 +1,86 @@
+#!/bin/bash
+set -xa
+
+# ###################################
+# SET SHELL PROCESSING VARIABLES
+# ###################################
+export PS4='$SECONDS + ' 
+date
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=${jobid:?}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+# 
+# obtain unique process id (pid) and make temp directories
+#
+export MACHID=${MACHID:-wcoss}
+export pid=$$
+export pgmout="OUTPUT.${pid}"
+export DATA=${DATAROOT:?}/${jobid:?}
+mkdir $DATA
+cd $DATA
+
+#################################
+# Set up the NET and RUN
+#################################
+export NET=nam
+export RUN=nam
+export model=nam
+export cycle=t${cyc}z 
+
+################################
+# Set up the HOME directory
+################################
+####export HOMEnam=$PACKAGEROOT/nam.${nam_ver}
+export EXECnam=$HOMEnam/exec
+export FIXnam=$HOMEnam/fix
+export PARMnam=$HOMEnam/parm
+export USHnam=$HOMEnam/ush
+
+###################################
+# Set up the UTILITIES 
+###################################
+export HOMEutil=$UTILSHAREDROOT
+export EXECutil=$UTILSHAREDROOT/exec
+export utilities=$UTILSHAREDROOT/ush
+export FIXutil=$FIXshared
+export PARMutil=$HOMEnam/util/parm
+export UTIL_EXECnam=${UTIL_EXECnam:-${HOMEnam}/util/exec/${MACHID}.exec}
+export UTIL_USHnam=${UTIL_USHnam:-${HOMEnam}/util/ush}
+export UTIL_PARMnam=${UTIL_PARMnam:-${HOMEnam}/util/parm}
+export USHutil=$USHshared
+
+export trkrscript=${trkrscript:-$UTIL_USHnam}
+
+# Run setpdy and initialize PDY variables
+sh setpdy.sh
+. ./PDY
+
+########################################
+# Set up the input/output directory
+########################################
+export COMIN=$COMROOT/nam/${nam_ver}/${RUN}.${PDY}
+export COMOUT=$COMROOT/nam/${nam_ver}/${RUN}.${PDY}
+export COMOUTwmo=$COMROOT/nam/${nam_ver}/${RUN}.${PDY}/wmo
+export namvitdir=$COMOUT
+
+mkdir -p $COMOUT $COMOUTwmo
+env
+
+########################################################
+# Execute the script.
+$HOMEnam/scripts/exnam_bulletins.sh $fcsthrs
+########################################################
+
+##############################
+# Remove the Temporary working directory
+##############################
+cd $DATAROOT
+if [ ${KEEPDATA:-YES} = NO ] ; then rm -rf $DATA ; fi
+
+date

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+#------------------------------------------------------------
+# Build all "emcsfc" programs.
+#
+# For more details, see the documentation in each
+# program sub-directory.
+#------------------------------------------------------------
+
+#set -x
+
+for directory in ./*.fd
+do
+  case $directory in
+    *gridgen_sfc.fd)
+      cd $directory/lib
+      make clean
+      cd ../driver
+      make clean
+      cd ../.. ;;
+    *)
+      cd $directory
+      make clean
+      cd .. ;;
+  esac
+
+done
+
+rm ../exec/*
+
+echo; echo DONE BUILDING EMCSFC PROGRAMS

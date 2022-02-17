@@ -1,0 +1,17 @@
+#!/bin/sh
+set -x
+
+versiondir=`dirname $(readlink -f ../../../../versions)`
+echo $versiondir
+. $versiondir/versions/build.ver
+
+wgrib2_ver=2.0.7a
+start_dir=$PWD
+
+# Install wgrib2
+echo "starting wgrib2"
+cd $start_dir/wgrib2_v${wgrib2_ver}
+./compile_wgrib2_wcoss2.sh ${wgrib2_ver} |& tee compile_wgrib2_wcoss.log
+echo "ending wgrib2"
+cd ../..
+pwd

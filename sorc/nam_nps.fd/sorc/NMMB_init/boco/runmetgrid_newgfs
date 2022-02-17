@@ -1,0 +1,114 @@
+#!/bin/ksh
+
+#BSUB -oo out.metgrid
+#BSUB -eo out.metgrid
+#BSUB -n 1
+#BSUB -J metgrid
+#BSUB -W 00:30
+#BSUB -P NAM-T2O
+#BSUB -q "debug"
+#BSUB -R span[ptile=1]
+#BSUB -R "affinity[core]"
+####BSUB -R rusage[mem=4000]
+#BSUB -x
+####BSUB -a poe
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+. /usrx/local/prod/lmod/lmod/init/ksh
+module load prod_util/1.1.0
+module load NetCDF/4.5.0
+
+BASE=/gpfs/dell2/ptmp/Matthew.Pyle
+
+set -x
+
+mkdir -p ${BASE}/testnps_origcode
+mkdir -p ${BASE}/testnps_origcode/run_metgrid
+cd ${BASE}/testnps_origcode
+export DATAROOT=${BASE}/testnps_origcode
+export DATA=${BASE}/testnps_origcode/run_metgrid
+cd $DATA
+
+export PDY=20190117
+export cyc=12
+
+export CYCLE=$PDY$cyc
+
+export PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
+export PARMnps=$PARMnam
+export FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
+export USHnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/ush
+export USHnps=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init/boco
+# path to your binaries
+###EXECnam=/meso/save/Eric.Rogers/nam.v4.1.5/exec/wcoss.exec
+export EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
+
+export jlogfile=~/jlog
+export pgmout=myout.log
+
+
+mkdir -p $DATAROOT/run_metgrid_1
+mkdir -p $DATAROOT/run_metgrid_2
+mkdir -p $DATAROOT/run_metgrid_3
+mkdir -p $DATAROOT/run_metgrid_4
+mkdir -p $DATAROOT/run_metgrid_5
+mkdir -p $DATAROOT/run_metgrid_6
+mkdir -p $DATAROOT/run_metgrid_7
+mkdir -p $DATAROOT/run_metgrid_8
+mkdir -p $DATAROOT/run_metgrid_9
+mkdir -p $DATAROOT/run_metgrid_10
+mkdir -p $DATAROOT/run_metgrid_11
+mkdir -p $DATAROOT/run_metgrid_12
+mkdir -p $DATAROOT/run_metgrid_13
+mkdir -p $DATAROOT/run_metgrid_14
+mkdir -p $DATAROOT/run_metgrid_15
+
+#########################################################
+# RUN MULTIPLE METGRID STEPS USING POE
+#########################################################
+
+# Create a script to be poe'd
+cd $DATA
+rm -rf poescript
+
+# Rename metgrid files with /com type names
+export send=1
+
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 00 03 1 $send" > poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 06 09 2 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 12 15 3 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 18 21 4 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 24 27 5 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 30 33 6 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 36 39 7 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 42 45 8 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 48 51 9 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 54 57 10 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 60 63 11 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 66 69 12 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 72 75 13 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 78 81 14 $send" >> poescript
+echo "$USHnps/nam_boco_metgrid_gen.sh $cyc 84 84 15 $send" >> poescript
+
+chmod 775 $DATA/poescript
+export MP_PGMMODEL=mpmd
+export MP_CMDFILE=poescript
+export MP_LABELIO=YES
+export MP_STDOUTMODE=ordered
+
+# mpirun.lsf 
+
+./poescript
+
+###export err=$?
+####${DATA}/err_chk
+
+####cat $DATA/metgrid.log.0000_* > $COMOUT/hiresw.t${cyc}z.${NEST}${MODEL}.metgrid.log
+
+##msg="JOB $job FOR WRF NEST=${NEST}${MODEL} HAS COMPLETED NORMALLY"
+##postmsg "$jlogfile" "$msg"

@@ -1,0 +1,11 @@
+prefix=/lfs/h2/emc/lam/noscrub/Eric.Rogers/nam.v4.2.0/util/sorc/wgrib2_v2.0.7a/sorc/wgrib2_v2.0.7a
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: proj
+Description: Cartographic Projections Library.
+Requires:
+Version: 4.8.0
+Libs: -L${libdir} -lproj
+Cflags: -I${includedir}

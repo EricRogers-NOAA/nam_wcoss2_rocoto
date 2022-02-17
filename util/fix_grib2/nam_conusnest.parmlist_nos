@@ -1,0 +1,18 @@
+TMP:2 m above ground
+DPT:2 m above ground
+SPFH:2 m above ground
+UGRD:10 m above ground
+VGRD:10 m above ground
+RH:2 m above ground
+WTMP:surface
+VIS:surface
+PRMSL:mean sea level
+APCP:surface
+DLWRF:surface
+ULWRF:surface
+DSWRF:surface
+USWRF:surface
+LHTFL:surface
+SHTFL:surface
+PRES:surface
+TCDC:entire atmosphere (considered as a single layer)

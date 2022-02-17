@@ -1,0 +1,3 @@
+To compile everything here in sorc/ for your machine (Theia or WCOSS) simply run the make_all.sh script from the command line.
+
+gettrk.fd, overgridnum_grib.fd, setfirewx.fd must be build separately ("make" in each dir).

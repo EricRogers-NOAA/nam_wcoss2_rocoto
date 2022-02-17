@@ -1,0 +1,102 @@
+#!/bin/bash
+set -xa
+
+###################################
+# Specify NET and RUN Name and model
+####################################
+export NET=${NET:-nam}
+export RUN=${RUN:-nam}
+
+export PS4='$SECONDS + ' 
+date
+
+#
+# obtain temp directory name
+#
+export pid=$$
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=${jobid:?}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+# COMAWP is the NAM gempak directory in com
+export COMIN=${COMAWP}
+export COMOUT=${COMAWP}/meta
+mkdir -p $COMOUT
+
+export PS4='$SECONDS + '
+date
+
+export pid=$$
+export pgmout="OUTPUT.${pid}"
+export DATA=${DATAROOT:?}/${jobid:?}
+mkdir $DATA
+cd $DATA
+
+#Only way to get this to work
+#UTILROOT set by loading prod_util module
+cp $UTILROOT/ush/* $DATA/.
+
+####################################
+# Determine Job Output Name on System
+####################################
+
+export pid=$$
+export pgmout="OUTPUT.${pid}"
+
+#############################################
+#set the fcst hrs for the 00z and 12z cycles
+#############################################
+if [ $cyc -eq 00 -o $cyc -eq 12 ] ; then
+   export fhbeg=00
+   export fhend=84
+   export fhinc=12
+else
+#set the fcst hrs for the 06z and 18z cycles
+   export fhbeg=12
+   export fhend=84
+   export fhinc=12
+fi
+
+export cycle=t${cyc}z 
+export DBN_ALERT_TYPE=NAM_METAFILE
+
+####################################
+# Specify Execution Areas
+####################################
+export HOMEgempak=$HOMEnam/gempak
+export FIXgempak=$HOMEgempak/fix
+export USHgempak=$HOMEgempak/ush
+
+cp $FIXgempak/datatype.tbl datatype.tbl
+
+# Run setpdy and initialize PDY variables
+sh setpdy.sh
+. PDY
+
+if [ ! -f $COMOUT ] ; then
+  mkdir -p -m 775 $COMOUT
+fi
+ 
+env
+
+msg="Begin job for $job"
+postmsg "$msg"
+########################################################
+# Execute the script.
+$HOMEnam/scripts/exnam_gempak_meta.sh
+########################################################
+msg="job has ended"
+postmsg "$msg"
+cat $pgmout
+
+##############################
+# Remove the Temporary working directory
+##############################
+cd $DATAROOT
+if [ ${KEEPDATA:-YES} = NO ] ; then rm -rf $DATA ; fi
+
+date

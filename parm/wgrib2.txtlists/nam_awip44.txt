@@ -1,0 +1,87 @@
+MSLET:mean sea level:
+PRMSL:mean sea level:
+ABSV:500 mb:
+ABSV:700 mb:
+ABSV:850 mb:
+ABSV:1000 mb:
+HGT:surface:
+TMP:2 m above ground:
+SPFH:2 m above ground:
+RH:2 m above ground:
+UGRD:10 m above ground:
+VGRD:10 m above ground:
+APCP:surface:
+ACPCP:surface:
+WEASD:surface:
+CSNOW:surface:
+CICEP:surface:
+CFRZR:surface:
+CRAIN:surface:
+VVEL:500 mb:
+VVEL:700 mb:
+TMP:850 mb:
+TMP:surface:
+RIME:1 hybrid level:
+CPOFP:surface:
+PRATE:surface:
+GUST:surface:
+HGT:lowest level of the wet bulb zero:
+VVEL:200 mb:
+VVEL:300 mb:
+VVEL:400 mb:
+VVEL:850 mb:
+VVEL:925 mb:
+VVEL:1000 mb:
+HGT:200 mb:
+TMP:200 mb:
+RH:200 mb:
+UGRD:200 mb:
+VGRD:200 mb:
+HGT:300 mb:
+TMP:300 mb:
+RH:300 mb:
+DPT:300 mb:
+UGRD:300 mb:
+VGRD:300 mb:
+HGT:400 mb:
+TMP:400 mb:
+RH:400 mb:
+DPT:400 mb:
+UGRD:400 mb:
+VGRD:400 mb:
+HGT:500 mb:
+TMP:500 mb:
+RH:500 mb:
+DPT:500 mb:
+UGRD:500 mb:
+VGRD:500 mb:
+HGT:700 mb:
+TMP:700 mb:
+RH:700 mb:
+DPT:700 mb:
+UGRD:700 mb:
+VGRD:700 mb:
+HGT:850 mb:
+RH:850 mb:
+DPT:850 mb:
+UGRD:850 mb:
+VGRD:850 mb:
+HGT:925 mb:
+TMP:925 mb:
+RH:925 mb:
+UGRD:925 mb:
+VGRD:925 mb:
+HGT:1000 mb:
+TMP:1000 mb:
+RH:1000 mb:
+DPT:1000 mb:
+UGRD:1000 mb:
+VGRD:1000 mb:
+WEASD:surface:
+NCPCP:surface:
+ABSV:400 mb:
+DPT:200 mb:
+ABSV:200 mb:
+ABSV:300 mb:
+DPT:925 mb:
+ABSV:925 mb:

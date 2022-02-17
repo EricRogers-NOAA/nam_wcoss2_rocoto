@@ -1,0 +1,8 @@
+set -x
+
+qsub run_nam_catchup_prdgen_alaska_tm04_f00.sh
+qsub run_nam_catchup_prdgen_alaska_tm04_f01.sh
+qsub run_nam_catchup_prdgen_conus_tm04_f00.sh
+qsub run_nam_catchup_prdgen_conus_tm04_f01.sh
+qsub run_nam_catchup_prdgen_tm04_f00.sh
+qsub run_nam_catchup_prdgen_tm04_f01.sh

@@ -1,0 +1,134 @@
+calpreciptype.o : calpreciptype.f physcons.o funcphys.o  
+cnvc90.o : cnvc90.f machine.o  
+co2hc.o : co2hc.f  
+cs_conv.o : cs_conv.f physcons.o machine.o funcphys.o  
+date_def.o : date_def.f machine.o  
+dcyc2.o : dcyc2.f physcons.o machine.o  
+dcyc2.pre.rad.o : dcyc2.pre.rad.f physcons.o machine.o  
+efield.o : efield.f  
+funcphys.o : funcphys.f physcons.o machine.o  
+gbphys.o : gbphys.f module_nst_water_prop.o cs_conv.o machine.o physcons.o  
+gcm_shoc.o : gcm_shoc.f physcons.o funcphys.o  
+get_prs.o : get_prs.f machine.o physcons.o tracer_const_h.o  
+gfs_phy_tracer_config.o : gfs_phy_tracer_config.f machine.o  
+gocart_tracer_config_stub.o : gocart_tracer_config_stub.f  
+grrad.o : grrad.f radiation_surface.o physparam.o radlw_param.o radsw_param.o physcons.o radiation_astronomy.o funcphys.o radlw_main.o radiation_gases.o radiation_clouds.o radiation_aerosols.o radsw_main.o  
+grrad_nmmb.o : grrad_nmmb.f radiation_astronomy_nmmb.o radlw_param.o physparam.o radiation_gases_nmmb.o radlw_main_nmmb.o radiation_clouds_nmmb.o radsw_param.o physcons.o radiation_aerosols_nmmb.o radsw_main_nmmb.o radiation_surface_nmmb.o funcphys.o  
+gscond.o : gscond.f physcons.o machine.o funcphys.o  
+gscondp.o : gscondp.f machine.o physcons.o funcphys.o  
+gsmddrive.o : gsmddrive.f module_bfmicrophysics.o machine.o  
+gwdc.o : gwdc.f machine.o  
+gwdps.o : gwdps.f machine.o  
+h2oc.o : h2oc.f  
+h2ohdc.o : h2ohdc.f  
+idea_co2.o : idea_co2.f physcons.o co2hc.o  
+idea_dissipation.o : idea_dissipation.f machine.o physcons.o  
+idea_h2o.o : idea_h2o.f physcons.o  
+idea_ion.o : idea_ion.f wam_f107_kp_mod.o physcons.o efield.o date_def.o  
+idea_o2_o3.o : idea_o2_o3.f physcons.o  
+idea_phys.o : idea_phys.f physcons.o tracer_const_h.o  
+idea_solar_heating.o : idea_solar_heating.f machine.o physcons.o wam_f107_kp_mod.o date_def.o  
+idea_tracer.o : idea_tracer.f wam_f107_kp_mod.o physcons.o machine.o  
+ideaca.o : ideaca.f  
+iounitdef.o : iounitdef.f  
+lrgsclr.o : lrgsclr.f physcons.o machine.o funcphys.o  
+machine.o : machine.f  
+mersenne_twister.o : mersenne_twister.f  
+mfdeepcnv.o : mfdeepcnv.f physcons.o machine.o funcphys.o  
+mfpbl.o : mfpbl.f machine.o physcons.o  
+mfshalcnv.o : mfshalcnv.f funcphys.o machine.o physcons.o  
+module_BL_GFSPBL.o : module_BL_GFSPBL.F90 machine.o  
+module_BL_GFSPBLHUR.o : module_BL_GFSPBLHUR.F90 physcons.o machine.o  
+module_BL_MYJPBL.o : module_BL_MYJPBL.F90  
+module_CU_BMJ.o : module_CU_BMJ.F90  
+module_CU_SAS.o : module_CU_SAS.F90 machine.o funcphys.o  
+module_CU_SASHUR.o : module_CU_SASHUR.F90 funcphys.o machine.o physcons.o  
+module_LS_LISS.o : module_LS_LISS.F90  
+module_LS_NOAHLSM.o : module_LS_NOAHLSM.F90 module_SF_URBAN.o  
+module_MP_ETANEW.o : module_MP_ETANEW.F90  
+module_MP_FER_HIRES.o : module_MP_FER_HIRES.F90  
+module_MP_GFS.o : module_MP_GFS.F90 machine.o funcphys.o  
+module_MP_WSM6.o : module_MP_WSM6.F90  
+module_RA_GFDL.o : module_RA_GFDL.F90 module_MP_ETANEW.o  
+module_RA_RRTM.o : module_RA_RRTM.F90 radsw_param.o physparam.o radlw_param.o radsw_main_nmmb.o module_MP_FER_HIRES.o grrad_nmmb.o  
+module_SF_GFDL.o : module_SF_GFDL.F90 funcphys.o physcons.o machine.o  
+module_SF_JSFC.o : module_SF_JSFC.F90  
+module_SF_URBAN.o : module_SF_URBAN.F90  
+module_bfmicrophysics.o : module_bfmicrophysics.f physcons.o machine.o funcphys.o  
+module_mp_radar.o : module_mp_radar.F90  
+module_mp_thompson.o : module_mp_thompson.F90 module_mp_radar.o  
+module_nst_model.o : module_nst_model.f module_nst_parameters.o module_nst_water_prop.o machine.o  
+module_nst_parameters.o : module_nst_parameters.f physcons.o machine.o  
+module_nst_water_prop.o : module_nst_water_prop.f module_nst_parameters.o machine.o  
+moninedmf.o : moninedmf.f machine.o physcons.o funcphys.o  
+moninp.o : moninp.f physcons.o machine.o  
+moninp1.o : moninp1.f machine.o physcons.o  
+moninq.o : moninq.f funcphys.o machine.o physcons.o  
+moninshoc.o : moninshoc.f physcons.o machine.o funcphys.o  
+mstadb.o : mstadb.f funcphys.o machine.o physcons.o  
+mstadbtn.o : mstadbtn.f funcphys.o physcons.o machine.o  
+mstcnv.o : mstcnv.f funcphys.o physcons.o machine.o  
+namelist_soilveg.o : namelist_soilveg.f  
+num_parthds.o : num_parthds.F  
+ozinterp.o : ozinterp.f machine.o ozne_def.o  
+ozne_def.o : ozne_def.f machine.o  
+ozphys.o : ozphys.f physcons.o machine.o  
+physcons.o : physcons.f machine.o  
+physparam.o : physparam.f machine.o  
+precpd.o : precpd.f physcons.o machine.o funcphys.o  
+precpd_nmmb.o : precpd_nmmb.f machine.o physcons.o funcphys.o  
+precpd_shoc.o : precpd_shoc.f funcphys.o physcons.o machine.o  
+precpdp.o : precpdp.f funcphys.o physcons.o machine.o  
+progt2.o : progt2.f machine.o progtm_module.o  
+progtm_module.o : progtm_module.f machine.o  
+rad_initialize.o : rad_initialize.f grrad.o physparam.o  
+rad_initialize_nmmb.o : rad_initialize_nmmb.f physparam.o grrad_nmmb.o  
+radiation_aerosols.o : radiation_aerosols.f funcphys.o iounitdef.o physparam.o radlw_param.o radsw_param.o physcons.o gfs_phy_tracer_config.o  
+radiation_aerosols_gfs.o : radiation_aerosols_gfs.f radlw_param_nmmb.o radsw_param_nmmb.o funcphys.o iounitdef.o physcons.o gfs_phy_tracer_config.o machine.o  
+radiation_aerosols_nmmb.o : radiation_aerosols_nmmb.f physparam.o radlw_param.o radsw_param.o physcons.o iounitdef.o  
+radiation_astronomy.o : radiation_astronomy.f physcons.o physparam.o iounitdef.o  
+radiation_astronomy_gfs.o : radiation_astronomy_gfs.f iounitdef.o machine.o physcons.o  
+radiation_astronomy_nmmb.o : radiation_astronomy_nmmb.f physcons.o physparam.o iounitdef.o  
+radiation_clouds.o : radiation_clouds.f physparam.o physcons.o iounitdef.o module_bfmicrophysics.o  
+radiation_clouds_gfs.o : radiation_clouds_gfs.f machine.o physcons.o iounitdef.o  
+radiation_clouds_nmmb.o : radiation_clouds_nmmb.f physparam.o physcons.o module_mp_thompson.o iounitdef.o  
+radiation_gases.o : radiation_gases.f physcons.o physparam.o ozne_def.o funcphys.o iounitdef.o  
+radiation_gases_gfs.o : radiation_gases_gfs.f machine.o physcons.o ozne_def.o iounitdef.o funcphys.o  
+radiation_gases_nmmb.o : radiation_gases_nmmb.f physcons.o ozne_def.o physparam.o iounitdef.o funcphys.o  
+radiation_surface.o : radiation_surface.f iounitdef.o physparam.o physcons.o  
+radiation_surface_gfs.o : radiation_surface_gfs.f machine.o physcons.o iounitdef.o  
+radiation_surface_nmmb.o : radiation_surface_nmmb.f iounitdef.o physparam.o physcons.o  
+radlw_datatb.o : radlw_datatb.f radlw_param.o physparam.o  
+radlw_datatb_nmmb.o : radlw_datatb_nmmb.f machine.o radlw_param_nmmb.o  
+radlw_main.o : radlw_main.f mersenne_twister.o physcons.o radlw_datatb.o physparam.o radlw_param.o  
+radlw_main_nmmb.o : radlw_main_nmmb.f physcons.o radlw_datatb.o physparam.o radlw_param.o mersenne_twister.o  
+radlw_param.o : radlw_param.f physparam.o  
+radlw_param_nmmb.o : radlw_param_nmmb.f machine.o  
+radsw_datatb.o : radsw_datatb.f physparam.o radsw_param.o  
+radsw_datatb_nmmb.o : radsw_datatb_nmmb.f machine.o radsw_param_nmmb.o  
+radsw_main.o : radsw_main.f physparam.o physcons.o radsw_param.o mersenne_twister.o radsw_datatb.o  
+radsw_main_nmmb.o : radsw_main_nmmb.f physparam.o physcons.o radsw_param.o radsw_datatb.o mersenne_twister.o  
+radsw_param.o : radsw_param.f physparam.o  
+radsw_param_nmmb.o : radsw_param_nmmb.f machine.o  
+rascnvv2.o : rascnvv2.f machine.o physcons.o funcphys.o  
+rayleigh_damp.o : rayleigh_damp.f machine.o  
+rayleigh_damp_mesopause.o : rayleigh_damp_mesopause.f machine.o  
+sascnv.o : sascnv.f machine.o physcons.o funcphys.o  
+sascnvn.o : sascnvn.f machine.o physcons.o funcphys.o  
+set_soilveg.o : set_soilveg.f namelist_soilveg.o  
+sfc_cice.o : sfc_cice.f funcphys.o physcons.o machine.o  
+sfc_diag.o : sfc_diag.f funcphys.o physcons.o machine.o  
+sfc_diff.o : sfc_diff.f physcons.o machine.o funcphys.o  
+sfc_drv.o : sfc_drv.f machine.o physcons.o funcphys.o  
+sfc_land.o : sfc_land.f funcphys.o machine.o physcons.o  
+sfc_nst.o : sfc_nst.f date_def.o funcphys.o module_nst_model.o physcons.o machine.o module_nst_water_prop.o module_nst_parameters.o  
+sfc_ocean.o : sfc_ocean.f physcons.o machine.o funcphys.o  
+sfc_sice.o : sfc_sice.f funcphys.o machine.o physcons.o  
+sfcsub.o : sfcsub.f machine.o  
+sflx.o : sflx.f namelist_soilveg.o physcons.o machine.o  
+shalcnv.o : shalcnv.f funcphys.o machine.o physcons.o  
+shalcv.o : shalcv.f physcons.o machine.o  
+shalcv_opr.o : shalcv_opr.f physcons.o machine.o  
+tracer_const_h.o : tracer_const_h.f machine.o physcons.o  
+tridi2t3.o : tridi2t3.f machine.o  
+wam_f107_kp_mod.o : wam_f107_kp_mod.f  

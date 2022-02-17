@@ -1,0 +1,24 @@
+#!/bin/bash
+set -xa
+
+export HOMEnam=$PACKAGEROOT/nam.${nam_ver}_rocoto
+export JJOBSnam=$HOMEnam/jobs
+export WKDIRNAME=nam_${cyc}_${tmmark}_${envir}
+
+# Setup directories and common environment variables
+
+. ${JJOBSnam}/JNAM_ENVARS
+
+########################################################
+# Execute the script.
+${HOMEnam}/scripts/exnam_postsnd.sh
+jerr=$?
+########################################################
+
+cat $pgmout
+date
+msg="JOB $job HAS COMPLETED NORMALLY"
+postmsg "$msg"
+
+cd ${DATAROOT}
+exit $jerr

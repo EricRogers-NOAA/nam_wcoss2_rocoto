@@ -1,0 +1,41 @@
+  # Decomposition for the parent domain: 
+    # For the parent domain
+    if [ "$domain" = parent ]
+    then
+      inpes=12
+      jnpes=24
+      write_groups=4
+      write_tasks=6
+    fi
+    # For nest domains
+    if [ "$domain" = alaska ] ; then
+     inpes=18
+     jnpes=36
+     write_groups=4
+     write_tasks=6
+    fi
+    if [ "$domain" = conus ] ; then
+     inpes=24
+     jnpes=48
+     write_groups=4
+     write_tasks=24
+    fi
+    if [ "$domain" = hawaii ] ; then
+     inpes=11
+     jnpes=12
+     write_groups=2
+     write_tasks=6
+    fi
+    if [ "$domain" = prico ] ; then
+     inpes=9
+     jnpes=12
+     write_groups=2
+     write_tasks=6
+    fi
+    if [ "$domain" = parentonly ]   # for 60-84h forecast
+    then
+      inpes=16
+      jnpes=39
+      write_groups=4
+      write_tasks=6
+    fi

@@ -1,0 +1,11 @@
+prefix=/lfs/h1/emc/eib/noscrub/Eric.Rogers/nam.v4.2.0/util/sorc/wgrib2_v2.0.7a/sorc/wgrib2_v2.0.7a
+exec_prefix=/lfs/h1/emc/eib/noscrub/Eric.Rogers/nam.v4.2.0/util/sorc/wgrib2_v2.0.7a/sorc/wgrib2_v2.0.7a
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/libpng12
+
+Name: libpng
+Description: Loads and saves PNG files
+Version: 1.2.57
+Libs: -L${libdir} -lpng12
+Libs.private: -lz 
+Cflags: -I${includedir} 

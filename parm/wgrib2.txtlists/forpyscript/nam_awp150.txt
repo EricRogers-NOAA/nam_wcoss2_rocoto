@@ -1,0 +1,38 @@
+(MSLET):mean sea level:
+(HGT):surface:
+(UGRD):10 m above ground:
+(VGRD):10 m above ground:
+(APCP):surface:
+(ACPCP):surface:
+(VIS):surface:
+(TMP):2 m above ground:
+(DSWRF):surface:
+(SSRUN):surface:
+(BGRUN):surface:
+(LHTFL):surface:
+(SHTFL):surface:
+(EVP):surface:
+(TCDC):entire atmosphere (considered as a single layer):
+(DLWRF):surface:
+(USWRF):surface:
+(ULWRF):surface:
+(PRES):cloud base:
+(HGT):cloud base:
+(GUST):surface:
+(DPT):2 m above ground:
+(TCDC):entire atmosphere (considered as a single layer):
+(SHTFL):surface:
+(LHTFL):surface:
+(DSWRF):surface:
+(DLWRF):surface:
+(USWRF):surface:
+(ULWRF):surface:
+(SOILW):0-0.1 m below ground:
+(SOILW):0.1-0.4 m below ground:
+(SOILW):0.4-1 m below ground:
+(SOILW):1-2 m below ground:
+(MSTAV):0-1 m below ground:
+(SOILM):0-2 m below ground:
+(SOTYP):surface:
+(VGTYP):surface:
+(VEG):surface:

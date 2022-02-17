@@ -1,0 +1,196 @@
+MSLET:mean sea level:
+PRMSL:mean sea level:
+VIS:surface:
+VIS:cloud top:
+ABSV:250 mb:
+ABSV:500 mb:
+ABSV:700 mb:
+ABSV:850 mb:
+ABSV:1000 mb:
+PRES:surface:
+HGT:surface:
+TMP:2 m above ground:
+SPFH:2 m above ground:
+DPT:2 m above ground:
+RH:2 m above ground:
+POT:10 m above ground:
+SPFH:10 m above ground:
+UGRD:10 m above ground:
+VGRD:10 m above ground:
+APCP:surface:
+ACPCP:surface:
+WEASD:surface:
+CSNOW:surface:
+CICEP:surface:
+CFRZR:surface:
+CRAIN:surface:
+CAPE:surface:
+CIN:surface:
+PWAT:entire atmosphere (considered as a single layer):
+HLCY:3000-0 m above ground:
+USTM:6000-0 m above ground:
+VSTM:6000-0 m above ground:
+TMP:30-0 mb above ground:
+RH:30-0 mb above ground:
+UGRD:30-0 mb above ground:
+VGRD:30-0 mb above ground:
+PLI:30-0 mb above ground:
+TMP:60-30 mb above ground:
+UGRD:60-30 mb above ground:
+VGRD:60-30 mb above ground:
+TMP:90-60 mb above ground:
+RH:90-60 mb above ground:
+UGRD:90-60 mb above ground:
+VGRD:90-60 mb above ground:
+TMP:120-90 mb above ground:
+UGRD:120-90 mb above ground:
+VGRD:120-90 mb above ground:
+TMP:150-120 mb above ground:
+RH:150-120 mb above ground:
+UGRD:150-120 mb above ground:
+VGRD:150-120 mb above ground:
+4LFTX:180-0 mb above ground:
+CAPE:180-0 mb above ground:
+CIN:180-0 mb above ground:
+LFTX:500-1000 mb:
+RH:60-30 mb above ground:
+RH:120-90 mb above ground:
+BRTMP:top of atmosphere:
+LAND:surface:
+SFCR:surface:
+FRICV:surface:
+CAPE:90-0 mb above ground:
+CIN:90-0 mb above ground:
+HLCY:1000-0 m above ground:
+CAPE:255-0 mb above ground:
+CIN:255-0 mb above ground:
+PLPL:255-0 mb above ground:
+VVEL:500 mb:
+VVEL:700 mb:
+TMP:750 mb:
+TMP:800 mb:
+TMP:850 mb:
+TMP:900 mb:
+TMP:surface:
+WEASD:surface:
+PRES:1 hybrid level:
+HGT:1 hybrid level:
+TMP:1 hybrid level:
+POT:1 hybrid level:
+DPT:1 hybrid level:
+RH:1 hybrid level:
+SPFH:1 hybrid level:
+UGRD:1 hybrid level:
+VGRD:1 hybrid level:
+VVEL:1 hybrid level:
+RIME:1 hybrid level:
+TKE:1 hybrid level:
+TSOIL:0-0.1 m below ground:
+SOILW:0-0.1 m below ground:
+TSOIL:0.1-0.4 m below ground:
+SOILW:0.1-0.4 m below ground:
+TSOIL:0.4-1 m below ground:
+SOILW:0.4-1 m below ground:
+TSOIL:1-2 m below ground:
+SOILW:1-2 m below ground:
+TSOIL:3 m underground:
+MSTAV:0-1 m below ground:
+SOILM:0-2 m below ground:
+CNWAT:surface:
+SNOM:surface:
+SSRUN:surface:
+BGRUN:surface:
+SFEXC:surface:
+VEG:surface:
+LCDC:low cloud layer:
+MCDC:middle cloud layer:
+HCDC:high cloud layer:
+TMP:180-150 mb above ground:
+UGRD:180-150 mb above ground:
+VGRD:180-150 mb above ground:
+RH:0.47-1 sigma layer:
+ALBDO:surface:
+WTMP:surface:
+BMIXL:1 hybrid level:
+ICEC:surface:
+TMP:cloud top:
+CPOFP:surface:
+PRATE:surface:
+SRWEQ:surface:
+TCOLW:entire atmosphere (considered as a single layer):
+TCOLI:entire atmosphere (considered as a single layer):
+TCOLR:entire atmosphere (considered as a single layer):
+TCOLS:entire atmosphere (considered as a single layer):
+TCOLC:entire atmosphere (considered as a single layer):
+DSWRF:surface:
+PRES:cloud base:
+PRES:cloud top:
+PRES:convective cloud bottom level:
+PRES:convective cloud top level:
+PRES:shallow convective cloud bottom level:
+PRES:shallow convective cloud top level:
+PRES:deep convective cloud bottom level:
+PRES:deep convective cloud top level:
+PRES:grid scale cloud bottom level:
+PRES:grid scale cloud top level:
+CUEFI:entire atmosphere (considered as a single layer):
+SNOD:surface:
+MXSALB:surface:
+SOILL:0-0.1 m below ground:
+SOILL:0.1-0.4 m below ground:
+SOILL:0.4-1 m below ground:
+SOILL:1-2 m below ground:
+SNFALB:surface:
+RLYRS:surface:
+CCOND:surface:
+RSMIN:surface:
+WILT:surface:
+HPBL:surface:
+SOTYP:surface:
+VGTYP:surface:
+SMREF:surface:
+SMDRY:surface:
+SNOWC:surface:
+POROS:surface:
+RCS:surface:
+RCT:surface:
+RCQ:surface:
+RCSOL:surface:
+HGT:level of adiabatic condensation from sfc:
+GUST:surface:
+HGT:lowest level of the wet bulb zero:
+CPRAT:surface:
+REFD:1 hybrid level:
+REFC:entire atmosphere (considered as a single layer):
+REFD:1000 m above ground:
+REFD:4000 m above ground:
+RETOP:entire atmosphere (considered as a single layer):
+HGT:cloud ceiling:
+TCLSW:entire atmosphere (considered as a single layer):
+TCOLM:entire atmosphere (considered as a single layer):
+HGT:lowest bottom level of supercooled liquid water layer:
+HGT:highest top level of supercooled liquid water layer:
+TMP:0.7 sigma level:
+TMP:0.75 sigma level:
+TMP:0.8 sigma level:
+TMP:0.85 sigma level:
+TMP:0.9 sigma level:
+SWHR:entire atmosphere (considered as a single layer):
+LWHR:entire atmosphere (considered as a single layer):
+LRGHR:entire atmosphere (considered as a single layer):
+CNVHR:entire atmosphere (considered as a single layer):
+MCONV:entire atmosphere (considered as a single layer):
+UGRD:planetary boundary layer:
+VGRD:planetary boundary layer:
+HGT:planetary boundary layer:
+RWMR:1 hybrid level:
+SNMR:1 hybrid level:
+VRATE:planetary boundary layer:
+HINDEX:surface:
+TMAX:2 m above ground:
+TMIN:2 m above ground:
+MAXRH:2 m above ground:
+MINRH:2 m above ground:
+MAXUW:10 m above ground:
+MAXVW:10 m above ground:
+LTNG:surface:

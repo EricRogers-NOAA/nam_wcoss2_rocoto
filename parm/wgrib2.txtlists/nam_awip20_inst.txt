@@ -1,0 +1,3 @@
+CDCON:entire atmosphere (considered as a single layer):
+PRATE:surface:
+TCDC:entire atmosphere (considered as a single layer):

@@ -1,0 +1,1143 @@
++ domain=alaska
++ domains='alaska prico hawaii'
++ MP_EUILIB=us
++ export MP_EUILIB
++ MP_EUIDEVICE=sn_all
++ export MP_EUIDEVICE
++ MP_MPILIB=mpich2
++ export MP_MPILIB
++ MP_STDOUTMODE=unordered
++ export MP_STDOUTMODE
++ MP_LABELIO=yes
++ export MP_LABELIO
++ . /usrx/local/prod/lmod/lmod/init/ksh
++ LMOD_PKG=/usrx/local/prod/lmod/lmod
++ LMOD_DIR=/usrx/local/prod/lmod/lmod/libexec/
++ LMOD_CMD=/usrx/local/prod/lmod/lmod/libexec/lmod
++ MODULESHOME=/usrx/local/prod/lmod/lmod
++ export LMOD_CMD
++ export LMOD_PKG
++ export LMOD_DIR
++ export MODULESHOME
++ export LMOD_DIR
++ module load prod_util/1.1.0
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load prod_util/1.1.0
++ eval COMDATEROOT='"/gpfs/dell1/nco/ops/com";' export 'COMDATEROOT;' COMLISTROOT='"/gpfs/dell1/nco/ops/config";' export 'COMLISTROOT;' FSYNC='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file";' export 'FSYNC;' __LMOD_REF_COUNT_LOADEDMODULES='"EnvVars/1.0.2:1;lmod/7.7:1;rsync/3.1.2:1;ips/18.0.1.163:1;lsf/10.1:1;impi/18.0.1:1;prod_envir/1.0.2:1;git/2.14.3:1;dev/grib_util/1.1.0:1;prod_util/1.1.0:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' LOADEDMODULES='"EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0";' export 'LOADEDMODULES;' MDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate";' export 'MDATE;' MODULEPATH='"/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles";' export 'MODULEPATH;' NDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate";' export 'NDATE;' NHOUR='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour";' export 'NHOUR;' __LMOD_REF_COUNT_PATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usrx/local/dev/packages/git/2.14.3/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/usrx/local/prod/packages/rsync/3.1.2/bin:1;/usrx/local/prod/lmod/lmod/libexec:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;.:1;/u/Matthew.Pyle/.local/bin:1;/u/Matthew.Pyle/bin:1";' export '__LMOD_REF_COUNT_PATH;' PATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin";' export 'PATH;' PYTHONPATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi";' export 'PYTHONPATH;' UTILROOT='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0";' export 'UTILROOT;' __LMOD_REF_COUNT__LMFILES_='"/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:1;/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:1;/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:1;/usrx/local/dev/modulefiles/git/2.14.3:1;/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1";' export '__LMOD_REF_COUNT__LMFILES_;' _LMFILES_='"/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0";' export '_LMFILES_;' _ModuleTable001_='"X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k";' export '_ModuleTable001_;' _ModuleTable002_='"dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv";' export '_ModuleTable002_;' _ModuleTable003_='"Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i";' export '_ModuleTable003_;' _ModuleTable004_='"XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v";' export '_ModuleTable004_;' _ModuleTable005_='"b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi";' export '_ModuleTable005_;' _ModuleTable006_='"XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable006_;' _ModuleTable007_='"cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv";' export '_ModuleTable007_;' _ModuleTable008_='"MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=";' export '_ModuleTable008_;' _ModuleTable_Sz_='"8";' export '_ModuleTable_Sz_;'
++ COMDATEROOT=/gpfs/dell1/nco/ops/com
++ export COMDATEROOT
++ COMLISTROOT=/gpfs/dell1/nco/ops/config
++ export COMLISTROOT
++ FSYNC=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file
++ export FSYNC
++ __LMOD_REF_COUNT_LOADEDMODULES='EnvVars/1.0.2:1;lmod/7.7:1;rsync/3.1.2:1;ips/18.0.1.163:1;lsf/10.1:1;impi/18.0.1:1;prod_envir/1.0.2:1;git/2.14.3:1;dev/grib_util/1.1.0:1;prod_util/1.1.0:1'
++ export __LMOD_REF_COUNT_LOADEDMODULES
++ LOADEDMODULES=EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0
++ export LOADEDMODULES
++ MDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate
++ export MDATE
++ MODULEPATH=/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles
++ export MODULEPATH
++ NDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate
++ export NDATE
++ NHOUR=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour
++ export NHOUR
++ __LMOD_REF_COUNT_PATH='/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usrx/local/dev/packages/git/2.14.3/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/usrx/local/prod/packages/rsync/3.1.2/bin:1;/usrx/local/prod/lmod/lmod/libexec:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;.:1;/u/Matthew.Pyle/.local/bin:1;/u/Matthew.Pyle/bin:1'
++ export __LMOD_REF_COUNT_PATH
++ PATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin
++ export PATH
++ PYTHONPATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi
++ export PYTHONPATH
++ UTILROOT=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0
++ export UTILROOT
++ __LMOD_REF_COUNT__LMFILES_='/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:1;/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:1;/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:1;/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:1;/usrx/local/dev/modulefiles/git/2.14.3:1;/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0:1'
++ export __LMOD_REF_COUNT__LMFILES_
++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0
++ export _LMFILES_
++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k
++ export _ModuleTable001_
++ _ModuleTable002_=dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv
++ export _ModuleTable002_
++ _ModuleTable003_=Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i
++ export _ModuleTable003_
++ _ModuleTable004_=XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v
++ export _ModuleTable004_
++ _ModuleTable005_=b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi
++ export _ModuleTable005_
++ _ModuleTable006_=XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv
++ export _ModuleTable006_
++ _ModuleTable007_=cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv
++ export _ModuleTable007_
++ _ModuleTable008_=MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=
++ export _ModuleTable008_
++ _ModuleTable_Sz_=8
++ export _ModuleTable_Sz_
++ module load NetCDF/4.5
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load NetCDF/4.5
+Lmod has detected the following error: The following module(s) are unknown:
+"NetCDF/4.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "NetCDF/4.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
++ eval false
++ false
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska
++ DATA=/gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska
++ mod=AVN
++ LENGTH=3
++ cyc=12
++ DOMNAM=nam
++ export DOMNAM
++ PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
++ EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
++ INPUT=/gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/ungrib
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid
++ rm 'met*.dio'
+rm: cannot remove ‘met*.dio’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/ungrib
++ rm 'GRIBFILE.*'
+rm: cannot remove ‘GRIBFILE.*’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/nemsinterp
++ rm 'test*d01'
+rm: cannot remove ‘test*d01’: No such file or directory
++ rm 'boco*'
+rm: cannot remove ‘boco*’: No such file or directory
++ rm GWD.bin
+rm: cannot remove ‘GWD.bin’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/ungrib
++ CYCLE=2019011706
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011706
++ datetm06=2019011700
++ echo DATEXX2019011700
++ 1> ncepdate.npstm06
++ cp ncepdate.npstm06 /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid/.
++ cut -c7-14
++ cat ncepdate.npstm06
++ PDYstart=20190117
++ cut -c7-10
++ cat ncepdate.npstm06
++ ystart=2019
++ cut -c11-12
++ cat ncepdate.npstm06
++ mstart=01
++ cut -c13-14
++ cat ncepdate.npstm06
++ dstart=17
++ cut -c15-16
++ cat ncepdate.npstm06
++ hstart=00
++ start=2019011700
++ cut -c 7-16
++ cat ncepdate.npstm06
++ CYCer=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -0 2019011700
++ CYCstart=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011700
++ CYCgdas=2019011618
++ echo DATEXX2019011618
++ 1> nmcdate.gdas
++ cut -c7-14
++ cat nmcdate.gdas
++ PDYgds=20190116
++ cut -c7-10
++ cat nmcdate.gdas
++ yygds=2019
++ cat nmcdate.gdas
++ cut -c11-12
++ mmgds=01
++ cat nmcdate.gdas
++ cut -c13-14
++ ddgds=16
++ cat nmcdate.gdas
++ cut -c15-16
++ cycgds=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ end=2019011700
++ echo 2019011700
++ cut -c1-4
++ yend=2019
++ echo 2019011700
++ cut -c5-6
++ mend=01
++ echo 2019011700
++ cut -c7-8
++ dend=17
++ echo 2019011700
++ cut -c9-10
++ hend=00
++ ignore_gridgen_sfc=.false.
++ CYCNEST=true
++ spectral=true
++ gribsrc=GFS
++ doclouds=false
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_alaskanest
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:DSTART:17:
++ sed s:HSTART:00:
++ sed s:MEND:01:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:SPECTRAL:true:
++ sed s:HEND:00:
++ sed s:DOCLOUDS:false:
++ sed s:DEND:17:
++ 1> namelist.nps
++ sed s:GRIBSRC:GFS:
++ sed s:YEND:2019:
++ echo 2019011700
++ cut -c1-8
++ DATE=20190117
++ rm Vtable
+rm: cannot remove ‘Vtable’: No such file or directory
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS_spectral Vtable
++ filedir=''
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/sigges.tm06 sf06
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/gfs.t18z.pgrb2.0p50.f006 gdas.pgbf06
++ ln -sf gdas.pgbf06 GRIBFILE.AAA
++ ln -sf sf06 fort.27
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib
++ 1> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/errfile.ungrib
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid
++ ignore_gridgen_sfc=.false.
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_alaskanest
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:DSTART:17:
++ sed s:HSTART:00:
++ sed s:HEND:00:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:DOCLOUDS:false:
++ sed s:DEND:17:
++ sed s:SPECTRAL:true:
++ sed s:MEND:01:
++ 1> namelist.nps
++ sed s:GRIBSRC:GFS:
++ sed s:YEND:2019:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_METGRID.TBL.NMM METGRID.TBL
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio_alaskanest geo_nmb.d01.dio
++ FHR=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ time=2019011700
++ echo 2019011700
++ cut -c1-4
++ yy=2019
++ echo 2019011700
++ cut -c5-6
++ mm=01
++ echo 2019011700
++ cut -c7-8
++ dd=17
++ echo 2019011700
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/ungrib/FILE:2019-01-17_00 .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/errfile.metgrid
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/nemsinterp
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid/ .
+cp: omitting directory ‘/gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid/’
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid/met_nmb.d01.2019-01-17_00:00:00.dio .
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/metgrid/namelist.nps .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_nemsinterp
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska/errfile.nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_alaska
++ cat errfile.ungrib errfile.metgrid errfile.nemsinterp
++ 1> errfile
++ MP_EUILIB=us
++ export MP_EUILIB
++ MP_EUIDEVICE=sn_all
++ export MP_EUIDEVICE
++ MP_MPILIB=mpich2
++ export MP_MPILIB
++ MP_STDOUTMODE=unordered
++ export MP_STDOUTMODE
++ MP_LABELIO=yes
++ export MP_LABELIO
++ . /usrx/local/prod/lmod/lmod/init/ksh
++ LMOD_PKG=/usrx/local/prod/lmod/lmod
++ LMOD_DIR=/usrx/local/prod/lmod/lmod/libexec/
++ LMOD_CMD=/usrx/local/prod/lmod/lmod/libexec/lmod
++ MODULESHOME=/usrx/local/prod/lmod/lmod
++ export LMOD_CMD
++ export LMOD_PKG
++ export LMOD_DIR
++ export MODULESHOME
++ export LMOD_DIR
++ module load prod_util/1.1.0
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load prod_util/1.1.0
++ eval COMDATEROOT='"/gpfs/dell1/nco/ops/com";' export 'COMDATEROOT;' COMLISTROOT='"/gpfs/dell1/nco/ops/config";' export 'COMLISTROOT;' FSYNC='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file";' export 'FSYNC;' LOADEDMODULES='"EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0";' export 'LOADEDMODULES;' MDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate";' export 'MDATE;' MODULEPATH='"/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles";' export 'MODULEPATH;' NDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate";' export 'NDATE;' NHOUR='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour";' export 'NHOUR;' PATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin";' export 'PATH;' PYTHONPATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi";' export 'PYTHONPATH;' UTILROOT='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0";' export 'UTILROOT;' _LMFILES_='"/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0";' export '_LMFILES_;' _ModuleTable001_='"X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k";' export '_ModuleTable001_;' _ModuleTable002_='"dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv";' export '_ModuleTable002_;' _ModuleTable003_='"Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i";' export '_ModuleTable003_;' _ModuleTable004_='"XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v";' export '_ModuleTable004_;' _ModuleTable005_='"b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi";' export '_ModuleTable005_;' _ModuleTable006_='"XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable006_;' _ModuleTable007_='"cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv";' export '_ModuleTable007_;' _ModuleTable008_='"MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=";' export '_ModuleTable008_;' _ModuleTable_Sz_='"8";' export '_ModuleTable_Sz_;'
++ COMDATEROOT=/gpfs/dell1/nco/ops/com
++ export COMDATEROOT
++ COMLISTROOT=/gpfs/dell1/nco/ops/config
++ export COMLISTROOT
++ FSYNC=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file
++ export FSYNC
++ LOADEDMODULES=EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0
++ export LOADEDMODULES
++ MDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate
++ export MDATE
++ MODULEPATH=/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles
++ export MODULEPATH
++ NDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate
++ export NDATE
++ NHOUR=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour
++ export NHOUR
++ PATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin
++ export PATH
++ PYTHONPATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi
++ export PYTHONPATH
++ UTILROOT=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0
++ export UTILROOT
++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0
++ export _LMFILES_
++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k
++ export _ModuleTable001_
++ _ModuleTable002_=dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv
++ export _ModuleTable002_
++ _ModuleTable003_=Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i
++ export _ModuleTable003_
++ _ModuleTable004_=XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v
++ export _ModuleTable004_
++ _ModuleTable005_=b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi
++ export _ModuleTable005_
++ _ModuleTable006_=XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv
++ export _ModuleTable006_
++ _ModuleTable007_=cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv
++ export _ModuleTable007_
++ _ModuleTable008_=MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=
++ export _ModuleTable008_
++ _ModuleTable_Sz_=8
++ export _ModuleTable_Sz_
++ module load NetCDF/4.5
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load NetCDF/4.5
+Lmod has detected the following error: The following module(s) are unknown:
+"NetCDF/4.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "NetCDF/4.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
++ eval false
++ false
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico
++ DATA=/gpfs/dell2/stmp/Matthew.Pyle/testnps_prico
++ mod=AVN
++ LENGTH=3
++ cyc=12
++ DOMNAM=nam
++ export DOMNAM
++ PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
++ EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
++ INPUT=/gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/ungrib
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid
++ rm 'met*.dio'
+rm: cannot remove ‘met*.dio’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/ungrib
++ rm 'GRIBFILE.*'
+rm: cannot remove ‘GRIBFILE.*’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/nemsinterp
++ rm 'test*d01'
+rm: cannot remove ‘test*d01’: No such file or directory
++ rm 'boco*'
+rm: cannot remove ‘boco*’: No such file or directory
++ rm GWD.bin
+rm: cannot remove ‘GWD.bin’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/ungrib
++ CYCLE=2019011706
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011706
++ datetm06=2019011700
++ echo DATEXX2019011700
++ 1> ncepdate.npstm06
++ cp ncepdate.npstm06 /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid/.
++ cut -c7-14
++ cat ncepdate.npstm06
++ PDYstart=20190117
++ cut -c7-10
++ cat ncepdate.npstm06
++ ystart=2019
++ cut -c11-12
++ cat ncepdate.npstm06
++ mstart=01
++ cut -c13-14
++ cat ncepdate.npstm06
++ dstart=17
++ cut -c15-16
++ cat ncepdate.npstm06
++ hstart=00
++ start=2019011700
++ cut -c 7-16
++ cat ncepdate.npstm06
++ CYCer=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -0 2019011700
++ CYCstart=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011700
++ CYCgdas=2019011618
++ echo DATEXX2019011618
++ 1> nmcdate.gdas
++ cut -c7-14
++ cat nmcdate.gdas
++ PDYgds=20190116
++ cut -c7-10
++ cat nmcdate.gdas
++ yygds=2019
++ cut -c11-12
++ cat nmcdate.gdas
++ mmgds=01
++ cut -c13-14
++ cat nmcdate.gdas
++ ddgds=16
++ cut -c15-16
++ cat nmcdate.gdas
++ cycgds=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ end=2019011700
++ echo 2019011700
++ cut -c1-4
++ yend=2019
++ echo 2019011700
++ cut -c5-6
++ mend=01
++ echo 2019011700
++ cut -c7-8
++ dend=17
++ echo 2019011700
++ cut -c9-10
++ hend=00
++ ignore_gridgen_sfc=.false.
++ CYCNEST=true
++ spectral=true
++ gribsrc=GFS
++ doclouds=false
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_priconest
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:DSTART:17:
++ sed s:HSTART:00:
++ sed s:YEND:2019:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:MEND:01:
++ sed s:GRIBSRC:GFS:
++ sed s:SPECTRAL:true:
++ sed s:DOCLOUDS:false:
++ 1> namelist.nps
++ sed s:HEND:00:
++ sed s:DEND:17:
++ echo 2019011700
++ cut -c1-8
++ DATE=20190117
++ rm Vtable
+rm: cannot remove ‘Vtable’: No such file or directory
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS_spectral Vtable
++ filedir=''
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/sigges.tm06 sf06
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/gfs.t18z.pgrb2.0p50.f006 gdas.pgbf06
++ ln -sf gdas.pgbf06 GRIBFILE.AAA
++ ln -sf sf06 fort.27
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib
++ 1> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/errfile.ungrib
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid
++ ignore_gridgen_sfc=.false.
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_priconest
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:DSTART:17:
++ sed s:HSTART:00:
++ sed s:MEND:01:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:DEND:17:
++ sed s:DOCLOUDS:false:
++ 1> namelist.nps
++ sed s:YEND:2019:
++ sed s:SPECTRAL:true:
++ sed s:GRIBSRC:GFS:
++ sed s:HEND:00:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_METGRID.TBL.NMM METGRID.TBL
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio_priconest geo_nmb.d01.dio
++ FHR=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ time=2019011700
++ echo 2019011700
++ cut -c1-4
++ yy=2019
++ echo 2019011700
++ cut -c5-6
++ mm=01
++ echo 2019011700
++ cut -c7-8
++ dd=17
++ echo 2019011700
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/ungrib/FILE:2019-01-17_00 .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/errfile.metgrid
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/nemsinterp
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid/ .
+cp: omitting directory ‘/gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid/’
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid/met_nmb.d01.2019-01-17_00:00:00.dio .
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/metgrid/namelist.nps .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_nemsinterp
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico/errfile.nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_prico
++ cat errfile.ungrib errfile.metgrid errfile.nemsinterp
++ 1> errfile
++ MP_EUILIB=us
++ export MP_EUILIB
++ MP_EUIDEVICE=sn_all
++ export MP_EUIDEVICE
++ MP_MPILIB=mpich2
++ export MP_MPILIB
++ MP_STDOUTMODE=unordered
++ export MP_STDOUTMODE
++ MP_LABELIO=yes
++ export MP_LABELIO
++ . /usrx/local/prod/lmod/lmod/init/ksh
++ LMOD_PKG=/usrx/local/prod/lmod/lmod
++ LMOD_DIR=/usrx/local/prod/lmod/lmod/libexec/
++ LMOD_CMD=/usrx/local/prod/lmod/lmod/libexec/lmod
++ MODULESHOME=/usrx/local/prod/lmod/lmod
++ export LMOD_CMD
++ export LMOD_PKG
++ export LMOD_DIR
++ export MODULESHOME
++ export LMOD_DIR
++ module load prod_util/1.1.0
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load prod_util/1.1.0
++ eval COMDATEROOT='"/gpfs/dell1/nco/ops/com";' export 'COMDATEROOT;' COMLISTROOT='"/gpfs/dell1/nco/ops/config";' export 'COMLISTROOT;' FSYNC='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file";' export 'FSYNC;' LOADEDMODULES='"EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0";' export 'LOADEDMODULES;' MDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate";' export 'MDATE;' MODULEPATH='"/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles";' export 'MODULEPATH;' NDATE='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate";' export 'NDATE;' NHOUR='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour";' export 'NHOUR;' PATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin";' export 'PATH;' PYTHONPATH='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi";' export 'PYTHONPATH;' UTILROOT='"/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0";' export 'UTILROOT;' _LMFILES_='"/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0";' export '_LMFILES_;' _ModuleTable001_='"X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k";' export '_ModuleTable001_;' _ModuleTable002_='"dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv";' export '_ModuleTable002_;' _ModuleTable003_='"Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i";' export '_ModuleTable003_;' _ModuleTable004_='"XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v";' export '_ModuleTable004_;' _ModuleTable005_='"b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi";' export '_ModuleTable005_;' _ModuleTable006_='"XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv";' export '_ModuleTable006_;' _ModuleTable007_='"cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv";' export '_ModuleTable007_;' _ModuleTable008_='"MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=";' export '_ModuleTable008_;' _ModuleTable_Sz_='"8";' export '_ModuleTable_Sz_;'
++ COMDATEROOT=/gpfs/dell1/nco/ops/com
++ export COMDATEROOT
++ COMLISTROOT=/gpfs/dell1/nco/ops/config
++ export COMLISTROOT
++ FSYNC=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/fsync_file
++ export FSYNC
++ LOADEDMODULES=EnvVars/1.0.2:lmod/7.7:rsync/3.1.2:ips/18.0.1.163:lsf/10.1:impi/18.0.1:prod_envir/1.0.2:git/2.14.3:dev/grib_util/1.1.0:prod_util/1.1.0
++ export LOADEDMODULES
++ MDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/mdate
++ export MDATE
++ MODULEPATH=/usrx/local/prod/lmod/lmod/modulefiles/Core:/usrx/local/prod/modulefiles/core_third:/usrx/local/prod/modulefiles/defs:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1:/usrx/local/prod/modulefiles/mpi_third/ips/18.0.1/impi/18.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1:/usrx/local/nceplibs/dev/modulefiles/mpi_nceplibs/ips/18.0.1/impi/18.0.1:/usrx/local/dev/modulefiles
++ export MODULEPATH
++ NDATE=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate
++ export NDATE
++ NHOUR=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/nhour
++ export NHOUR
++ PATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/usrx/local/dev/packages/git/2.14.3/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:/usrx/local/prod/intel/2018UP01/itac_latest/bin:/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:/usrx/local/prod/packages/rsync/3.1.2/bin:/usrx/local/prod/lmod/lmod/libexec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:.:/u/Matthew.Pyle/.local/bin:/u/Matthew.Pyle/bin
++ export PATH
++ PYTHONPATH=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/ush:/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi
++ export PYTHONPATH
++ UTILROOT=/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0
++ export UTILROOT
++ _LMFILES_=/usrx/local/prod/modulefiles/core_third/EnvVars/1.0.2:/usrx/local/prod/lmod/lmod/modulefiles/Core/lmod/7.7.lua:/usrx/local/prod/modulefiles/core_third/rsync/3.1.2:/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/core_prod/prod_envir/1.0.2:/usrx/local/dev/modulefiles/git/2.14.3:/usrx/local/nceplibs/dev/modulefiles/compiler_nceplibs/ips/18.0.1/dev/grib_util/1.1.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/prod_util/1.1.0
++ export _LMFILES_
++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJtcGkiXT0iaW1waSIsfSxtVD17RW52VmFycz17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvRW52VmFycy8xLjAuMiIsWyJmdWxsTmFtZSJdPSJFbnZWYXJzLzEuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iRW52VmFycy8xLjAuMiIsfSxbImRldi9ncmliX3V0aWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9k
++ export _ModuleTable001_
++ _ModuleTable002_=dWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMS9kZXYvZ3JpYl91dGlsLzEuMS4wIixbImZ1bGxOYW1lIl09ImRldi9ncmliX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJkZXYvZ3JpYl91dGlsLzEuMS4wIix9LGdpdD17WyJmbiJdPSIvdXNyeC9sb2NhbC9kZXYvbW9kdWxlZmlsZXMvZ2l0LzIuMTQuMyIsWyJmdWxsTmFtZSJdPSJnaXQvMi4xNC4zIixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ2l0LzIuMTQuMyIsfSxpbXBpPXtbImZuIl09Ii91c3J4L2xv
++ export _ModuleTable002_
++ _ModuleTable003_=Y2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEubHVhIixbImZ1bGxOYW1lIl09ImltcGkvMTguMC4xIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaW1waS8xOC4wLjEiLH0saXBzPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9pcHMvMTguMC4xLjE2MyIsWyJmdWxsTmFtZSJdPSJpcHMvMTguMC4xLjE2MyIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imlwcy8xOC4wLjEuMTYzIix9LGxtb2Q9e1siZm4i
++ export _ModuleTable003_
++ _ModuleTable004_=XT0iL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZS9sbW9kLzcuNy5sdWEiLFsiZnVsbE5hbWUiXT0ibG1vZC83LjciLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsbW9kLzcuNyIsfSxsc2Y9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2xzZi8xMC4xIixbImZ1bGxOYW1lIl09ImxzZi8xMC4xIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0scHJvZF9lbnZpcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28v
++ export _ModuleTable004_
++ _ModuleTable005_=b3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QvcHJvZF9lbnZpci8xLjAuMiIsWyJmdWxsTmFtZSJdPSJwcm9kX2VudmlyLzEuMC4yIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZF9lbnZpci8xLjAuMiIsfSxwcm9kX3V0aWw9e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3Byb2RfdXRpbC8xLjEuMCIsWyJmdWxsTmFtZSJdPSJwcm9kX3V0aWwvMS4xLjAiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUi
++ export _ModuleTable005_
++ _ModuleTable006_=XT0icHJvZF91dGlsLzEuMS4wIix9LHJzeW5jPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZC9yc3luYy8zLjEuMiIsWyJmdWxsTmFtZSJdPSJyc3luYy8zLjEuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJzeW5jLzMuMS4yIix9LH0sbXBhdGhBPXsiL3VzcngvbG9jYWwvcHJvZC9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29yZV90aGlyZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmcyIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2Nv
++ export _ModuleTable006_
++ _ModuleTable007_=cmVfcHJvZCIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMSIsIi9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfbXBpL2lwcy8xOC4wLjEiLCIvdXNyeC9sb2NhbC9uY2VwbGlicy9kZXYvbW9kdWxlZmlsZXMvY29tcGlsZXJfbmNlcGxpYnMvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkv
++ export _ModuleTable007_
++ _ModuleTable008_=MTguMC4xIiwiL3VzcngvbG9jYWwvbmNlcGxpYnMvZGV2L21vZHVsZWZpbGVzL21waV9uY2VwbGlicy9pcHMvMTguMC4xL2ltcGkvMTguMC4xIiwiL3VzcngvbG9jYWwvZGV2L21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0=
++ export _ModuleTable008_
++ _ModuleTable_Sz_=8
++ export _ModuleTable_Sz_
++ module load NetCDF/4.5
++ /usrx/local/prod/lmod/lmod/libexec/lmod sh load NetCDF/4.5
+Lmod has detected the following error: The following module(s) are unknown:
+"NetCDF/4.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "NetCDF/4.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
++ eval false
++ false
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii
++ DATA=/gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii
++ mod=AVN
++ LENGTH=3
++ cyc=12
++ DOMNAM=nam
++ export DOMNAM
++ PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
++ FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
++ EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
++ INPUT=/gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/ungrib
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid
++ mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid
++ rm 'met*.dio'
+rm: cannot remove ‘met*.dio’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/ungrib
++ rm 'GRIBFILE.*'
+rm: cannot remove ‘GRIBFILE.*’: No such file or directory
++ rm 'FILE*'
+rm: cannot remove ‘FILE*’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/nemsinterp
++ rm 'test*d01'
+rm: cannot remove ‘test*d01’: No such file or directory
++ rm 'boco*'
+rm: cannot remove ‘boco*’: No such file or directory
++ rm GWD.bin
+rm: cannot remove ‘GWD.bin’: No such file or directory
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/ungrib
++ CYCLE=2019011706
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011706
++ datetm06=2019011700
++ echo DATEXX2019011700
++ 1> ncepdate.npstm06
++ cp ncepdate.npstm06 /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid/.
++ cut -c7-14
++ cat ncepdate.npstm06
++ PDYstart=20190117
++ cut -c7-10
++ cat ncepdate.npstm06
++ ystart=2019
++ cut -c11-12
++ cat ncepdate.npstm06
++ mstart=01
++ cut -c13-14
++ cat ncepdate.npstm06
++ dstart=17
++ cut -c15-16
++ cat ncepdate.npstm06
++ hstart=00
++ start=2019011700
++ cut -c 7-16
++ cat ncepdate.npstm06
++ CYCer=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -0 2019011700
++ CYCstart=2019011700
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate -6 2019011700
++ CYCgdas=2019011618
++ echo DATEXX2019011618
++ 1> nmcdate.gdas
++ cut -c7-14
++ cat nmcdate.gdas
++ PDYgds=20190116
++ cut -c7-10
++ cat nmcdate.gdas
++ yygds=2019
++ cut -c11-12
++ cat nmcdate.gdas
++ mmgds=01
++ cut -c13-14
++ cat nmcdate.gdas
++ ddgds=16
++ cut -c15-16
++ cat nmcdate.gdas
++ cycgds=18
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ end=2019011700
++ echo 2019011700
++ cut -c1-4
++ yend=2019
++ echo 2019011700
++ cut -c5-6
++ mend=01
++ echo 2019011700
++ cut -c7-8
++ dend=17
++ echo 2019011700
++ cut -c9-10
++ hend=00
++ ignore_gridgen_sfc=.false.
++ CYCNEST=true
++ spectral=true
++ gribsrc=GFS
++ doclouds=false
++ sed s:YSTART:2019:
++ sed s:HSTART:00:
++ sed s:YEND:2019:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:SPECTRAL:true:
++ sed s:HEND:00:
++ sed s:GRIBSRC:GFS:
++ sed s:DEND:17:
++ sed s:DSTART:17:
++ sed s:MEND:01:
++ sed s:DOCLOUDS:false:
++ sed s:MSTART:01:
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_hawaiinest
++ 1> namelist.nps
++ echo 2019011700
++ cut -c1-8
++ DATE=20190117
++ rm Vtable
+rm: cannot remove ‘Vtable’: No such file or directory
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_Vtable.GFS_spectral Vtable
++ filedir=''
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/sigges.tm06 sf06
++ cp /gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117/gfs.t18z.pgrb2.0p50.f006 gdas.pgbf06
++ ln -sf gdas.pgbf06 GRIBFILE.AAA
++ ln -sf sf06 fort.27
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_ungrib
++ 1> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/errfile.ungrib
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid
++ ignore_gridgen_sfc=.false.
++ cat /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_namelist.nps_hawaiinest
++ sed s:YSTART:2019:
++ sed s:MSTART:01:
++ sed s:DSTART:17:
++ sed s:HSTART:00:
++ sed s:IGNORE_GRIDGEN:.false.:
++ sed s:HEND:00:
++ sed s:YEND:2019:
++ 1> namelist.nps
++ sed s:GRIBSRC:GFS:
++ sed s:DOCLOUDS:false:
++ sed s:MEND:01:
++ sed s:DEND:17:
++ sed s:SPECTRAL:true:
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm/nam_METGRID.TBL.NMM METGRID.TBL
++ cp /gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix/nam_geo_nmb.d01.dio_hawaiinest geo_nmb.d01.dio
++ FHR=00
++ /gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.0/exec/ips/ndate +00 2019011700
++ time=2019011700
++ echo 2019011700
++ cut -c1-4
++ yy=2019
++ echo 2019011700
++ cut -c5-6
++ mm=01
++ echo 2019011700
++ cut -c7-8
++ dd=17
++ echo 2019011700
++ cut -c9-10
++ hh=00
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/ungrib/FILE:2019-01-17_00 .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_metgrid
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/errfile.metgrid
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/nemsinterp
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid/ .
+cp: omitting directory ‘/gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid/’
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid/met_nmb.d01.2019-01-17_00:00:00.dio .
++ cp /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/metgrid/namelist.nps .
++ mpirun /gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec/nam_nemsinterp
++ 1>> pgmout 2> errfile
++ mv errfile /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii/errfile.nemsinterp
++ cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_hawaii
++ cat errfile.ungrib errfile.metgrid errfile.nemsinterp
++ 1> errfile
++ exit
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@v59c46f>
+Subject: Job 2375773: <ndas_coldstart_prep_06> in cluster <venus> Done
+
+Job <ndas_coldstart_prep_06> was submitted from host <v72a3f> by user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 14:32:34 2019
+Job was executed on host(s) <4*v59c46f>, in queue <debug>, as user <Matthew.Pyle> in cluster <venus> at Fri Jan 18 14:32:34 2019
+                            <4*v59c48f>
+                            <4*v59c72f>
+                            <4*v60c3f>
+</u/Matthew.Pyle> was used as the home directory.
+</gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/NMMB_init> was used as the working directory.
+Started at Fri Jan 18 14:32:34 2019
+Terminated at Fri Jan 18 14:34:26 2019
+Results reported at Fri Jan 18 14:34:26 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/ksh
+
+#BSUB -oo out.nps
+#BSUB -eo out.nps
+#BSUB -n 16
+#BSUB -J ndas_coldstart_prep_06
+#BSUB -W 00:15
+#BSUB -P NAM-T2O
+#BSUB -q "debug"
+#BSUB -R span[ptile=4]
+#BSUB -R "affinity[core:distribute=balance]"
+#BSUB -x
+####BSUB -a poe
+
+set -x
+
+domain=alaska
+domains="alaska prico hawaii"
+
+for domain in $domains
+do
+
+export MP_EUILIB=us
+export MP_EUIDEVICE=sn_all
+export MP_MPILIB=mpich2
+export MP_STDOUTMODE=unordered
+export MP_LABELIO=yes
+
+. /usrx/local/prod/lmod/lmod/init/ksh
+module load prod_util/1.1.0
+module load NetCDF/4.5
+
+mkdir -p /gpfs/dell2/stmp/Matthew.Pyle/testnps_${domain}
+cd /gpfs/dell2/stmp/Matthew.Pyle/testnps_${domain}
+DATA=/gpfs/dell2/stmp/Matthew.Pyle/testnps_${domain}
+
+mod=AVN
+LENGTH=3
+
+cyc=12
+
+export DOMNAM=nam
+
+PARMnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/parm
+FIXnam=/gpfs/dell2/emc/modeling/noscrub/Eric.Rogers/nam.v4.1.10/fix
+# path to your binaries
+EXECnam=/gpfs/dell2/emc/modeling/noscrub/Matthew.Pyle/nam_transition/nam_nps.fd/namtransition_exec
+
+INPUT=/gpfs/dell2/ptmp/Eric.Rogers/gdas.20190117
+
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1484.00 sec.
+    Max Memory :                                 22 MB
+    Average Memory :                             14.67 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                10
+    Run time :                                   139 sec.
+    Turnaround time :                            112 sec.
+
+The output (if any) is above this job summary.
+
+[Fri Jan 18 14:34:26 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: /var/lsf/ecflow_post_in.Matthew.Pyle.2375773 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Fri Jan 18 14:34:26 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Adding mmpmon postexec records to /var/lsf/mmpmon.2375773 for nodes: v59c46f,v59c48f,v59c72f,v60c3f
+[Fri Jan 18 14:34:27 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Performing IPCS Clean-up Check on nodes: v59c46f,v59c48f,v59c72f,v60c3f
+[Fri Jan 18 14:34:28 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_exclusive_ecflow_log.ksh: Reporting summary of GPFS mmpmon activity:
+
+LSF_SUMMARY: GPFS
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell1
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():              4336
+    close():             4336
+    read():               508
+    write():                0
+    readdir():            660
+
+  Data:
+
+    READ:                134.8 MB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:           64
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell2
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():              1538
+    close():             1400
+    read():            662472
+    write():            10962
+    readdir():            171
+
+  Data:
+
+    READ:                130.0 GB
+    WRITTEN:              22.2 GB
+
+  Inode_Updates:          539
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-dell3
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():               405
+    close():              405
+    read():                14
+    write():                0
+    readdir():            126
+
+  Data:
+
+    READ:                102.7 KB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            4
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-lsf
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():               149
+    close():              149
+    read():                36
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  3.4 MB
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            1
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-iodprod-dell
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM: gpfs-ioddev-dell
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd1
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd2
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gd3
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp1
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-gp2
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+---------------------------------
+SUBTOTALS FILE_SYSTEM:   gpfs-hps
+---------------------------------
+
+  Time_Interval:          112 seconds
+
+  Requests:
+
+    open():                 0
+    close():                0
+    read():                 0
+    write():                0
+    readdir():              0
+
+  Data:
+
+    READ:                  0.0 Bytes
+    WRITTEN:               0.0 Bytes
+
+  Inode_Updates:            0
+
+===============================================
+AGGREGATE TOTALS (ALL Hosts, ALL File Systems):
+===============================================
+
+  Requests:
+
+    open():              6428
+    close():             6290
+    read():            663030
+    write():            10962
+    readdir():            957
+
+  Data:
+
+    READ:                130.1 GB
+    WRITTEN:              22.2 GB
+
+  Inode_Updates:          608
+

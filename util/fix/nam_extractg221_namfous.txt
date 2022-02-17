@@ -1,0 +1,17 @@
+RH:0.9823 sigma level:
+RH:0.47-0.96 sigma layer:
+RH:0.18-0.47 sigma layer:
+VVEL:700 mb:
+PRMSL:mean sea level
+4LFTX:180-0 mb above ground:
+UGRD:0.9823 sigma level:
+VGRD:0.9823 sigma level:
+HGT:500 mb:
+HGT:1000 mb:
+TMP:0.89671 sigma level:
+TMP:0.78483 sigma level:
+TMP:0.9823 sigma level:
+APCP:surface:
+HGT:surface:
+HGT:0C isotherm:
+RH:0C isotherm:

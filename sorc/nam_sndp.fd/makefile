@@ -1,0 +1,25 @@
+SHELL=/bin/bash
+
+SRCS=	BFRHDR.f BFRIZE.f CALHEL.f CALWXT.f SMIX.f SNDPST.f VAP.f \
+        WETBLB.f CALVIS.f CALWXT_RAMER.f CALWXT_EXPLICIT.f \
+        CALWXT_REVISED.f CALWXT_BOURG.f CALWXT_DOMINANT.f
+
+OBJS=	BFRHDR.o BFRIZE.o CALHEL.o CALWXT.o SMIX.o SNDPST.o VAP.o \
+        WETBLB.o CALVIS.o CALWXT_RAMER.o CALWXT_EXPLICIT.o \
+        CALWXT_REVISED.o CALWXT_BOURG.o CALWXT_DOMINANT.o
+
+FC = ftn -g -traceback -convert big_endian
+LDFLAGS =
+CMD = $(OUTDIR)/nam_sndp
+
+LIBS = $(BUFR_LIB4)
+
+FFLAGS = -O
+
+all:		$(CMD)
+
+$(CMD):		$(OBJS)
+	$(FC) $(LDFLAGS) -o $(@) $(OBJS) $(LIBS)
+
+clean:
+	-rm $(OBJS) *.lst $(CMD)

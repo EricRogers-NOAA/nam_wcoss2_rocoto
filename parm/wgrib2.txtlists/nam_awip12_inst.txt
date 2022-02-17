@@ -1,0 +1,8 @@
+TCDC:entire atmosphere (considered as a single layer):
+SHTFL:surface:
+LHTFL:surface:
+DLWRF:surface:
+USWRF:surface:
+ULWRF:surface:
+ULWRF:top of atmosphere:
+CDCON:entire atmosphere (considered as a single layer):

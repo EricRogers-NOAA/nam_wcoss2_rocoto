@@ -1,0 +1,677 @@
+B+BDL    174 41.93 072.68 FDUE01,03,05    Windsor Locks,         CONNECTICUT
+ +BGR    192 44.83 068.87                 Bangor,                MAINE          
+ +CAR    623 46.87 068.02                 Caribou,               MAINE
+ +PWM     74 43.63 070.30                 Portland,              MAINE
+ +EMI    820 39.48 076.97                 Westminster,           MARYLAND
+ +ACK     48 41.27 070.02                 Nantucket,             MASSACHUSETTS
+ +BOS     20 42.35 070.98                 Boston,                MASSACHUSETTS
+ +BML   1158 44.63 071.18                 Berlin,                NEBRASKA
+ +ACY     76 39.45 074.57                 Atlantic City,         NEW JERSEY
+ +ALB    285 42.73 073.80                 Albany,                NEW YORK
+ +BUF    725 42.92 078.63                 Buffalo,               NEW YORK
+ +JFK     12 40.62 073.77                 New York,              NEW YORK
+ +PLB    371 44.80 073.40                 Plattsburgh,           NEW YORK
+ +SYR    421 43.15 076.20                 Syracuse,              NEW YORK
+ +CLE    792 41.35 082.15                 Cleveland,             OHIO
+ +CMH    816 39.98 082.92                 Columbus,              OHIO
+ +CVG    891 39.00 084.70                 Covington,             OHIO  
+ +AGC   1252 40.27 080.03                 Pittsburgh,            PENNSYLVANIA
+ +AVP    957 41.27 075.68                 Wilkes-Barre/Scranton, PENNSYLVANIA
+ +PSB   1948 40.90 077.98                 Phillipsburg,          PENNSYLVANIA
+ +ORF     27 36.88 076.20                 Norfolk,               VIRGINIA
+ +RIC    168 37.50 077.32                 Richmond,              VIRGINIA
+ +ROA   1175 37.33 080.07                 Roanoke,               VIRGINIA
+ +CRW    982 38.33 081.77                 Charleston,            WEST VIRGINIA
+E+EKN   1987 38.90 080.08                 Elkins,                WEST VIRGINIA
+B+EYW      4 24.58 081.80 FDUE02,04,06    Key West,              FLORIDA
+ +JAX     30 30.43 081.55                 Jacksonville,          FLORIDA
+ +MIA     10 25.95 080.45                 Miami,                 FLORIDA
+ +MLB     33 28.10 080.63                 Melbourne,             FLORIDA
+ +PFN     20 30.20 085.67                 Panama City,           FLORIDA
+ +PIE     11 27.90 082.68                 St. Petersburg,        FLORIDA
+ +TLH     81 30.55 084.37                 Tallahassee,           FLORIDA
+ +ATL   1026 33.62 084.43                 Atlanta,               GEORGIA
+ +CSG    397 32.60 085.02                 Columbus,              GEORGIA
+ +SAV     50 32.15 081.10                 Savannah,              GEORGIA
+ +HAT     11 35.27 075.55                 Cape Hatteras,         NORTH CAROLINA
+ +ILM     32 34.35 077.87                 Wilmington,            NORTH CAROLINA
+ +RDU    437 35.87 078.78                 Raleigh-Durham,        NORTH CAROLINA
+ +CAE    236 33.85 081.05                 Columbia,              SOUTH CAROLINA 
+ +CHS     45 32.88 080.03                 Charleston,            SOUTH CAROLINA
+ +FLO    147 34.22 079.65                 Florence,              SOUTH CAROLINA
+ +GSP    972 34.88 082.22                 Greer,                 SOUTH CAROLINA
+E+2XG      0 30.33 078.50                 Gauge,                 ATLANTIC OCEAN
+B+BRL    698 40.72 090.92 FDUM01,03,05    Burlington,            IOWA
+ +DBQ   1076 42.40 090.70                 Dubuque,               IOWA
+ +DSM    957 41.43 093.63                 Des Moines,            IOWA
+ +MCW   1213 43.08 093.32                 Mason City,            IOWA
+ +JOT    582 41.53 088.32                 Joliet,                ILLINOIS
+ +SPI    597 39.83 089.67                 Springfield,           ILLINOIS
+ +EVV    418 38.03 087.52                 Evansville,            INDIANA
+ +FWA    800 40.97 085.18                 Fort Wayne,            INDIANA
+ +IND    797 39.80 086.37                 Indianapolis,          INDIANA
+ +GCK   2888 37.92 100.72                 Garden City,           KANSAS
+ +GLD   3654 39.38 101.68                 Goodland,              KANSAS
+ +ICT   1332 37.72 097.45                 Wichita,               KANSAS
+ +SLN   1272 38.87 097.62                 Salina,                KANSAS
+ +LOU    546 38.10 085.57                 Louisville,            KENTUCKY
+ +ECK    810 43.25 082.72                 Peck,                  MICHIGAN
+ +MKG    628 43.17 086.03                 Muskegon,              MICHIGAN
+ +MQT   1419 46.52 087.58                 Marquette,             MICHIGAN
+ +SSM    690 46.40 084.30                 Sault Ste. Marie,      MICHIGAN
+ +TVC    624 44.67 085.53                 Traverse City,         MICHIGAN
+ +AXN   1425 45.95 095.22                 Alexandria,            MINNESOTA
+ +DLH   1428 46.80 092.20                 Duluth,                MINNESOTA
+ +INL   1184 48.55 093.40                 International Falls,   MINNESOTA
+ +MSP    841 45.13 093.37                 Minneapolis-St Paul,   MINNESOTA
+ +CGI    342 37.22 089.57                 Cape Girardeau,        MISSOURI
+ +COU    889 38.80 092.22                 Columbia,              MISSOURI
+ +MKC    758 39.27 094.58                 Kansas City,           MISSOURI
+ +SGF   1267 37.35 093.33                 Springfield,           MISSOURI
+ +STL    589 38.85 090.47                 St. Louis,             MISSOURI
+ +DIK   2589 46.85 102.77                 Dickinson,             NORTH DAKOTA
+ +GFK    844 47.95 097.18                 Grand Forks,           NORTH DAKOTA
+ +MOT   1715 48.25 101.28                 Minot,                 NORTH DAKOTA
+ +BFF   3965 41.88 103.47                 Scottsbluff,           NEBRASKA
+ +GRI   1846 40.98 098.30                 Grand Island,          NEBRASKA
+ +OMA    983 41.17 095.73                 Omaha,                 NEBRASKA
+ +ONL   2030 42.47 098.68                 O Neill,               NEBRASKA
+ +ABR   1301 45.42 098.37                 Aberdeen,              SOUTH DAKOTA
+ +FSD   1429 43.63 096.77                 Sioux Falls,           SOUTH DAKOTA
+ +PIR   1742 44.38 100.15                 Pierre,                SOUTH DAKOTA
+ +RAP   3182 43.97 103.00                 Rapid City,            SOUTH DAKOTA
+ +GRB    695 44.55 088.18                 Green Bay,             WISCONSIN
+E+LSE    653 43.87 091.25                 La Crosse,             WISCONSIN
+B+BHM    620 33.55 086.73 FDUM02,04,06    Birmingham,            ALABAMA
+ +HSV    629 34.55 086.77                 Huntsville,            ALABAMA
+ +MGM    221 32.22 086.32                 Montgomery,            ALABAMA   
+ +MOB    190 30.68 088.23                 Mobile,                ALABAMA
+ +FSM    468 35.38 094.47                 Fort Smith,            ARKANSAS
+ +LIT    258 34.67 092.17                 Little Rock,           ARKANSAS       
+ +LCH     16 30.13 093.10                 Lake Charles,          LOUISIANA
+ +MSY      4 30.02 090.17                 New Orleans,           LOUISIANA
+ +SHV    258 32.77 093.80                 Shreveport,            LOUISIANA
+ +JAN    346 32.50 090.17                 Jackson,               MISSISSIPPI
+ +GAG   2223 36.33 099.87                 Gage,                  OKLAHOMA
+ +OKC   1295 35.40 097.63                 Oklahoma City,         OKLAHOMA
+ +TUL    676 36.18 095.78                 Tulsa,                 OKLAHOMA
+ +BNA    599 36.12 086.67                 Nashville,             TENNESSEE
+ +MEM    332 35.05 089.97                 Memphis,               TENNESSEE
+ +TRI   1519 36.47 082.40                 Bristol/Johnson,       TENNESSEE
+ +TYS    981 35.90 083.88                 Knoxville,             TENNESSEE
+ +ABI   1790 32.47 099.85                 Abilene,               TEXAS
+ +AMA   3605 35.28 101.63                 Amarillo,              TEXAS             
+ +BRO     22 25.92 097.37                 Brownsville,           TEXAS
+ +CLL    319 30.60 096.42                 College Station,       TEXAS 
+ +CRP     44 27.90 097.43                 Corpus Christi,        TEXAS 
+ +DAL    487 32.83 096.85                 Dallas,                TEXAS 
+ +DRT    999 29.37 100.92                 Del Rio,               TEXAS        
+ +ELP   3956 31.80 106.27                 El Paso,               TEXAS
+ +HOU     47 29.63 095.27                 Houston,               TEXAS 
+ +INK   2818 31.87 103.23                 Wink,                  TEXAS
+ +LBB   3281 33.70 101.90                 Lubbock,               TEXAS
+ +LRD    508 27.47 099.42                 Laredo,                TEXAS
+ +MRF   4848 30.28 103.62                 Marfa,                 TEXAS
+ +PSX     15 28.75 096.30                 Palacios,              TEXAS
+ +SAT    809 28.63 098.45                 San Antonio,           TEXAS
+ +SPS   1015 33.98 098.58                 Wichita Falls,         TEXAS
+ +T01      0 28.50 093.50                 West Cameron,          GULF OF MEXICO    
+ +T06      0 28.50 091.00                 Ship Shoal,            GULF OF MEXICO  
+ +T07      0 28.50 088.00                 S Mobile South,        GULF OF MEXICO
+ +4J3      0 28.50 085.00                 S Apalachicola South,  GULF OF MEXICO
+ +H51      0 26.50 095.00                 Bay city,              GULF OF MEXICO
+ +H52      0 26.00 089.50                 Mid Gulf,              GULF OF MEXICO
+E+H61      0 26.50 084.00                 W Fort Myers West,     GULF OF MEXICO
+B+PHX   1132 33.42 111.88 FDUW01,03,05    Phoenix,               ARIZONA 
+ +PRC   5042 34.70 112.47                 Prescott,              ARIZONA
+ +TUS   2630 32.12 110.82                 Tucson,                ARIZONA
+ +ALS   7535 37.33 105.80                 Alamosa,               COLORADO
+ +DEN   5333 39.80 104.88                 Denver,                COLORADO
+ +GJT   4858 39.05 108.78                 Grand Junction,        COLORADO
+ +PUB   4726 38.28 104.42                 Pueblo,                COLORADO
+ +BOI   2858 43.57 116.23                 Boise,                 IDAHO
+ +LWS   1438 46.37 116.87                 Lewiston,              IDAHO
+ +PIH   4448 42.87 112.65                 Pocatello,             IDAHO
+ +BIL   3605 45.80 108.62                 Billings,              MONTANA
+ +DLN   5238 45.23 112.53                 Dillon,                MONTANA
+ +GPI   2972 48.20 114.17                 Kalispell,             MONTANA      
+ +GGW   2293 48.20 106.62                 Glasgow,               MONTANA
+ +GTF   3674 47.45 111.40                 Great Falls,           MONTANA
+ +MLS   2628 46.37 105.95                 Miles City,            MONTANA
+ +BAM   4532 40.57 116.92                 Battle Mountain,       NEVADA          
+ +ELY   6255 39.28 114.83                 Ely,                   NEVADA
+ +LAS   2174 36.07 115.15                 Las Vegas,             NEVADA
+ +RNO   4412 39.52 119.65                 Reno,                  NEVADA
+ +ABQ   5352 35.03 106.80                 Albuquerque,           NEW MEXICO
+ +FMN   5503 36.73 108.08                 Farmington,            NEW MEXICO
+ +ROW   3669 33.33 104.62                 Roswell,               NEW MEXICO
+ +TCC   4063 35.17 103.58                 Tucumcari,             NEW MEXICO
+ +ZUN   6454 34.95 109.15                 Zuni,                  NEW MEXICO
+ +BCE   7586 37.68 112.30                 Bryce Canyon,          UTAH
+ +SLC   4227 40.85 111.97                 Salt Lake City,        UTAH
+ +CZI   4798 43.98 106.43                 Crazy Woman,           WYOMING   
+ +LND   5586 42.80 108.72                 Lander,                WYOMING
+ +MBW   7000 41.83 106.00                 Medicine Bow,          WYOMING
+E+RKS   6760 41.58 109.00                 Rock Springs,          WYOMING
+B+BIH   4120 37.37 118.35 FDUW02,04,06    Bishop,                CALIFORNIA
+ +BLH    397 33.58 114.75                 Blythe,                CALIFORNIA
+ +FAT    332 36.88 119.80                 Fresno,                CALIFORNIA
+ +FOT    390 40.67 124.23                 Fortuna,               CALIFORNIA
+ +ONT    952 34.05 117.60                 Ontario,               CALIFORNIA
+ +RBL    354 40.08 122.23                 Red Bluff,             CALIFORNIA
+ +SAC     21 38.43 121.55                 Sacramento,            CALIFORNIA
+ +SAN     15 32.73 117.18                 San Diego,             CALIFORNIA
+ +SBA     10 34.50 119.77                 Santa Barbara,         CALIFORNIA
+ +SFO     11 37.62 122.37                 San Francisco,         CALIFORNIA
+ +SIY   2648 41.78 122.45                 Montague,              CALIFORNIA
+ +WJF   2347 34.73 118.22                 Lancaster,             CALIFORNIA
+ +AST     11 46.15 123.87                 Astorio,               OREGON
+ +IMB   5220 44.63 119.70                 Kimberly,              OREGON
+ +LKV   4728 42.48 120.50                 Lakeview,              OREGON
+ +OTH     14 43.40 124.17                 North Bend,            OREGON
+ +PDX     26 45.73 122.58                 Portland,              OREGON
+ +RDM   3077 44.25 121.30                 Redmond,               OREGON
+ +GEG   2372 47.55 117.62                 Spokane,               WASHINGTON
+ +SEA    429 47.43 122.30                 Seattle,               WASHINGTON
+E+YKM   1095 46.57 120.43                 Yakima,                WASHINGTON
+B ADK     13 51.93 176.42 FDAK01, 02, 03  Adak,                  ALASKA
+  ADQ    112 57.77 152.58                 Kodiak,                ALASKA
+  AKN     49 58.73 156.75                 King Salmon,           ALASKA
+  ANC    131 61.23 149.55                 Anchorage,             ALASKA
+  ANN    112 55.05 131.62                 Annette Island,        ALASKA
+  BET    151 60.58 161.58                 Bethel,                ALASKA
+  BRW     13 71.28 156.52                 Barrow,                ALASKA
+  BTI     49 70.17 143.92                 Barter Island,         ALASKA
+  BTT    673 66.90 151.50                 Bettles,               ALASKA
+  CDB    102 55.18 162.37                 Cold Bay,              ALASKA
+  CZF    457 61.78 166.03                 Cape Romanzof,         ALASKA
+  EHM    541 58.65 162.07                 Cape Newenham,         ALASKA
+  FAI    453 64.72 148.18                 Fairbanks,             ALASKA
+  FYU    431 66.58 145.08                 Fort Yukon,            ALASKA    
+  GAL    152 64.73 156.93                 Galena,                ALASKA
+  GKN     21 62.15 145.45 *               Gulkana,               ALASKA
+  HOM     78 59.65 151.48 *               Homer,                 ALASKA
+  JNU     23 58.43 134.68                 Juneau,                ALASKA
+  LUR     12 68.88 166.12                 Cape Lisburne,         ALASKA
+  MCG    338 62.82 155.40                 McGrath,               ALASKA
+  MDO     72 59.50 146.30                 Middleton Island,      ALASKA
+  OME     23 64.62 165.08                 Nome,                  ALASKA
+  ORT   1722 63.07 142.07                 Northway,              ALASKA
+  OTZ     16 66.65 162.90                 Kotzebue,              ALASKA
+  SNP     30 57.15 170.62                 St. Paul,              ALASKA
+  TKA    358 62.32 150.10 *               Talkeetna,             ALASKA
+  UNK     21 63.88 160.80 *               Unalakleet,            ALASKA
+  YAK     30 59.62 139.50                 Yakutal,               ALASKA
+  IKO     73 52.95 168.85 *               Nikolski,              ALASKA
+  AFM    289 67.10 157.85 *               Ambler,                ALASKA
+  5AB    100 52.43 184.00                                        GULF OF ALASKA
+  5AC      0 52.00 135.00                                        GULF OF ALASKA
+  5AD      0 54.00 145.00                                        GULF OF ALASKA
+  5AE      0 55.00 155.00                                        GULF OF ALASKA
+  5AF      0 56.00 137.00                                        GULF OF ALASKA
+E 5AG      0 58.00 142.00                                        GULF OF ALASKA
+B YVR      0 49.19 123.18 FDCN01, 02, 03  Vancouver,             CANADA
+  YYF      0 49.47 119.60                                        CANADA                
+  YXC      0 49.60 115.79                 Cranbrook,             CANADA
+  YYC      0 51.10 114.02                 Calgary,               CANADA
+  YQL      0 49.63 112.80                                        CANADA
+  YEA      0 50.91 110.10                                        CANADA
+  YZP      0 53.25 131.80                                        CANADA
+  YZT      0 50.68 127.38                                        CANADA
+  YPU      0 52.11 124.90                                        CANADA
+  YXS      0 53.89 122.31                 Prince George,         CANADA
+  YYD      0 54.82 127.82                                        CANADA
+  YDL      0 58.41 130.00                                        CANADA
+  YKA      0 50.71 120.41                                        CANADA
+  YJA      0 52.89 118.07                                        CANADA
+  YEG      0 53.57 113.52                 Edmonton,              CANADA
+  YXE      0 52.18 106.69                                        CANADA
+  YZH      0 55.35 114.98                                        CANADA
+  YXJ      0 56.23 120.75                                        CANADA
+  YYE      0 58.83 122.59                                        CANADA
+  YQH      0 60.11 128.82                                        CANADA
+  YXY      0 60.71 135.08                                        CANADA
+  YDB      0 61.37 139.06                                        CANADA
+  YMA      0 63.61 135.88                                        CANADA
+  YOC      0 67.84 139.80                                        CANADA
+  YEV      0 68.30 133.49                                        CANADA
+  YVQ      0 65.29 126.80                                        CANADA
+  YFS      0 61.75 121.23                                        CANADA
+  YOD      0 54.41 110.30                                        CANADA
+  YMM      0 56.65 111.18                                        CANADA
+  YOJ      0 58.52 117.10                                        CANADA
+  YSM      0 60.01 111.96                                        CANADA
+  YZF      0 62.47 114.45                                        CANADA
+  YIX      0 66.10 118.03                                        CANADA
+  YQR      0 50.43 104.66                 Regina,                CANADA
+  YBR      0 50.01 100.30                                        CANADA
+  YWG      0 49.90  97.22                 Winnipeg,              CANADA
+  YQT      0 48.37  89.31                 Thunder Bay,           CANADA
+  WUJ      0 53.00  97.60                                        CANADA
+  WUI      0 52.00 101.00                                        CANADA
+  YQD      0 53.96 101.10                 The Pas,               CANADA
+  YVC      0 55.10 105.30                                        CANADA
+  YFN      0 57.35 107.17                                        CANADA
+  YYL      0 56.86 101.07                                        CANADA
+  WUC      0 55.00  95.00                                        CANADA
+  YYQ      0 58.75  90.08                                        CANADA
+  WUD      0 60.00  85.00                                        CANADA
+  WUB      0 65.00 105.00                                        CANADA
+  YEI      0 61.13 100.91                                        CANADA
+  YBK      0 64.30  96.00                                        CANADA
+  YRT      0 62.80  92.10                                        CANADA
+  YZS      0 64.20  83.37                                        CANADA
+  YRL      0 51.07  93.82                                        CANADA
+  YTL      0 53.83  89.87                                        CANADA
+  WUE      0 55.00  85.00                                        CANADA
+  YYW      0 50.29  88.90                                        CANADA
+  YMO      0 51.27  80.65                                        CANADA
+  YYU      0 49.41  82.46                                        CANADA
+  YYB      0 46.38  79.41                 North Bay,             CANADA
+  YAM      0 46.49  84.50                                        CANADA
+  YVV      0 44.75  81.10                                        CANADA
+  YQG      0 42.28  82.96                                        CANADA
+  YYZ      0 43.68  79.64                                        CANADA
+  YOW      0 45.31  75.68                 Ottawa,                CANADA
+  YSC      0 45.42  71.69                                        CANADA
+  YQB      0 46.80  71.39                 Quebec,                CANADA
+  XUH      0 48.00  75.00                                        CANADA
+  WUF      0 51.00  75.00                                        CANADA
+  YMV      0 50.66  63.83                                        CANADA
+  YNI      0 53.20  70.90                                        CANADA
+  YGW      0 55.29  77.77                                        CANADA
+  WUG      0 57.00  73.00                                        CANADA
+  YPH      0 58.45  78.00                                        CANADA
+  YTE      0 63.11  77.92                                        CANADA
+  YZV      0 50.21  66.27                                        CANADA
+  YWK      0 52.92  66.89                                        CANADA
+  YKL      0 54.80  66.81                                        CANADA
+  YVP      0 58.10  68.41                                        CANADA
+  YYY      0 48.60  68.20                                        CANADA
+  YQI      0 43.83  66.09                                        CANADA
+  YFC      0 45.86  66.53                                        CANADA
+  YQM      0 46.75  64.85                                        CANADA
+  YHZ      0 44.89  63.51                                        CANADA
+  YSA      0 43.93  60.00                                        CANADA
+  YQY      0 46.18  60.05                                        CANADA
+  FVP      0 46.75  56.15                                        CANADA
+  YYT      0 47.60  52.75                                        CANADA
+  YJT      0 48.51  58.55                                        CANADA
+  YQX      0 48.95  54.59                                        CANADA
+  YAY      0 51.49  55.81                                        CANADA
+  YGR      0 47.42  61.85                                        CANADA
+  YNA      0 50.20  61.81                                        CANADA
+  YEO      0 51.85  63.29                                        CANADA
+  YYR      0 53.31  60.41                                        CANADA 
+  YHO      0 55.45  60.23                                        CANADA
+  YSV      0 58.61  62.80                                        CANADA 
+  UHA      0 61.09  69.55                                        CANADA
+  YFB      0 63.75  68.55                                        CANADA
+  WFA      0 62.00  56.00                                        CANADA
+  YCO      0 67.86 115.12                                        CANADA
+  YCB      0 69.10 105.10                                        CANADA
+  YYH      0 69.53  93.52                                        CANADA
+  YUX      0 68.80  81.25                                        CANADA
+  YUW      0 68.65  71.18                                        CANADA
+  YVN      0 66.59  61.61                                        CANADA
+  YSY      0 71.98 125.29                                        CANADA
+  WUA      0 73.00 110.00                                        CANADA
+  YRB      0 74.71  94.98                                        CANADA
+  YAB      0 73.00  85.30                                        CANADA
+  WFB      0 72.00  62.00                                        CANADA
+  WFC      0 66.00  54.00                                        CANADA
+  YMD      0 76.23 119.32                                        CANADA
+  YIC      0 78.79 103.53                                        CANADA
+  YEU      0 80.00  85.93                                        CANADA
+  WZJ      0 81.08  70.28                                        CANADA
+  XCN      0 76.50  68.85                                        CANADA
+  YZG      0 62.11  75.40                                        CANADA
+  YNC      0 53.01  78.50                                        CANADA
+  YTF      0 48.30  71.38                                        CANADA
+  YMT      0 49.46  74.32                                        CANADA
+  YGP      0 48.47  64.29                                        CANADA
+  YRI      0 47.46  69.35                                        CANADA
+  YVO      0 48.03  77.47                                        CANADA
+  YMW      0 46.16  75.59                 Maniwaki,              CANADA
+  YNM      0 49.45  77.47                                        CANADA
+  YAH      0 53.45  73.40                                        CANADA
+  YIF      0 51.12  58.39                                        CANADA
+  WDG      0 80.00 115.00                                        CANADA
+  WCM      0 70.00 115.00                                        CANADA
+  WCK      0 74.00 135.00                                        CANADA
+  VBI      0 49.40  94.10                                        CANADA
+  WKZ      0 57.00  89.00                                        CANADA
+  WLR      0 61.00  80.00                                        CANADA
+  WKJ      0 63.00 107.00                                        CANADA
+  WPM      0 47.00  49.00                                        CANADA
+  WJQ      0 76.00 140.00                                        CANADA
+  WRS      0 78.00 130.00                                        CANADA
+  WLL      0 82.00 140.00                                        CANADA
+  XBT      0 84.00 100.00                                        CANADA
+  YUL      0 45.47  73.75                                        CANADA
+  WPV      0 67.00  60.00                                        CANADA
+  WOP      0 67.00  50.00                                        CANADA
+  WOM      0 58.00  60.00                                        CANADA
+  WOX      0 59.00  50.00                                        CANADA
+  YLT      0 82.30  62.20                                        CANADA
+  WKQ      0 85.00  70.00                                        CANADA
+  WFK      0 89.00  75.00                                        CANADA
+  XDH      0 74.50  82.50                                        CANADA
+  XAA      0 85.00 140.00                                        CANADA
+  XAB      0 85.00 120.00                                        CANADA
+  XAD      0 85.00  90.00                                        CANADA
+  XAE      0 85.00  60.00                                        CANADA
+  XBA      0 80.00 140.00                                        CANADA
+  XBB      0 80.00 120.00                                        CANADA
+  XBM      0 80.00 100.00                                        CANADA
+  XBS      0 80.00  60.00                                        CANADA
+  XCB      0 77.50 130.00                                        CANADA
+  XCC      0 77.50 110.00                                        CANADA
+  XCE      0 77.50  90.00                                        CANADA
+  XCF      0 77.50  75.00                                        CANADA
+  XDA      0 75.00 140.00                                        CANADA
+  XDB      0 75.00 130.00                                        CANADA
+  XDC      0 75.00 120.00                                        CANADA
+  XDD      0 75.00 110.00                                        CANADA
+  XDF      0 75.00  70.00                                        CANADA
+  XEE      0 70.00 140.00                                        CANADA
+  XEF      0 70.00 130.00                                        CANADA
+  XEH      0 70.00 120.00                                        CANADA
+  XEJ      0 70.00  90.00                                        CANADA
+  XEK      0 70.00  60.00                                        CANADA
+E XDJ      0 89.00 140.00                                        CANADA
+B YVR      0 49.19 123.18 FDCN40, 41, 42  Vancouver,             CANADA
+  YYF      0 49.47 119.60                                        CANADA
+  YXC      0 49.60 115.79                                        CANADA
+  YYC      0 51.10 114.02                 Calgary,               CANADA
+  YZP      0 53.25 131.80                                        CANADA
+  YZT      0 50.68 127.38                                        CANADA
+  YPU      0 52.11 124.90                                        CANADA
+  YXS      0 53.89 122.31                 Prince George,         CANADA
+  YYD      0 54.82 127.82                                        CANADA
+  YDL      0 58.41 130.00                                        CANADA
+  YEG      0 53.57 113.52                 Edmonton,              CANADA
+  YXJ      0 56.23 120.75                                        CANADA
+  YYE      0 58.83 122.59                                        CANADA
+  YQH      0 60.11 128.82                                        CANADA
+  YXY      0 60.71 135.08                                        CANADA
+  YDB      0 61.37 139.06                                        CANADA
+  YMA      0 63.61 135.88                                        CANADA
+  YOC      0 67.84 139.80                                        CANADA
+  YEV      0 68.30 133.49                                        CANADA
+E YVQ      0 65.29 126.80                                        CANADA
+B ABI   1790 32.47  99.85 FDUS11, 13, 15  Abilene,               TEXAS
+  ABQ   5352 35.03 106.80                 Albuquerque,           NEW MEXICO
+  ABR   1301 45.42  98.37                 Aberdeen,              SOUTH DAKOTA
+  AGC   1252 40.27  80.03                 Pittsburgh,            PENNSYLVANIA
+  ALB    285 42.73  73.80                 Albany,                NEW YORK
+  ALS   7535 37.33 105.80                 Alamosa,               COLORADO
+  AMA   3605 35.28 101.63                 Amarillo,              TEXAS             
+  ATL   1026 33.62  84.43                 Atlanta,               GEORGIA
+  BAM   4532 40.57 116.92                 Battle Mountain,       NEVADA          
+  BCE   7586 37.68 112.30                 Bryce Canyon,          UTAH
+  BFF   3965 41.88 103.47                 Scottsbluff,           NEBRASKA
+  BHM    620 33.55  86.73                 Birmingham,            ALABAMA
+  BIH   4120 37.37 118.35                 Bishop,                CALIFORNIA
+  BIL   3605 45.80 108.62                 Billings,              MONTANA
+  BLH    397 33.58 114.75                 Blythe,                CALIFORNIA
+  BNA    599 36.12 086.67                 Nashville,             TENNESSEE
+  BOI   2858 43.57 116.23                 Boise,                 IDAHO
+  BOS     20 42.35  70.98                 Boston,                MASSACHUSETTS
+  BRO     22 25.92 097.37                 Brownsville,           TEXAS
+  BUF    725 42.92  78.63                 Buffalo,               NEW YORK
+  CAE    236 33.85  81.05                 Columbia,              SOUTH CAROLINA
+  CAR    623 46.87  68.02                 Caribou,               MAINE
+  CLE    792 41.35  82.15                 Cleveland,             OHIO
+  CRP     44 27.90 097.43                 Corpus Christi,        TEXAS 
+  CRW    982 38.33  81.77                 Charleston,            WEST VIRGINIA
+  CZI   4798 43.98 106.43                 Crazy Woman,           WYOMING   
+  DAL    487 32.83 096.85                 Dallas,                TEXAS 
+  DBQ   1076 42.40  90.70                 Dubuque,               IOWA
+  DEN   5333 39.80 104.88                 Denver,                COLORADO
+  DIK   2589 46.85 102.77                 Dickinson,             NORTH DAKOTA
+  DLN   5238 45.23 112.53                 Dillon,                MONTANA
+  DRT    999 29.37 100.92                 Del Rio,               TEXAS        
+  DSM    957 41.43  93.63                 Des Moines,            IOWA
+  ECK    810 43.25  82.72                 Peck,                  MICHIGAN
+  ELP   3956 31.80 106.27                 El Paso,               TEXAS
+  ELY   6255 39.28 114.83                 Ely,                   NEVADA
+  EMI    820 39.48  76.97                 Westminster,           MARYLAND
+  FAT    332 36.88 119.80                 Fresno,                CALIFORNIA
+  GPI   2972 48.20 114.17                 Kalispell,             MONTANA      
+  FMN   5503 36.73 108.08                 Farmington,            NEW MEXICO
+  GCK   2888 37.92 100.72                 Garden City,           KANSAS
+  GEG   2372 47.55 117.62                 Spokane,               WASHINGTON
+  GFK    844 47.95  97.18                 Grand Forks,           NORTH DAKOTA
+  GGW   2293 48.20 106.62                 Glasgow,               MONTANA
+  GJT   4858 39.05 108.78                 Grand Junction,        COLORADO
+  GLD   3654 39.38 101.68                 Goodland,              KANSAS
+  GRB    695 44.55  88.18                 Green Bay,             WISCONSIN
+  GTF   3674 47.45 111.40                 Great Falls,           MONTANA
+  HOU     47 29.63 095.27                 Houston,               TEXAS 
+  ICT   1332 37.72  97.45                 Wichita,               KANSAS
+  ILM     32 34.35  77.87                 Wilmington,            NORTH CAROLINA
+  IMB   5220 44.63 119.70                 Kimberly,              OREGON
+  IND    797 39.80  86.37                 Indianapolis,          INDIANA
+  INK   2818 31.87 103.23                 Wink,                  TEXAS
+  INL   1184 48.55  93.40                 International Falls,   MINNESOTA
+  JAN    346 32.50 090.17                 Jackson,               MISSISSIPPI
+  JAX     30 30.43  81.55                 Jacksonville,          FLORIDA
+  JFK     12 40.62  73.77                 New York,              NEW YORK
+  JOT    582 41.53  88.32                 Joliet,                ILLINOIS
+  LAS   2174 36.07 115.15                 Las Vegas,             NEVADA
+  LIT    258 34.67 092.17                 Little Rock,           ARKANSAS       
+  LKV   4728 42.48 120.50                 Lakeview,              OREGON
+  LOU    546 38.10  85.57                 Louisville,            KENTUCKY
+  LRD    508 27.47 099.42                 Laredo,                TEXAS
+  MEM    332 35.05 089.97                 Memphis,               TENNESSEE
+  MIA     10 25.95  80.45                 Miami,                 FLORIDA
+  MKC    758 39.27  94.58                 Kansas City,           MISSOUR
+  MOB    190 30.68 088.23                 Mobile,                ALABAMA
+  MSP    841 45.13  93.37                 Minneapolis-St Paul,   MINNESOTA
+  MSY      4 30.02 090.17                 New Orleans,           LOUISIANA
+  OKC   1295 35.40 097.63                 Oklahoma City,         OKLAHOMA
+  ONL   2030 42.47  98.68                 O Neill,               NEBRASKA
+  OTH     14 43.40 124.17                 North Bend,            OREGON
+  PDX     26 45.73 122.58                 Portland,              OREGON
+  PIE     11 27.90  82.68                 St. Petersburg,        FLORIDA
+  PIH   4448 42.87 112.65                 Pocatello,             IDAHO
+  PLB    371 44.80  73.40                 Plattsburgh,           NEW YORK
+  PRC   5042 34.70 112.47                 Prescott,              ARIZONA
+  PSB   1948 40.90  77.98                 Phillipsburg,          PENNSYLVANIA
+  RAP   3182 43.97 103.00                 Rapid City,            SOUTH DAKOTA
+  RBL    354 40.08 122.23                 Red Bluff,             CALIFORNIA
+  RDU    437 35.87  78.78                 Raleigh-Durham,        NORTH CAROLINA
+  RIC    168 37.50  77.32                 Richmond,              VIRGINIA
+  RKS   6760 41.58 109.00                 Rock Springs,          WYOMING
+  RNO   4412 39.52 119.65                 Reno,                  NEVADA
+  SAN     15 32.73 117.18                 San Diego,             CALIFORNIA
+  SAT    809 28.63 098.45                 San Antonio,           TEXAS
+  SBA     10 34.50 119.77                 Santa Barbara,         CALIFORNIA
+  SEA    429 47.43 122.30                 Seattle,               WASHINGTON
+  SFO     11 37.62 122.37                 San Francisco,         CALIFORNIA
+  SGF   1267 37.35  93.33                 Springfield,           MISSOURI
+  SHV    258 32.77 093.80                 Shreveport,            LOUISIANA
+  SLC   4227 40.85 111.97                 Salt Lake City,        UTAH
+  SSM    690 46.40  84.30                 Sault Ste. Marie,      MICHIGAN
+  STL    589 38.85  90.47                 St. Louis,             MISSOURI
+  TLH     81 30.55  84.37                 Tallahassee,           FLORIDA
+  TRI   1519 36.47 082.40                 Bristol/Johnson,       TENNESSEE
+  TUS   2630 32.12 110.82                 Tucson,                ARIZONA
+E 2XG      0 30.33  78.50                 Gauge,                 ATLANTIC OCEAN
+B ACK     48 41.27  70.02 FDUS12, 14, 16  Nantucket,             MASSACHU
+  ACY     76 39.45  74.57                 Atlantic City,         NEW JERSEY
+  AST     11 46.15 123.87                 Astorio,               OREGON
+  AVP    957 41.27  75.68                 Wilkes-Barre/Scranton, PENNSYLVANIA
+  AXN   1425 45.95  95.22                 Alexandria,            MINNESOTA
+  BDL    174 41.93  72.68                 Windsor Locks,         CONNECTICUT
+  BGR    192 44.83  68.87                 Bangor,                MAINE
+  BML   1158 44.63  71.18                 Berlin,                NEBRASKA
+  BRL    698 40.72  90.92                 Burlington,            IOWA
+  CGI    342 37.22  89.57                 Cape Girardeau,        MISSOURI
+  CHS     45 32.88  80.03                 Charleston,            SOUTH CAROLINA
+  CLL    319 30.60 096.42                 College Station,       TEXAS 
+  CMH    816 39.98  82.92                 Columbus,              OHIO
+  COU    889 38.80  92.22                 Columbia,              MISSOURI
+  CSG    397 32.60  85.02                 Columbus,              GEORGIA
+  CVG    891 39.00  84.70                 Covington,             OHIO
+  DLH   1428 46.80  92.20                 Duluth,                MINNESOTA
+  EKN   1987 38.90  80.08                 Elkins,                WEST VIRGINIA
+  EVV    418 38.03  87.52                 Evansville,            INDIANA
+  EYW      4 24.58  81.80                 Key West,              FLORIDA
+  FLO    147 34.22  79.65                 Florence,              SOUTH CAROLINA
+  FOT    390 40.67 124.23                 Fortuna,               CALIFORNIA
+  FSD   1429 43.63  96.77                 Sioux Falls,           SOUTH DAKOTA
+  FSM    468 35.38 094.47                 Fort Smith,            ARKANSAS
+  FWA    800 40.97  85.18                 Fort Wayne,            INDIANA
+  GAG   2223 36.33 099.87                 Gage,                  OKLAHOMA
+  GRI   1846 40.98  98.30                 Grand Island,          NEBRASKA
+  GSP    972 34.88  82.22                 Greer,                 SOUTH CAROLINA
+  HAT     11 35.27  75.55                 Cape Hatteras,         NORTH CAROLINA
+  HSV    629 34.55 086.77                 Huntsville,            ALABAMA
+  H51      0 26.50 095.00                 Bay city,              GULF OF MEXICO
+  H52      0 26.00 089.50                 Mid Gulf,              GULF OF MEXICO
+  H61      0 26.50 084.00                 W Fort Myers West,     GULF OF MEXICO
+  LBB   3281 33.70 101.90                 Lubbock,               TEXAS
+  LCH     16 30.13 093.10                 Lake Charles,          LOUISIANA
+  LND   5586 42.80 108.72                 Lander,                WYOMING
+  LSE    653 43.87  91.25                 La Crosse,             WISCONSIN
+  LWS   1438 46.37 116.87                 Lewiston,              IDAHO
+  MBW   7000 41.83 106.00                 Medicine Bow,          WYOMING
+  MCW   1213 43.08  93.32                 Mason City,            IOWA
+  MGM    221 32.22 086.32                 Montgomery,            ALABAMA   
+  MKG    628 43.17  86.03                 Muskegon,              MICHIGAN
+  MLB     33 28.10  80.63                 Melbourne,             FLORIDA
+  MLS   2628 46.37 105.95                 Miles City,            MONTANA
+  MOT   1715 48.25 101.28                 Minot,                 NORTH DAKOTA
+  MQT   1419 46.52  87.58                 Marquette,             MICHIGAN
+  MRF   4848 30.28 103.62                 Marfa,                 TEXAS
+  OMA    983 41.17  95.73                 Omaha,                 NEBRASKA
+  ONT    952 34.05 117.60                 Ontario,               CALIFORNIA
+  ORF     27 36.88  76.20                 Norfolk,               VIRGINIA
+  PFN     20 30.20  85.67                 Panama City,           FLORIDA
+  PHX   1132 33.42 111.88                 Phoenix,               ARIZONA 
+  PIR   1742 44.38 100.15                 Pierre,                SOUTH DAKOTA
+  PSX     15 28.75 096.30                 Palacios,              TEXAS
+  PUB   4726 38.28 104.42                 Pueblo,                COLORADO
+  PWM     74 43.63 070.30                 Portland,              MAINE
+  RDM   3077 44.25 121.30                 Redmond,               OREGON
+  ROA   1175 37.33  80.07                 Roanoke,               VIRGINIA
+  ROW   3669 33.33 104.62                 Roswell,               NEW MEXICO
+  SAC     21 38.43 121.55                 Sacramento,            CALIFORNIA
+  SAV     50 32.15  81.10                 Savannah,              GEORGIA
+  SIY   2648 41.78 122.45                 Montague,              CALIFORNIA
+  SLN   1272 38.87  97.62                 Salina,                KANSAS
+  SPI    597 39.83  89.67                 Springfield,           ILLINOIS
+  SPS   1015 33.98 098.58                 Wichita Falls,         TEXAS
+  SYR    421 43.15  76.20                 Syracuse,              NEW YORK
+  TCC   4063 35.17 103.58                 Tucumcari,             NEW MEXICO
+  TUL    676 36.18 095.78                 Tulsa,                 OKLAHOMA
+  TVC    624 44.67  85.53                 Traverse City,         MICHIGAN
+  TYS    981 35.90 083.88                 Knoxville,             TENNESSEE
+  T01      0 28.50 093.50                 West Cameron,          GULF OF MEXICO    
+  T06      0 28.50 091.00                 Ship Shoal,            GULF OF MEXICO  
+  T07      0 28.50 088.00                 S Mobile South,        GULF OF MEXICO
+  WJF   2347 34.73 118.22                 Lancaster,             CALIFORNIA
+  YKM   1095 46.57 120.43                 Yakima,                WASHINGTON
+  ZUN   6454 34.95 109.15                 Zuni,                  NEW MEXICO
+E 4J3      0 28.50 085.00                 S Apalachicola South,  GULF OF MEXICO
+B ABI   1790 32.47  99.85 FDUS08, 09, 10  Abilene,               TEXAS
+  ABQ   5352 35.03 106.80                 Albuquerque,           NEW MEXICO
+  ABR   1301 45.42  98.37                 Aberdeen,              SOUTH DAKOTA
+  AGC   1252 40.27  80.03                 Pittsburgh,            PENNSYLVANIA
+  ALB    285 42.73  73.80                 Albany,                NEW YORK
+  ALS   7535 37.33 105.80                 Alamosa,               COLORADO
+  AMA   3605 35.28 101.63                 Amarillo,              TEXAS             
+  ATL   1026 33.62  84.43                 Atlanta,               GEORGIA
+  BAM   4532 40.57 116.92                 Battle Mountain,       NEVADA          
+  BCE   7586 37.68 112.30                 Bryce Canyon,          UTAH
+  BFF   3965 41.88 103.47                 Scottsbluff,           NEBRASKA
+  BHM    620 33.55  86.73                 Birmingham,            ALABAMA
+  BIH   4120 37.37 118.35                 Bishop,                CALIFORNIA
+  BIL   3605 45.80 108.62                 Billings,              MONTANA
+  BLH    397 33.58 114.75                 Blythe,                CALIFORNIA
+  BNA    599 36.12 086.67                 Nashville,             TENNESSEE
+  BOI   2858 43.57 116.23                 Boise,                 IDAHO
+  BOS     20 42.35  70.98                 Boston,                MASSACHUSETTS
+  BRO     22 25.92 097.37                 Brownsville,           TEXAS
+  BUF    725 42.92  78.63                 Buffalo,               NEW YORK
+  CAE    236 33.85  81.05                 Columbia,              SOUTH CAROLINA
+  CAR    623 46.87 068.02                 Caribou,               MAINE
+  CLE    792 41.35  82.15                 Cleveland,             OHIO
+  CRP     44 27.90 097.43                 Corpus Christi,        TEXAS 
+  CRW    982 38.33  81.77                 Charleston,            WEST VIRGINIA
+  CZI   4798 43.98 106.43                 Crazy Woman,           WYOMING   
+  DAL    487 32.83 096.85                 Dallas,                TEXAS 
+  DBQ   1076 42.40  90.70                 Dubuque,               IOWA
+  DEN   5333 39.80 104.88                 Denver,                COLORADO
+  DIK   2589 46.85 102.77                 Dickinson,             NORTH DAKOTA
+  DLN   5238 45.23 112.53                 Dillon,                MONTANA
+  DRT    999 29.37 100.92                 Del Rio,               TEXAS        
+  DSM    957 41.43  93.63                 Des Moines,            IOWA
+  ECK    810 43.25  82.72                 Peck,                  MICHIGAN
+  ELP   3956 31.80 106.27                 El Paso,               TEXAS
+  ELY   6255 39.28 114.83                 Ely,                   NEVADA
+  EMI    820 39.48  76.97                  Westminster,           MARYLAND
+  FAT    332 36.88 119.80                 Fresno,                CALIFORNIA
+  GPI   2972 48.20 114.17                 Kalispell,             MONTANA      
+  FMN   5503 36.73 108.08                 Farmington,            NEW MEXICO
+  GCK   2888 37.92 100.72                 Garden City,           KANSAS
+  GEG   2372 47.55 117.62                 Spokane,               WASHINGTON
+  GFK    844 47.95  97.18                 Grand Forks,           NORTH DAKOTA
+  GGW   2293 48.20 106.62                 Glasgow,               MONTANA
+  GJT   4858 39.05 108.78                 Grand Junction,        COLORADO
+  GLD   3654 39.38 101.68                 Goodland,              KANSAS
+  GRB    695 44.55  88.18                 Green Bay,             WISCONSIN
+  GTF   3674 47.45 111.40                 Great Falls,           MONTANA
+  HOU     47 29.63 095.27                 Houston,               TEXAS 
+  ICT   1332 37.72  97.45                 Wichita,               KANSAS
+  ILM     32 34.35  77.87                 Wilmington,            NORTH CAROLINA
+  IMB   5220 44.63 119.70                 Kimberly,              OREGON
+  IND    797 39.80  86.37                 Indianapolis,          INDIANA
+  INK   2818 31.87 103.23                 Wink,                  TEXAS
+  INL   1184 48.55  93.40                 International Falls,   MINNESOTA
+  JAN    346 32.50 090.17                 Jackson,               MISSISSIPPI
+  JAX     30 30.43  81.55                 Jacksonville,          FLORIDA
+  JFK     12 40.62  73.77                 New York,              NEW YORK
+  JOT    582 41.53  88.32                 Joliet,                ILLINOIS
+  LAS   2174 36.07 115.15                 Las Vegas,             NEVADA
+  LIT    258 34.67 092.17                 Little Rock,           ARKANSAS       
+  LKV   4728 42.48 120.50                 Lakeview,              OREGON
+  LOU    546 38.10  85.57                 Louisville,            KENTUCKY
+  LRD    508 27.47 099.42                 Laredo,                TEXAS
+  MEM    332 35.05 089.97                 Memphis,               TENNESSEE
+  MIA     10 25.95  80.45                 Miami,                 FLORIDA
+  MKC    758 39.27  94.58                 Kansas City,           MISSOUR
+  MOB    190 30.68 088.23                 Mobile,                ALABAMA
+  MSP    841 45.13  93.37                 Minneapolis-St Paul,   MINNESOTA
+  MSY      4 30.02 090.17                 New Orleans,           LOUISIANA
+  OKC   1295 35.40 097.63                 Oklahoma City,         OKLAHOMA
+  ONL   2030 42.47  98.68                 O Neill,               NEBRASKA
+  OTH     14 43.40 124.17                 North Bend,            OREGON
+  PDX     26 45.73 122.58                 Portland,              OREGON
+  PIE     11 27.90  82.68                 St. Petersburg,        FLORIDA
+  PIH   4448 42.87 112.65                 Pocatello,             IDAHO
+  PLB    371 44.80  73.40                 Plattsburgh,           NEW YORK
+  PRC   5042 34.70 112.47                 Prescott,              ARIZONA
+  PSB   1948 40.90  77.98                 Phillipsburg,          PENNSYLVANIA
+  RAP   3182 43.97 103.00                 Rapid City,            SOUTH DAKOTA
+  RBL    354 40.08 122.23                 Red Bluff,             CALIFORNIA
+  RDU    437 35.87  78.78                 Raleigh-Durham,        NORTH CAROLINA
+  RIC    168 37.50  77.32                 Richmond,              VIRGINIA
+  RKS   6760 41.58 109.00                 Rock Springs,          WYOMING
+  RNO   4412 39.52 119.65                 Reno,                  NEVADA
+  SAN     15 32.73 117.18                 San Diego,             CALIFORNIA
+  SAT    809 28.63 098.45                 San Antonio,           TEXAS
+  SBA     10 34.50 119.77                 Santa Barbara,         CALIFORNIA
+  SEA    429 47.43 122.30                 Seattle,               WASHINGTON
+  SFO     11 37.62 122.37                 San Francisco,         CALIFORNIA
+  SGF   1267 37.35  93.33                 Springfield,           MISSOURI
+  SHV    258 32.77 093.80                 Shreveport,            LOUISIANA
+  SLC   4227 40.85 111.97                 Salt Lake City,        UTAH
+  SSM    690 46.40  84.30                 Sault Ste. Marie,      MICHIGAN
+  STL    589 38.85  90.47                 St. Louis,             MISSOURI
+  TLH     81 30.55  84.37                 Tallahassee,           FLORIDA
+  TRI   1519 36.47 082.40                 Bristol/Johnson,       TENNESSEE
+  TUS   2630 32.12 110.82                 Tucson,                ARIZONA
+E 2XG      0 30.33  78.50                 Gauge,                 ATLANTIC OCEAN

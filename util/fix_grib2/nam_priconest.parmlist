@@ -1,0 +1,16 @@
+CAPE:255-0 mb above ground
+CIN:255-0 mb above ground
+CAPE:90-0 mb above ground
+CIN:90-0 mb above ground
+CAPE:surface
+CIN:surface
+TMP:2 m above ground
+UGRD:10 m above ground
+VGRD:10 m above ground
+PWAT:entire atmospehere
+REFD:1000 m above ground
+REFD:4000 m above ground
+REFC:entire atmospehere
+MSLET:mean sea level
+PRMSL:mean sea level
+APCP:surface

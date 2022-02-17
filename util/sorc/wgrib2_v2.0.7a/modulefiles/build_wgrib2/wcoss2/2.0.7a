@@ -1,0 +1,20 @@
+#%Module######################################################################
+
+export CC=cc
+export FC=ftn
+export COMP_SYS=intel_linux
+
+module load intel/${intel_ver}
+module load PrgEnv-intel/${PrgEnv_intel_ver}
+module load craype/${craype_ver}
+module load cray-mpich/${cray_mpich_ver}
+module load envvar/${envvar_ver}
+
+module load hdf5/${hdf5_ver}
+module load netcdf/3.6.3
+module load jasper/${jasper_ver}
+module load libpng/${libpng_ver}
+module load zlib/${zlib_ver}
+module load ip/${ip_ver}
+module load sp/${sp_ver}
+module load g2c/${g2c_ver}
