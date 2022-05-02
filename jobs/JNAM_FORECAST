@@ -14,7 +14,7 @@ if [ $tmmark = tm00 ] ; then
 # export ppn=63
 # export threads=2
 # w/hyperthreading (38 nodes)
-  export ntasks=2432
+  export ntasks=2496
   export ppn=64
   export threads=2
 else

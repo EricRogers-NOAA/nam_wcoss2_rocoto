@@ -29,7 +29,7 @@ cd $DATA
 
 export run_firewx=${run_firewx:-NO}
 if [ $tmmark = tm00 ] ; then
-  export NODE_CONFIGFILE=${NODE_CONFIGFILE:-$PARMnam/nam_node_decomposition_opsconfig.tm00_wcoss2_38nodes}
+  export NODE_CONFIGFILE=${NODE_CONFIGFILE:-$PARMnam/nam_node_decomposition_opsconfig.tm00_wcoss2_39nodes}
 # export NODE_CONFIGFILE=${NODE_CONFIGFILE:-$PARMnam/nam_node_decomposition_opsconfig.tm00_wcoss2_63tasks_node}
 else
   export NODE_CONFIGFILE=${NODE_CONFIGFILE:-$PARMnam/nam_node_decomposition_opsconfig.tm06-01_wcoss2}

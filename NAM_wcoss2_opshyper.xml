@@ -3,13 +3,13 @@
 <!DOCTYPE workflow [
 
 <!ENTITY STARTYEAR "2022">
-<!ENTITY STARTMONTH "02">
-<!ENTITY STARTDAY "16">
+<!ENTITY STARTMONTH "04">
+<!ENTITY STARTDAY "25">
 <!ENTITY STARTHOUR "18">
 
 <!ENTITY ENDYEAR "2022">
-<!ENTITY ENDMONTH "02">
-<!ENTITY ENDDAY "22">
+<!ENTITY ENDMONTH "05">
+<!ENTITY ENDDAY "06">
 <!ENTITY ENDHOUR "18">
 
 <!ENTITY USER "Eric.Rogers">
@@ -186,7 +186,7 @@
 <!ENTITY CATCHUP_RUNNAM_NEMSINTERP_FREEFORECAST_NODES "1:ppn=14">           <!-- runnamrr${cyc}_ungrib_boco.ll -->
 <!ENTITY CATCHUP_RUNNAM_NEMSINTERP_FREEFORECAST_RESOURCES "<walltime>00:20:00</walltime><memory>28GB</memory>">
 
-<!ENTITY CATCHUP_RUNNAM_FREEFORECAST_NODES "38:ppn=64:tpp=2">  <!-- runnamrr${cyc}_forecast.ll **FOR THE CATCHUP FREE FORECAST** -->
+<!ENTITY CATCHUP_RUNNAM_FREEFORECAST_NODES "39:ppn=64:tpp=2">  <!-- runnamrr${cyc}_forecast.ll **FOR THE CATCHUP FREE FORECAST** -->
 <!ENTITY CATCHUP_RUNNAM_FREEFORECAST_RESOURCES "<walltime>02:45:00</walltime><native>-l place=vscatter:excl</native><native>-l hyper=true</native>">
 
 <!ENTITY CATCHUP_RUNNAM_FREEFORECAST_PARENTEXT_NODES "4:ppn=64:tpp=2">
@@ -2397,7 +2397,7 @@
 
 <!-- FORECAST TM00 -->
 
-  <task name="forecast_catchup_tm00" cycledefs="catchup" maxtries="2">
+  <task name="forecast_catchup_tm00" cycledefs="catchup" maxtries="3">
 
    &CATCHUP_RUNNAM_FREEFORECAST_RESOURCES;
    &RESERVATION_NOSHARE;

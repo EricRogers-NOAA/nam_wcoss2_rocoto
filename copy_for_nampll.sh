@@ -12,7 +12,7 @@ set -x
 
 mkdir -p /lfs/h2/emc/stmp/Eric.Rogers/tmp
 
-export PDY=20220216
+export PDY=20220425
 export cyc=18
 export cycle=t${cyc}z
 
