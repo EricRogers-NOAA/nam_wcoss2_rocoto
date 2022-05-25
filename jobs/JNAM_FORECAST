@@ -10,13 +10,14 @@ export WKDIRNAME=nam_${cyc}_${tmmark}_${envir}
 . ${JJOBSnam}/JNAM_ENVARS
 
 if [ $tmmark = tm00 ] ; then
-# export ntasks=2520
-# export ppn=63
-# export threads=2
-# w/hyperthreading (38 nodes)
-  export ntasks=2496
-  export ppn=64
+# no hyperthreading (41 nodes)
+  export ntasks=2583
+  export ppn=63
   export threads=2
+# w/hyperthreading (38 nodes)
+# export ntasks=2496
+# export ppn=64
+# export threads=2
 else
   export ntasks=1024
   export ppn=64

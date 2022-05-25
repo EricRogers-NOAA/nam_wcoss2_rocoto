@@ -28,8 +28,8 @@ sbd:    0.0                 # Grid's southern boundary (rotated degrees)
 #####  Grid Decomposition  #####
 ################################
 
-inpes:  9               # Number of compute tasks in the I direction
-jnpes:  17              # Number of compute tasks in the J direction
+inpes:  10               # Number of compute tasks in the I direction
+jnpes:  16              # Number of compute tasks in the J direction
 
 #################################
 ####  Specify the I/O tasks  ####
@@ -39,8 +39,7 @@ quilting:              true    # Do you want asynchronous quilting/history write
 read_groups:           0
 read_tasks_per_group:  0
 write_groups:          2
-write_tasks_per_group: 3
-
+write_tasks_per_group: 2
 
 ############################################
 #####  Fundamental Timestep (seconds)  #####
@@ -76,7 +75,7 @@ minutes_history:   60       # Frequency of history output (minutes)
 nhours_dfini:      0
 
 restart:          REST      # True--> A restarted run
-minutes_restart:  RESINT       # Frequency of restart output (minutes)
+minutes_restart:  RESINT      # Frequency of restart output (minutes)
 
 avg_max_length: 3600        # length of accumulation period for average and
                             # min/max fields (seconds) 
@@ -203,9 +202,13 @@ np3d: 3                     # cloud properties for radiation
                                 # 5--> NAM stratiform + convective cloud optical depth and fraction (GFDL type convective cloud)
                                 # 8--> Thompson microphysics and special Thompson rrtm SW radiation
 
-cldfraction: default        # cloud fraction scheme for radiation
+cldfraction: default       # cloud fraction scheme for radiation
                                 # default  --> according to the choice of np3d
                                 # thompson --> thompson
+
+
+
+
 
 co2tf:  1                       # co2tf--> Read (0) or generate internally (1)
                                 #          the GFDL CO2 transmission functions
@@ -351,7 +354,7 @@ io_pad:                  ' '
 ##################################
 
 my_domain_id: 6              # The ID number of this domain (uppermost domain must have ID=1)
-my_parent_id: 2              # The ID number of this domain's parent
+my_parent_id: 3              # The ID number of this domain's parent
 n_children:  0               # How many child domains does this domain have?
 my_domain_moves:  false      # Does this domain move?
 ntrack: 00                    # the number of nphys steps between tracker calls
@@ -381,9 +384,9 @@ nhours_clocktime:   1        # Frequency in hours between clocktime diagnostic p
 npe_print:          1        # The MPI task that will provide the clocktimes.
 
 #######################
-########  Hurricane    ####
-###########################
-###
+#########  Hurricane    ####
+############################
+####
 run_tc:             false    # true=use hwrf phys
 
 sas_pgcon:          0.55     # convectively forced pressure gradient factor,default=0.55
@@ -398,3 +401,4 @@ coef_ric_s:         0.16     # Regression coef for sea Ric,default=0.16
 alpha:              0.7      # adjustment coef for K in gfspblhur
 sfenth:             0.0      # GFDL surface-layer enhancement coef
 disheat:            true     # true='consider diss heating'
+#
